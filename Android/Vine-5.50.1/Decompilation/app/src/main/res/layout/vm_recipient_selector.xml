@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <co.vine.android.share.widgets.VineRecipientSelectionIndicatorRow
+        android:orientation="horizontal"
+        android:id="@+id/vm_recipients_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <View
+        android:background="@color/solid_super_light_gray"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+    <ListView
+        android:id="@+id/vm_recipient_selector_list_view"
+        android:background="@color/solid_white"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        style="@style/List.Refreshable"/>
+</merge>

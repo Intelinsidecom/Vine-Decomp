@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="new_messages">
+        <item quantity="other">%1$s नए संदेश</item>
+        <item quantity="one">%1$s नया संदेश</item>
+    </plurals>
+    <plurals name="profile_followers">
+        <item quantity="other">&quot;%1$s&quot; फ़ॉलोअर्स</item>
+        <item quantity="one">&quot;%1$s&quot; फ़ॉलोअर</item>
+    </plurals>
+    <plurals name="profile_following">
+        <item quantity="other">&quot;%1$s&quot; फ़ॉलोइंग</item>
+        <item quantity="one">&quot;%1$s&quot; फ़ॉलोइंग</item>
+    </plurals>
+    <plurals name="profile_likes">
+        <item quantity="other">&quot;%1$s&quot; पसंदीदा</item>
+        <item quantity="one">&quot;%1$s&quot; पसंदीदा</item>
+    </plurals>
+    <plurals name="profile_loops">
+        <item quantity="other">%1$s लूप</item>
+        <item quantity="one">%1$s लूप</item>
+    </plurals>
+    <plurals name="profile_posts">
+        <item quantity="other">&quot;%1$s&quot; पोस्ट</item>
+        <item quantity="one">&quot;%1$s&quot; पोस्ट</item>
+    </plurals>
+    <plurals name="revine_count">
+        <item quantity="other">%1$s रीवाईन</item>
+        <item quantity="one">%1$s रीवाईन</item>
+    </plurals>
+    <plurals name="tag_post_count">
+        <item quantity="other">%1$s पोस्ट</item>
+        <item quantity="one">%1$s पोस्ट</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="other">%dदिन</item>
+        <item quantity="one">1 दिन</item>
+    </plurals>
+    <plurals name="time_days_verbose">
+        <item quantity="other">%d दिन</item>
+        <item quantity="one">1 दिन</item>
+    </plurals>
+    <plurals name="time_days_verbose_ago">
+        <item quantity="other">%d दिन पहले</item>
+        <item quantity="one">1 दिन पहले</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="other">%d घंटे</item>
+        <item quantity="one">1 घंटा</item>
+    </plurals>
+    <plurals name="time_hours_verbose">
+        <item quantity="other">%d घंटे</item>
+        <item quantity="one">1 घंटा</item>
+    </plurals>
+    <plurals name="time_hours_verbose_ago">
+        <item quantity="other">%d घंटे पहले</item>
+        <item quantity="one">1 घंटा पहले</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="other">%d क्षण</item>
+        <item quantity="one">1 क्षण</item>
+    </plurals>
+    <plurals name="time_mins_verbose">
+        <item quantity="other">%d क्षण</item>
+        <item quantity="one">1 क्षण</item>
+    </plurals>
+    <plurals name="time_mins_verbose_ago">
+        <item quantity="other">%d क्षण पहले</item>
+        <item quantity="one">1 मिनट पहले</item>
+    </plurals>
+    <plurals name="time_months_verbose_ago">
+        <item quantity="other">%d महीने पहले</item>
+        <item quantity="one">1 महीने पहले</item>
+    </plurals>
+    <plurals name="time_secs">
+        <item quantity="other">%d पल</item>
+        <item quantity="one">1 पल</item>
+    </plurals>
+    <plurals name="time_secs_verbose">
+        <item quantity="other">%d पल</item>
+        <item quantity="one">1 पल</item>
+    </plurals>
+    <plurals name="time_secs_verbose_ago">
+        <item quantity="other">%d पल पहले</item>
+        <item quantity="one">1 पल पहले</item>
+    </plurals>
+    <plurals name="time_weeks_verbose_ago">
+        <item quantity="other">%d सप्ताह पहले</item>
+        <item quantity="one">1 सप्ताह पहले</item>
+    </plurals>
+    <plurals name="time_years_verbose_ago">
+        <item quantity="other">%d साल पहले</item>
+        <item quantity="one">1 साल पहले</item>
+    </plurals>
+    <plurals name="timeline_compact_comments">
+        <item quantity="other">%1$s टिप्पणियाँ</item>
+        <item quantity="one">%1$s टिप्पणि</item>
+    </plurals>
+    <plurals name="timeline_compact_likes">
+        <item quantity="other">%1$s पसंदीदा</item>
+        <item quantity="one">%1$s पसंद</item>
+    </plurals>
+    <plurals name="timeline_likes">
+        <item quantity="other">&quot;%1$s लोगो&quot; ने पसंद किया</item>
+        <item quantity="one">%1$s को पसंद है ये</item>
+    </plurals>
+</resources>

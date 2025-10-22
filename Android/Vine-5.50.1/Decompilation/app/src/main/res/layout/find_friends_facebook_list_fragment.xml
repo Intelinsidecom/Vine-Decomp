@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vine="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/contacts_count_container"
+        android:background="#fff2f2f2"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_alignParentTop="true">
+        <co.vine.android.widget.TypefacesTextView
+            android:textSize="14sp"
+            android:textColor="@color/find_friends_header"
+            android:id="@+id/contacts_text"
+            android:paddingLeft="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            vine:textWeight="4"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:textSize="14sp"
+            android:textColor="@color/find_friends_header"
+            android:id="@+id/select_all_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <include
+        android:id="@android:id/empty"
+        layout="@layout/find_friends_facebook_empty"/>
+    <com.twitter.android.widget.RefreshableListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@drawable/rule_horizontal_5"
+        android:dividerHeight="2dp"
+        android:layout_below="@+id/contacts_count_container"
+        style="@style/List.Refreshable"/>
+</RelativeLayout>

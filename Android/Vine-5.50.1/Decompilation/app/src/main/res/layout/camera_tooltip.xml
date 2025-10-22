@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="horizontal"
+    android:id="@+id/onboardingContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+    <LinearLayout
+        android:gravity="center"
+        android:background="@drawable/onboarding_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.6">
+        <co.vine.android.widget.TypefacesTextView
+            android:textSize="@dimen/font_size_default"
+            android:textColor="@color/solid_white"
+            android:id="@+id/onboardingText"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/press_and_hold_to_record"/>
+    </LinearLayout>
+</LinearLayout>

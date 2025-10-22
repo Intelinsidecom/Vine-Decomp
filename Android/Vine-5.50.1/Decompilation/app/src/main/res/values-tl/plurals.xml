@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="new_messages">
+        <item quantity="other">%1$s mga bagong mensahe</item>
+        <item quantity="one">%1$s bagong mensahe</item>
+    </plurals>
+    <plurals name="profile_followers">
+        <item quantity="other">&quot;%1$s&quot; Mga Tagasunod</item>
+        <item quantity="one">&quot;%1$s&quot; Tagasunod</item>
+    </plurals>
+    <plurals name="profile_following">
+        <item quantity="other">&quot;%1$s&quot; Sinusundan</item>
+        <item quantity="one">&quot;%1$s&quot; Sinusundan</item>
+    </plurals>
+    <plurals name="profile_likes">
+        <item quantity="other">&quot;%1$s&quot; Mga Gusto</item>
+        <item quantity="one">&quot;%1$s&quot; Gusto</item>
+    </plurals>
+    <plurals name="profile_loops">
+        <item quantity="other">%1$s Mga Loop</item>
+        <item quantity="one">%1$s Loop</item>
+    </plurals>
+    <plurals name="profile_posts">
+        <item quantity="other">&quot;%1$s&quot; Mga Post</item>
+        <item quantity="one">&quot;%1$s&quot; Post</item>
+    </plurals>
+    <plurals name="revine_count">
+        <item quantity="other">%1$s mga revine</item>
+        <item quantity="one">%1$s revine</item>
+    </plurals>
+    <plurals name="tag_post_count">
+        <item quantity="other">%1$s mga post</item>
+        <item quantity="one">%1$s post</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="other">%da</item>
+        <item quantity="one">1a</item>
+    </plurals>
+    <plurals name="time_days_verbose">
+        <item quantity="other">%d araw</item>
+        <item quantity="one">1 araw</item>
+    </plurals>
+    <plurals name="time_days_verbose_ago">
+        <item quantity="other">%d araw ang nakalipas</item>
+        <item quantity="one">1 araw ang nakalipas</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="other">%do</item>
+        <item quantity="one">1o</item>
+    </plurals>
+    <plurals name="time_hours_verbose">
+        <item quantity="other">%d oras</item>
+        <item quantity="one">1 oras</item>
+    </plurals>
+    <plurals name="time_hours_verbose_ago">
+        <item quantity="other">%d oras ang nakalipas</item>
+        <item quantity="one">1 oras ang nakalipas</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="other">%dm</item>
+        <item quantity="one">1m</item>
+    </plurals>
+    <plurals name="time_mins_verbose">
+        <item quantity="other">%d minuto</item>
+        <item quantity="one">1 minuto</item>
+    </plurals>
+    <plurals name="time_mins_verbose_ago">
+        <item quantity="other">%d ang nakalipas</item>
+        <item quantity="one">1 minuto ang nakalipas</item>
+    </plurals>
+    <plurals name="time_months_verbose_ago">
+        <item quantity="other">%d buwan ang nakalipas</item>
+        <item quantity="one">1 buwan ang nakalipas</item>
+    </plurals>
+    <plurals name="time_secs">
+        <item quantity="other">%ds</item>
+        <item quantity="one">1s</item>
+    </plurals>
+    <plurals name="time_secs_verbose">
+        <item quantity="other">%d segundo</item>
+        <item quantity="one">1 segundo</item>
+    </plurals>
+    <plurals name="time_secs_verbose_ago">
+        <item quantity="other">%d segundo ang nakalipas</item>
+        <item quantity="one">1 segundo ang nakalipas</item>
+    </plurals>
+    <plurals name="time_weeks_verbose_ago">
+        <item quantity="other">%d linggo ang nakalipas</item>
+        <item quantity="one">1 linggo ang nakalipas</item>
+    </plurals>
+    <plurals name="time_years_verbose_ago">
+        <item quantity="other">%d taon ang nakalipas</item>
+        <item quantity="one">1 taon ang nakalipas</item>
+    </plurals>
+    <plurals name="timeline_compact_comments">
+        <item quantity="other">Mga komento ni %1$s</item>
+        <item quantity="one">Komento ni %1$s</item>
+    </plurals>
+    <plurals name="timeline_compact_likes">
+        <item quantity="other">%1$s (na) gusto</item>
+        <item quantity="one">%1$s gusto</item>
+    </plurals>
+    <plurals name="timeline_likes">
+        <item quantity="other">Gusto ito ng &quot;%1$s tao&quot;</item>
+        <item quantity="one">Gusto ito ni &quot;%1$s&quot;</item>
+    </plurals>
+</resources>

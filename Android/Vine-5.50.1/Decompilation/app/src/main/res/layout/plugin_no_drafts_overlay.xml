@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vine="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/no_drafts_overlay"
+        android:background="@color/no_drafts_overlay"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/no_drafts_overlay_face"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_sadface_overlay"
+            android:layout_centerHorizontal="true"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:textSize="@dimen/font_size_middle"
+            android:textColor="@color/solid_white"
+            android:gravity="center_horizontal"
+            android:id="@+id/no_drafts_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/no_drafts"
+            android:layout_below="@+id/no_drafts_overlay_face"
+            vine:textWeight="4"
+            vine:textStyle="0"/>
+    </RelativeLayout>
+    <co.vine.android.widget.TypefacesTextView
+        android:textColor="@color/draft_number_text"
+        android:id="@+id/no_draft_overlay_draft_button"
+        android:background="@drawable/ic_save"
+        android:visibility="gone"
+        android:layout_width="@dimen/record_options_button_size"
+        android:layout_height="@dimen/record_options_button_size"/>
+</merge>

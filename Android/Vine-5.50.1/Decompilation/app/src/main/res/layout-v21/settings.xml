@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollview"
+    android:background="@color/settings_bg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/user_image_container"
+            android:layout_width="match_parent"
+            android:layout_height="160dp">
+            <include layout="@layout/user_image_container_large"/>
+        </RelativeLayout>
+        <EditText
+            android:textStyle="bold"
+            android:gravity="center"
+            android:id="@+id/name"
+            android:layout_height="48dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:hint="@string/signup_name_hint"
+            android:inputType="textNoSuggestions"
+            style="@style/SettingsEditText"/>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.Settings"/>
+        <EditText
+            android:textSize="@dimen/font_size_large"
+            android:gravity="top|center_horizontal"
+            android:id="@+id/description"
+            android:paddingTop="@dimen/spacing_small"
+            android:paddingBottom="@dimen/spacing_small"
+            android:layout_height="wrap_content"
+            android:scrollHorizontally="false"
+            android:inputType="textMultiLine"
+            style="@style/SettingsEditText"/>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.Settings"/>
+        <EditText
+            android:textSize="@dimen/font_size_large"
+            android:gravity="center"
+            android:id="@+id/location"
+            android:layout_height="@dimen/settings_row_height"
+            android:inputType="textCapSentences"
+            style="@style/SettingsEditText"/>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.Settings"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:text="@string/settings_profile"
+            style="@style/SettingsHeader"/>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.SettingsHeader"/>
+        <include layout="@layout/settings_color_picker"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:text="@string/settings_account"
+            style="@style/SettingsHeader"/>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.SettingsHeader"/>
+        <RelativeLayout
+            android:layout_marginRight="10dp"
+            style="@style/SettingsItemParent">
+            <co.vine.android.widget.TypefacesTextView
+                android:id="@+id/settings_email_label"
+                android:text="@string/settings_email"
+                android:layout_centerVertical="true"
+                style="@style/SettingsLabel"/>
+            <ImageView
+                android:id="@+id/email_verified"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="1dp"
+                android:src="@drawable/ic_settings_alert"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+            <co.vine.android.widget.TypingEditText
+                android:id="@+id/settings_email"
+                android:hint="@string/email_hint"
+                android:layout_toLeftOf="@+id/email_verified"
+                android:layout_toRightOf="@+id/settings_email_label"
+                style="@style/SettingsValue"/>
+        </RelativeLayout>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.Settings"/>
+        <RelativeLayout
+            android:layout_marginRight="10dp"
+            style="@style/SettingsItemParent">
+            <co.vine.android.widget.TypefacesTextView
+                android:id="@+id/settings_phone_label"
+                android:text="@string/settings_phone"
+                android:layout_centerVertical="true"
+                style="@style/SettingsLabel"/>
+            <ImageView
+                android:id="@+id/phone_verified"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="1dp"
+                android:src="@drawable/ic_settings_alert"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+            <co.vine.android.widget.TypingEditText
+                android:id="@+id/settings_phone"
+                android:hint="@string/phone_hint"
+                android:layout_toLeftOf="@+id/phone_verified"
+                android:layout_toRightOf="@+id/settings_phone_label"
+                style="@style/SettingsValue"/>
+        </RelativeLayout>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.Settings"/>
+        <RelativeLayout
+            android:id="@+id/edition_container"
+            android:layout_marginRight="0dp"
+            style="@style/SettingsItemParent">
+            <co.vine.android.widget.TypefacesTextView
+                android:id="@+id/edition_label"
+                android:text="@string/settings_edition"
+                android:layout_centerVertical="true"
+                style="@style/SettingsLabel"/>
+            <Spinner
+                android:id="@+id/edition"
+                android:background="@android:color/transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/settings_row_height"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.Settings"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:id="@+id/settings_password"
+            android:text="@string/password_reset_title"
+            style="@style/SettingsLabel.Selectable"/>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.Settings"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:id="@+id/sync"
+            android:text="@string/sync"
+            style="@style/SettingsLabel.Selectable"/>
+        <co.vine.android.widget.RoundedDivider
+            android:id="@+id/sync_divider"
+            style="@style/RoundedDivider.Settings"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:id="@+id/privacy_controls"
+            android:text="@string/privacy"
+            style="@style/SettingsLabel.Selectable"/>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.Settings"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:text="@string/settings_content"
+            style="@style/SettingsHeader"/>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.SettingsHeader"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:id="@+id/content_controls"
+            android:text="@string/content_controls_title"
+            style="@style/SettingsLabel.Selectable"/>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.Settings"/>
+        <RelativeLayout
+            android:id="@+id/notification_settings"
+            android:layout_marginRight="0dp"
+            style="@style/SettingsItemParent">
+            <ImageView
+                android:id="@+id/alert_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="6dp"
+                android:src="@drawable/ic_settings_alert"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+            <co.vine.android.widget.TypefacesTextView
+                android:text="@string/settings_notifications"
+                style="@style/SettingsLabel.Selectable"/>
+        </RelativeLayout>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.Settings"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:id="@+id/tell_us_what_you_like"
+            android:text="@string/tell_us_what_you_like_settings"
+            style="@style/SettingsLabel.Selectable"/>
+        <co.vine.android.widget.RoundedDivider
+            android:id="@+id/tell_us_what_you_like_divider"
+            style="@style/RoundedDivider.Settings"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:text="@string/settings_people"
+            style="@style/SettingsHeader"/>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.SettingsHeader"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:id="@+id/favorite_people"
+            android:text="@string/favorite_people"
+            style="@style/SettingsLabel.Selectable"/>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.Settings"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:id="@+id/find_friends"
+            android:text="@string/find_friends"
+            style="@style/SettingsLabel.Selectable"/>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.Settings"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:id="@+id/invite_via_text"
+            android:text="@string/settings_invite_via_text"
+            style="@style/SettingsLabel.Selectable"/>
+        <co.vine.android.widget.RoundedDivider
+            android:id="@+id/invite_via_text_divider"
+            style="@style/RoundedDivider.Settings"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:id="@+id/invite_via_email"
+            android:text="@string/settings_invite_via_email"
+            style="@style/SettingsLabel.Selectable"/>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.Settings"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:text="@string/settings_social_networks"
+            style="@style/SettingsHeader"/>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.SettingsHeader"/>
+        <RelativeLayout
+            android:id="@+id/twitter_connect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/SettingsItemParent">
+            <co.vine.android.widget.TypefacesTextView
+                android:id="@+id/twitter_connect_label"
+                android:text="@string/twitter"
+                style="@style/SettingsLabel.Selectable"/>
+            <co.vine.android.widget.TypefacesTextView
+                android:id="@+id/twitter_connect_value"
+                style="@style/SettingsValue.Light"/>
+        </RelativeLayout>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.Settings"/>
+        <RelativeLayout
+            android:id="@+id/facebook_connect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/SettingsItemParent">
+            <co.vine.android.widget.TypefacesTextView
+                android:id="@+id/facebook_label"
+                android:text="@string/facebook"
+                android:layout_centerVertical="true"
+                style="@style/SettingsLabel"/>
+            <co.vine.android.widget.TypefacesTextView
+                android:id="@+id/facebook_value"
+                style="@style/SettingsValue.Light"/>
+        </RelativeLayout>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.Settings"/>
+        <RelativeLayout
+            android:id="@+id/tumblr_connect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/SettingsItemParent">
+            <co.vine.android.widget.TypefacesTextView
+                android:id="@+id/tumblr_label"
+                android:text="@string/tumblr"
+                android:layout_centerVertical="true"
+                style="@style/SettingsLabel"/>
+            <co.vine.android.widget.TypefacesTextView
+                android:id="@+id/tumblr_value"
+                style="@style/SettingsValue.Light"/>
+        </RelativeLayout>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.Settings"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:text="@string/settings_support"
+            style="@style/SettingsHeader"/>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.SettingsHeader"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:id="@+id/settings_help"
+            android:text="@string/settings_help"
+            style="@style/SettingsLabel.Selectable"/>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.Settings"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:id="@+id/vine_rules"
+            android:text="@string/vine_rules"
+            style="@style/SettingsLabel.Selectable"/>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.Settings"/>
+        <RelativeLayout
+            android:id="@+id/clear_cache"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <co.vine.android.widget.TypefacesTextView
+                android:id="@+id/clear_cache_label"
+                style="@style/SettingsLabel.Selectable"/>
+            <co.vine.android.widget.TypefacesTextView
+                android:id="@+id/clear_cache_value"
+                style="@style/SettingsValue.Light"/>
+        </RelativeLayout>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.Settings"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:id="@+id/terms_of_service"
+            android:text="@string/settings_tos"
+            style="@style/SettingsLabel.Selectable"/>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.Settings"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:id="@+id/privacy_policy"
+            android:text="@string/settings_pp"
+            style="@style/SettingsLabel.Selectable"/>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.Settings"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:id="@+id/attribution"
+            android:text="@string/settings_attribution"
+            style="@style/SettingsLabel.Selectable"/>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.Settings"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:id="@+id/locale"
+            android:visibility="gone"
+            android:text="Set custom locale"
+            style="@style/SettingsLabel.Selectable"/>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.Settings"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:id="@+id/deactivate_account"
+            android:text="@string/settings_deactivate_account"
+            style="@style/SettingsLabel.Selectable"/>
+        <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.Settings"/>
+        <Button
+            android:textSize="@dimen/font_size_xlarge"
+            android:textStyle="bold"
+            android:textColor="@color/solid_white"
+            android:id="@+id/logout"
+            android:background="@drawable/logout_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tabbar_height"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="13dp"
+            android:text="@string/logout"
+            android:stateListAnimator="@null"
+            style="@android:style/Widget.Holo.Button"/>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:id="@+id/version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/standard_spacing"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:minHeight="@dimen/spacing_large">
+            <co.vine.android.widget.TypefacesTextView
+                android:textSize="@dimen/font_size_medium"
+                android:textColor="@color/sign_in_text_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vine_caps"/>
+            <ImageView
+                android:id="@android:id/icon"
+                android:background="@drawable/roundel"
+                android:layout_width="@dimen/settings_vine_icon"
+                android:layout_height="@dimen/settings_vine_icon"
+                android:layout_marginLeft="@dimen/standard_spacing"
+                android:layout_marginRight="@dimen/standard_spacing"
+                android:scaleType="centerCrop"/>
+            <co.vine.android.widget.TypefacesTextView
+                android:textSize="@dimen/font_size_medium"
+                android:textColor="@color/sign_in_text_hint"
+                android:id="@+id/version_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

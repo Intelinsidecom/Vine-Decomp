@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vine="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:layout_gravity="top"
+        android:background="@drawable/rule_horizontal_5"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+    <co.vine.android.widget.TypefacesTextView
+        android:textSize="@dimen/font_size_large"
+        android:textColor="@color/primary_text"
+        android:gravity="center"
+        android:id="@+id/text"
+        android:background="@drawable/bg_profile_dropdown"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        vine:textWeight="4"/>
+</LinearLayout>

@@ -1,0 +1,36 @@
+{
+  "projectVersion": 2,
+  "files": [
+    "..\\Extracted Client\\Vine_5.50.1_APKPure.apk"
+  ],
+  "treeExpansionsV2": [
+    "t:JInputs//JInputFiles"
+  ],
+  "codeData": {
+    "comments": [],
+    "renames": []
+  },
+  "openTabs": [
+    {
+      "type": "class",
+      "tabPath": "co.vine.android.digits.ClientFlagsAdapter",
+      "subPath": "java",
+      "caret": 393,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": true,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    }
+  ],
+  "cacheDir": "C:\\Users\\jlaks\\AppData\\Local\\skylot\\jadx\\cache\\projects\\Vine_5.50.1_APKPure-9deafb688f9d477fbbccfd47200ff4da",
+  "enableLiveReload": false,
+  "searchHistory": [],
+  "searchResourcesFilter": "$TEXT",
+  "searchResourcesSizeLimit": 0,
+  "pluginOptions": {}
+}

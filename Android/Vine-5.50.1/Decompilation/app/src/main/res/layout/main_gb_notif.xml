@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/root_gingerbread_notif"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/logo_overlay"/>
+    <co.vine.android.widget.TypefacesTextView
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="@string/gingerbread_notif_title"
+        style="@style/ViewOnlyNotifTitle"/>
+    <co.vine.android.widget.TypefacesTextView
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="@string/gingerbread_notif_desc"
+        style="@style/ViewOnlyNotifSummary"/>
+    <co.vine.android.widget.TypefacesTextView
+        android:gravity="center"
+        android:id="@+id/gingerbread_notif_button"
+        android:text="@string/gingerbread_notif_button"
+        style="@style/ViewOnlyNotifButton"/>
+</LinearLayout>

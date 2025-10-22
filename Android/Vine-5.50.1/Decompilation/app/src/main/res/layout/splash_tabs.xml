@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/twitter_button"
+        android:background="@drawable/bg_signup_twitter"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="26dp"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:id="@+id/twitter_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/sign_up_twitter"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:id="@+id/twitter_button_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:singleLine="true"
+            android:layout_toRightOf="@+id/twitter_icon"
+            android:layout_centerVertical="true"
+            style="@style/SignupTwitterButtonText"/>
+    </RelativeLayout>
+    <co.vine.android.widget.StartButton
+        android:id="@+id/email_button"
+        android:background="@drawable/bg_signup_email"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:layout_below="@+id/twitter_button"
+        android:layout_centerHorizontal="true"
+        style="@style/SignUpEmailButton"/>
+</RelativeLayout>

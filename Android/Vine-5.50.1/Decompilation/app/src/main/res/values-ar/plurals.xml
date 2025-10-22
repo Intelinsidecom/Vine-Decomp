@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="new_messages">
+        <item quantity="other">%1$s رسائل جديدة</item>
+        <item quantity="one">%1$s رسالة جديدة</item>
+    </plurals>
+    <plurals name="profile_followers">
+        <item quantity="other">&quot;%1$s&quot; متابِعون</item>
+        <item quantity="one">&quot;%1$s&quot; متابِع</item>
+    </plurals>
+    <plurals name="profile_following">
+        <item quantity="other">&quot;%1$s&quot; متابَعون</item>
+        <item quantity="one">&quot;%1$s&quot; مُتابَعون</item>
+    </plurals>
+    <plurals name="profile_likes">
+        <item quantity="other">&quot;%1$s&quot; إعجابات</item>
+        <item quantity="one">&quot;%1$s&quot; إعجاب</item>
+    </plurals>
+    <plurals name="profile_loops">
+        <item quantity="other">%1$s تكرارات</item>
+        <item quantity="one">%1$s تكرار</item>
+    </plurals>
+    <plurals name="profile_posts">
+        <item quantity="other">&quot;%1$s&quot; منشورات</item>
+        <item quantity="one">&quot;%1$s&quot; منشور</item>
+    </plurals>
+    <plurals name="revine_count">
+        <item quantity="other">%1$s إعادة نشر</item>
+        <item quantity="one">%1$s إعادة نشر</item>
+    </plurals>
+    <plurals name="tag_post_count">
+        <item quantity="other">%1$s منشورات</item>
+        <item quantity="one">%1$s منشور</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="other">%dي</item>
+        <item quantity="one">1ي</item>
+    </plurals>
+    <plurals name="time_days_verbose">
+        <item quantity="other">%d أيام</item>
+        <item quantity="one">يوم واحد</item>
+    </plurals>
+    <plurals name="time_days_verbose_ago">
+        <item quantity="other">منذ %d يوم</item>
+        <item quantity="one">منذ يوم واحد</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="other">%dس</item>
+        <item quantity="one">1س</item>
+    </plurals>
+    <plurals name="time_hours_verbose">
+        <item quantity="other">%d ساعات</item>
+        <item quantity="one">ساعة واحدة</item>
+    </plurals>
+    <plurals name="time_hours_verbose_ago">
+        <item quantity="other">مُنذ %d ساعة</item>
+        <item quantity="one">منذ ساعة واحدة</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="other">%dد</item>
+        <item quantity="one">1د</item>
+    </plurals>
+    <plurals name="time_mins_verbose">
+        <item quantity="other">%d دقائق</item>
+        <item quantity="one">دقيقة واحدة</item>
+    </plurals>
+    <plurals name="time_mins_verbose_ago">
+        <item quantity="other">منذ %d دقيقة</item>
+        <item quantity="one">منذ دقيقة واحدة</item>
+    </plurals>
+    <plurals name="time_months_verbose_ago">
+        <item quantity="other">منذ %d شهور</item>
+        <item quantity="one">منذ شهر</item>
+    </plurals>
+    <plurals name="time_secs">
+        <item quantity="other">%dث</item>
+        <item quantity="one">1ث</item>
+    </plurals>
+    <plurals name="time_secs_verbose">
+        <item quantity="other">%d ثوان</item>
+        <item quantity="one">ثانية واحدة</item>
+    </plurals>
+    <plurals name="time_secs_verbose_ago">
+        <item quantity="other">منذ %d ثوانٍ</item>
+        <item quantity="one">منذ ثانية واحدة</item>
+    </plurals>
+    <plurals name="time_weeks_verbose_ago">
+        <item quantity="other">منذ %d أسبوع</item>
+        <item quantity="one">منذ أسبوع</item>
+    </plurals>
+    <plurals name="time_years_verbose_ago">
+        <item quantity="other">منذ %d سنوات</item>
+        <item quantity="one">منذ سنة</item>
+    </plurals>
+    <plurals name="timeline_compact_comments">
+        <item quantity="other">%1$s تعليقات</item>
+        <item quantity="one">%1$s تعليق</item>
+    </plurals>
+    <plurals name="timeline_compact_likes">
+        <item quantity="other">%1$s إعجابات</item>
+        <item quantity="one">%1$s إعجاب</item>
+    </plurals>
+    <plurals name="timeline_likes">
+        <item quantity="other">&quot;%1$s أشخاص&quot; معجبون بهذا</item>
+        <item quantity="one">&quot;%1$s&quot; معجبون بهذا</item>
+    </plurals>
+</resources>

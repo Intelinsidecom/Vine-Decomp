@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/bg_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/suggestions_header"
+        layout="@layout/suggestions_header"/>
+    <com.twitter.android.widget.RefreshableListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="0dp"
+        android:layout_below="@+id/suggestions_header"
+        style="@style/List.Refreshable"/>
+    <RelativeLayout
+        android:id="@android:id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/suggestions_header">
+        <co.vine.android.views.SdkProgressBar
+            android:id="@+id/list_empty_progress"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/standard_spacing"
+            android:layout_marginBottom="@dimen/standard_spacing"
+            android:indeterminate="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            style="?android:attr/progressBarStyleSmall"/>
+    </RelativeLayout>
+</RelativeLayout>

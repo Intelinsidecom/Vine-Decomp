@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<account-authenticator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:label="@string/app_name"
+    android:icon="@drawable/ic_vine_account"
+    android:accountType="co.vine.android.auth"
+    android:smallIcon="@drawable/ic_vine_account_small"/>

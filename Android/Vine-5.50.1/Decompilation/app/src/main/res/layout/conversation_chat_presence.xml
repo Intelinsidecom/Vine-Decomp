@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:background="@color/solid_white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:layout_gravity="center"
+        android:id="@+id/container"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="7dp">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/ellipsis"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/vm_ellipses"/>
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vine="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_search_tab"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="1">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="top"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_search_tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_large">
+        <ImageView
+            android:id="@+id/tab_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:textSize="@dimen/font_size_small"
+            android:textColor="@drawable/search_tab_text"
+            android:id="@+id/tab_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            vine:textWeight="3"/>
+    </LinearLayout>
+    <View
+        android:layout_gravity="bottom"
+        android:background="@color/btn_tab_default_fill"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+</FrameLayout>

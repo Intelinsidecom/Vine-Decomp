@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vine="http://schemas.android.com/apk/res-auto">
+    <co.vine.android.widget.TypefacesTextView
+        android:textSize="14sp"
+        android:textColor="@color/black_thirty_five_percent"
+        android:gravity="center"
+        android:id="@+id/text"
+        android:background="@color/black_five_percent"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        vine:textWeight="3"
+        vine:textStyle="0"/>
+    <View
+        android:background="@color/solid_white"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"/>
+</merge>

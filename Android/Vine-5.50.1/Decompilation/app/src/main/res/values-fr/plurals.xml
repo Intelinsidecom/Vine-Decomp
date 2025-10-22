@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="new_messages">
+        <item quantity="other">%1$s nouveaux messages</item>
+        <item quantity="one">%1$s nouveau message</item>
+    </plurals>
+    <plurals name="profile_followers">
+        <item quantity="other">&quot;%1$s&quot; Abonnés</item>
+        <item quantity="one">&quot;%1$s&quot; Abonné</item>
+    </plurals>
+    <plurals name="profile_following">
+        <item quantity="other">&quot;%1$s&quot; Abonnements</item>
+        <item quantity="one">&quot;%1$s&quot; Abonnement</item>
+    </plurals>
+    <plurals name="profile_likes">
+        <item quantity="other">&quot;%1$s&quot; J&apos;aime</item>
+        <item quantity="one">&quot;%1$s&quot; J&apos;aime</item>
+    </plurals>
+    <plurals name="profile_loops">
+        <item quantity="other">%1$s Boucles</item>
+        <item quantity="one">%1$s Boucle</item>
+    </plurals>
+    <plurals name="profile_posts">
+        <item quantity="other">&quot;%1$s&quot; Publications</item>
+        <item quantity="one">&quot;%1$s&quot; Publication</item>
+    </plurals>
+    <plurals name="revine_count">
+        <item quantity="other">%1$s revines</item>
+        <item quantity="one">%1$s revine</item>
+    </plurals>
+    <plurals name="tag_post_count">
+        <item quantity="other">%1$s publications</item>
+        <item quantity="one">%1$s publication</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="other">%dj</item>
+        <item quantity="one">1j</item>
+    </plurals>
+    <plurals name="time_days_verbose">
+        <item quantity="other">%d jours</item>
+        <item quantity="one">1 jour</item>
+    </plurals>
+    <plurals name="time_days_verbose_ago">
+        <item quantity="other">il y a %d jours</item>
+        <item quantity="one">il y a 1 jour</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="other">%dh</item>
+        <item quantity="one">1h</item>
+    </plurals>
+    <plurals name="time_hours_verbose">
+        <item quantity="other">%d heures</item>
+        <item quantity="one">1 heure</item>
+    </plurals>
+    <plurals name="time_hours_verbose_ago">
+        <item quantity="other">il y a %d heures</item>
+        <item quantity="one">Il y a 1 heure</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="other">%dm</item>
+        <item quantity="one">1m</item>
+    </plurals>
+    <plurals name="time_mins_verbose">
+        <item quantity="other">%d minutes</item>
+        <item quantity="one">1 minute</item>
+    </plurals>
+    <plurals name="time_mins_verbose_ago">
+        <item quantity="other">il y a %d minutes</item>
+        <item quantity="one">il y a 1 minute</item>
+    </plurals>
+    <plurals name="time_months_verbose_ago">
+        <item quantity="other">il y a %d mois</item>
+        <item quantity="one">il y a 1 mois</item>
+    </plurals>
+    <plurals name="time_secs">
+        <item quantity="other">%ds</item>
+        <item quantity="one">1s</item>
+    </plurals>
+    <plurals name="time_secs_verbose">
+        <item quantity="other">%d secondes</item>
+        <item quantity="one">1 seconde</item>
+    </plurals>
+    <plurals name="time_secs_verbose_ago">
+        <item quantity="other">il y a %d secondes</item>
+        <item quantity="one">il y a 1 seconde</item>
+    </plurals>
+    <plurals name="time_weeks_verbose_ago">
+        <item quantity="other">il y a %d semaines</item>
+        <item quantity="one">il y a 1 semaine</item>
+    </plurals>
+    <plurals name="time_years_verbose_ago">
+        <item quantity="other">il y a %d ans</item>
+        <item quantity="one">il y a 1 an</item>
+    </plurals>
+    <plurals name="timeline_compact_comments">
+        <item quantity="other">%1$s commentaires</item>
+        <item quantity="one">%1$s commentaire</item>
+    </plurals>
+    <plurals name="timeline_compact_likes">
+        <item quantity="other">%1$s j&apos;aime</item>
+        <item quantity="one">%1$s j&apos;aime</item>
+    </plurals>
+    <plurals name="timeline_likes">
+        <item quantity="other">&quot;%1$s personnes&quot; aiment ça</item>
+        <item quantity="one">&quot;%1$s&quot; aiment ça</item>
+    </plurals>
+</resources>

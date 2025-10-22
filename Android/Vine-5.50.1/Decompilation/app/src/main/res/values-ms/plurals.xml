@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="new_messages">
+        <item quantity="other">%1$s mesej baharu</item>
+        <item quantity="one">%1$s mesej baharu</item>
+    </plurals>
+    <plurals name="profile_followers">
+        <item quantity="other">&quot;%1$s&quot; Pengikut</item>
+        <item quantity="one">&quot;%1$s&quot; Pengikut</item>
+    </plurals>
+    <plurals name="profile_following">
+        <item quantity="other">&quot;%1$s&quot; Mengikuti</item>
+        <item quantity="one">&quot;%1$s&quot; Mengikuti</item>
+    </plurals>
+    <plurals name="profile_likes">
+        <item quantity="other">&quot;%1$s&quot; Suka</item>
+        <item quantity="one">&quot;%1$s&quot; Suka</item>
+    </plurals>
+    <plurals name="profile_loops">
+        <item quantity="other">%1$s Ulang main</item>
+        <item quantity="one">%1$s Ulang main</item>
+    </plurals>
+    <plurals name="profile_posts">
+        <item quantity="other">&quot;%1$s&quot; Kiriman</item>
+        <item quantity="one">&quot;%1$s&quot; Kiriman</item>
+    </plurals>
+    <plurals name="revine_count">
+        <item quantity="other">%1$s vine semula</item>
+        <item quantity="one">%1$s vine semula</item>
+    </plurals>
+    <plurals name="tag_post_count">
+        <item quantity="other">%1$s kiriman</item>
+        <item quantity="one">%1$s kiriman</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="other">%d hari</item>
+        <item quantity="one">1 hari</item>
+    </plurals>
+    <plurals name="time_days_verbose">
+        <item quantity="other">%d hari</item>
+        <item quantity="one">1 hari</item>
+    </plurals>
+    <plurals name="time_days_verbose_ago">
+        <item quantity="other">%d hari yang lalu</item>
+        <item quantity="one">1 hari yang lalu</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="other">%d jam</item>
+        <item quantity="one">1 jam</item>
+    </plurals>
+    <plurals name="time_hours_verbose">
+        <item quantity="other">%d jam</item>
+        <item quantity="one">1 jam</item>
+    </plurals>
+    <plurals name="time_hours_verbose_ago">
+        <item quantity="other">%d jam yang lalu</item>
+        <item quantity="one">1 jam yang lalu</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="other">%d minit</item>
+        <item quantity="one">1 minit</item>
+    </plurals>
+    <plurals name="time_mins_verbose">
+        <item quantity="other">%d minit</item>
+        <item quantity="one">1 minit</item>
+    </plurals>
+    <plurals name="time_mins_verbose_ago">
+        <item quantity="other">%d minit yang lalu</item>
+        <item quantity="one">1 minit yang lalu</item>
+    </plurals>
+    <plurals name="time_months_verbose_ago">
+        <item quantity="other">%d bulan yang lalu</item>
+        <item quantity="one">1 bulan yang lalu</item>
+    </plurals>
+    <plurals name="time_secs">
+        <item quantity="other">%d saat</item>
+        <item quantity="one">1 saat</item>
+    </plurals>
+    <plurals name="time_secs_verbose">
+        <item quantity="other">%d saat</item>
+        <item quantity="one">1 saat</item>
+    </plurals>
+    <plurals name="time_secs_verbose_ago">
+        <item quantity="other">%d saat yang lalu</item>
+        <item quantity="one">1 saat yang lalu</item>
+    </plurals>
+    <plurals name="time_weeks_verbose_ago">
+        <item quantity="other">%d minggu yang lalu</item>
+        <item quantity="one">1 minggu yang lalu</item>
+    </plurals>
+    <plurals name="time_years_verbose_ago">
+        <item quantity="other">%d tahun yang lalu</item>
+        <item quantity="one">1 tahun yang lalu</item>
+    </plurals>
+    <plurals name="timeline_compact_comments">
+        <item quantity="other">%1$s komen</item>
+        <item quantity="one">%1$s komen</item>
+    </plurals>
+    <plurals name="timeline_compact_likes">
+        <item quantity="other">%1$s suka</item>
+        <item quantity="one">%1$s suka</item>
+    </plurals>
+    <plurals name="timeline_likes">
+        <item quantity="other">&quot;%1$s people&quot; menyukai ini</item>
+        <item quantity="one">&quot;%1$s&quot; menyukai ini</item>
+    </plurals>
+</resources>

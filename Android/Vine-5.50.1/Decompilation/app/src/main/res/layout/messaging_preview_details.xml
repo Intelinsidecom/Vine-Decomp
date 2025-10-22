@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vine="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/messaging_details_container"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp"/>
+    <co.vine.android.widget.TypefacesEditText
+        android:textSize="14sp"
+        android:textColor="@color/white_eighty_percent"
+        android:textColorHint="@color/white_fifty_percent"
+        android:id="@+id/messaging_preview_caption"
+        android:background="@android:color/transparent"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/share_caption_text"
+        android:singleLine="true"
+        android:imeOptions="actionDone"
+        android:textCursorDrawable="@drawable/cursor_drawable"
+        vine:textWeight="3"
+        vine:textStyle="0"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp"/>
+</LinearLayout>

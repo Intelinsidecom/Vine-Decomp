@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vine="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/root_layout"
+    android:background="@drawable/bg_transparent_clickable"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/spacing_large">
+    <TextView
+        android:id="@+id/header_label"
+        android:background="@drawable/bg_black_five_percent"
+        android:paddingLeft="11dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="7dp"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/search_header_height"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginLeft="11dp"
+            android:src="@drawable/ic_smallsearch"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:textSize="@dimen/font_size_large"
+            android:gravity="center"
+            android:id="@+id/query"
+            android:paddingLeft="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_toRightOf="@+id/icon"
+            android:layout_centerVertical="true"
+            vine:textWeight="3"/>
+    </RelativeLayout>
+</LinearLayout>

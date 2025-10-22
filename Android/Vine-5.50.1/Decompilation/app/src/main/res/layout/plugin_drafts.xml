@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/CameraFeatureLayout">
+    <co.vine.android.widget.TypefacesTextView
+        android:textSize="12sp"
+        android:textColor="@color/solid_white"
+        android:id="@+id/drafts_button"
+        android:background="@drawable/ic_drafts"
+        android:paddingLeft="12dp"
+        android:paddingTop="8dp"
+        android:layout_width="@dimen/record_options_button_size"
+        android:layout_height="@dimen/record_options_button_size"
+        style="@style/DraftNumber"/>
+    <co.vine.android.views.SdkProgressBar
+        android:id="@+id/upgrade_spinner"
+        android:background="@drawable/ic_drafts"
+        android:paddingLeft="12dp"
+        android:paddingTop="8dp"
+        android:visibility="gone"
+        android:layout_width="@dimen/record_options_button_size"
+        android:layout_height="@dimen/record_options_button_size"
+        style="@android:style/Widget.ProgressBar.Small"/>
+</RelativeLayout>

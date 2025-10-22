@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v4.view.ViewPager
+        android:gravity="center"
+        android:layout_gravity="top|center_horizontal"
+        android:id="@+id/drafts_pager"
+        android:layout_width="wrap_content"
+        android:layout_height="330dp"
+        android:layout_marginTop="72dp"/>
+    <co.vine.android.widget.DotIndicators
+        android:id="@+id/dots"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/draft_dots_height"
+        android:layout_marginTop="7dp"
+        android:layout_below="@+id/drafts_pager"/>
+</RelativeLayout>

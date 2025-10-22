@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    android:background="#ffffffff"
+    android:paddingLeft="@dimen/share_comment_spacing"
+    android:paddingRight="@dimen/share_comment_spacing"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0">
+    <co.vine.android.widget.ListenableEditText
+        android:textColor="@android:color/black"
+        android:gravity="top"
+        android:id="@+id/message_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="@string/add_a_comment_detailed"
+        android:maxLines="3"
+        android:lineSpacingMultiplier="1.2"
+        android:inputType="textMultiLine"
+        android:textCursorDrawable="@drawable/cursor_drawable_dark"
+        style="@style/ShareItem.Text"/>
+</LinearLayout>

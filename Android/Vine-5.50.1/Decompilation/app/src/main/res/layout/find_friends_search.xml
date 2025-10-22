@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/btn_friends_search"
+        android:background="@drawable/btn_search_cta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_small"
+        style="@style/Button.FindFriends"/>
+    <Button
+        android:id="@+id/btn_friends_txt"
+        android:background="@drawable/btn_search_cta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_small"
+        android:layout_below="@+id/btn_friends_search"
+        style="@style/Button.FindFriends"/>
+    <Button
+        android:id="@+id/btn_friends_email"
+        android:background="@drawable/btn_search_cta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_small"
+        android:layout_below="@+id/btn_friends_txt"
+        style="@style/Button.FindFriends"/>
+</RelativeLayout>

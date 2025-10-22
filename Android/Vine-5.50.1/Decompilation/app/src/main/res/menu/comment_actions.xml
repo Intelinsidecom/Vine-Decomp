@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vine="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/ic_action_reply"
+        android:id="@+id/action_reply"
+        android:title="@string/reply"
+        vine:showAsAction="always"/>
+    <item
+        android:icon="@drawable/ic_action_error"
+        android:id="@+id/comment_action_spam"
+        android:title="@string/delete"
+        vine:showAsAction="always"/>
+    <item
+        android:icon="@drawable/ic_trash_comment"
+        android:id="@+id/comment_action_delete"
+        android:title="@string/delete"
+        vine:showAsAction="always"/>
+</menu>

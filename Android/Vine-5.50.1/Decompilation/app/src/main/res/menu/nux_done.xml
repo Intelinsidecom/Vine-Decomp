@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vine="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/ic_action_search"
+        android:id="@+id/search"
+        android:visible="false"
+        android:title="@string/search"
+        vine:showAsAction="always"/>
+    <item
+        android:id="@+id/done"
+        android:title="@string/done_caps"
+        vine:showAsAction="always"/>
+</menu>

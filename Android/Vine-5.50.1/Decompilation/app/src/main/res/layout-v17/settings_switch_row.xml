@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="66dp">
+    <co.vine.android.views.SwitchImple
+        android:id="@+id/switcher"
+        android:layout_marginRight="13dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        style="@style/VineSwitch"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_toLeftOf="@+id/switcher"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="13dp"
+        android:layout_toStartOf="@+id/switcher"
+        android:layout_alignParentStart="true">
+        <co.vine.android.widget.TypefacesTextView
+            android:id="@+id/label"
+            android:text="Title"
+            style="@style/SubSettingControlLabel"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:textSize="@dimen/font_size_small"
+            android:textColor="#ff333333"
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:layout_below="@+id/label"
+            android:lineSpacingExtra="1sp"/>
+    </RelativeLayout>
+</RelativeLayout>

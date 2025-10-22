@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include layout="@layout/feed_row_home_info_header"/>
+    <include layout="@layout/feed_row_home_video"/>
+    <View
+        android:background="@color/solid_white"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"/>
+    <include layout="@layout/feed_row_description"/>
+    <include layout="@layout/feed_row_actions"/>
+    <View
+        android:background="@color/solid_white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/post_bottom_spacer_discover"/>
+</LinearLayout>

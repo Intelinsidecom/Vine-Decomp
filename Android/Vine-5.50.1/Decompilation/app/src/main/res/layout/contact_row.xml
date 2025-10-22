@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vine="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/indicator_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+        <ImageView
+            android:id="@+id/phone_indicator"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_phone"/>
+        <ImageView
+            android:id="@+id/email_indicator"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_mail"/>
+    </LinearLayout>
+    <co.vine.android.widget.TypefacesTextView
+        android:textSize="14sp"
+        android:textColor="@color/solid_black"
+        android:ellipsize="end"
+        android:id="@+id/contact_name"
+        android:paddingRight="@dimen/spacing_small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:lines="1"
+        android:layout_alignLeft="@+id/indicator_container"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        vine:textWeight="3"
+        vine:textStyle="0"/>
+</merge>

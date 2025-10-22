@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="new_messages">
+        <item quantity="other">%1$s件の新しいメッセージ</item>
+        <item quantity="one">%1$s件の新しいメッセージ</item>
+    </plurals>
+    <plurals name="profile_followers">
+        <item quantity="other">&quot;%1$s&quot; フォロワー</item>
+        <item quantity="one">&quot;%1$s&quot; フォロワー</item>
+    </plurals>
+    <plurals name="profile_following">
+        <item quantity="other">&quot;%1$s&quot; フォロー</item>
+        <item quantity="one">&quot;%1$s&quot;人がフォロー</item>
+    </plurals>
+    <plurals name="profile_likes">
+        <item quantity="other">&quot;%1$s&quot; いいね</item>
+        <item quantity="one">&quot;%1$s&quot; いいね</item>
+    </plurals>
+    <plurals name="profile_loops">
+        <item quantity="other">%1$sループ</item>
+        <item quantity="one">%1$sループ</item>
+    </plurals>
+    <plurals name="profile_posts">
+        <item quantity="other">&quot;%1$s&quot; 件の投稿</item>
+        <item quantity="one">&quot;%1$s&quot; 件の投稿</item>
+    </plurals>
+    <plurals name="revine_count">
+        <item quantity="other">%1$s件のReVine</item>
+        <item quantity="one">%1$s件のReVine</item>
+    </plurals>
+    <plurals name="tag_post_count">
+        <item quantity="other">%1$s件の投稿</item>
+        <item quantity="one">%1$s件の投稿</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="other">%d日</item>
+        <item quantity="one">1日</item>
+    </plurals>
+    <plurals name="time_days_verbose">
+        <item quantity="other">%d日</item>
+        <item quantity="one">1日</item>
+    </plurals>
+    <plurals name="time_days_verbose_ago">
+        <item quantity="other">%d日前</item>
+        <item quantity="one">1日前</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="other">%d時間</item>
+        <item quantity="one">1時間</item>
+    </plurals>
+    <plurals name="time_hours_verbose">
+        <item quantity="other">%d時間</item>
+        <item quantity="one">1時間</item>
+    </plurals>
+    <plurals name="time_hours_verbose_ago">
+        <item quantity="other">%d時間前</item>
+        <item quantity="one">1時間前</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="other">%d分</item>
+        <item quantity="one">1分</item>
+    </plurals>
+    <plurals name="time_mins_verbose">
+        <item quantity="other">%d分</item>
+        <item quantity="one">1分</item>
+    </plurals>
+    <plurals name="time_mins_verbose_ago">
+        <item quantity="other">%d分前</item>
+        <item quantity="one">1分前</item>
+    </plurals>
+    <plurals name="time_months_verbose_ago">
+        <item quantity="other">%dヶ月前</item>
+        <item quantity="one">1ヶ月前</item>
+    </plurals>
+    <plurals name="time_secs">
+        <item quantity="other">%d秒</item>
+        <item quantity="one">1秒</item>
+    </plurals>
+    <plurals name="time_secs_verbose">
+        <item quantity="other">%d秒</item>
+        <item quantity="one">1秒</item>
+    </plurals>
+    <plurals name="time_secs_verbose_ago">
+        <item quantity="other">%d秒前</item>
+        <item quantity="one">1秒前</item>
+    </plurals>
+    <plurals name="time_weeks_verbose_ago">
+        <item quantity="other">%d週間前</item>
+        <item quantity="one">1週間前</item>
+    </plurals>
+    <plurals name="time_years_verbose_ago">
+        <item quantity="other">%d年前</item>
+        <item quantity="one">1年前</item>
+    </plurals>
+    <plurals name="timeline_compact_comments">
+        <item quantity="other">%1$s件のコメント</item>
+        <item quantity="one">%1$s件のコメント</item>
+    </plurals>
+    <plurals name="timeline_compact_likes">
+        <item quantity="other">%1$s件のいいね</item>
+        <item quantity="one">%1$s件のいいね</item>
+    </plurals>
+    <plurals name="timeline_likes">
+        <item quantity="other">%1$s人がいいねしました</item>
+        <item quantity="one">%1$sさんがいいねしました</item>
+    </plurals>
+</resources>

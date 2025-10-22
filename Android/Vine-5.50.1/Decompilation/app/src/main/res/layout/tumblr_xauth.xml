@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <co.vine.android.widget.TypefacesEditText
+        android:id="@+id/username"
+        android:layout_marginBottom="11dp"
+        android:hint="@string/login_username"
+        android:inputType="textEmailAddress"
+        android:imeOptions="actionNext"
+        style="@style/EditText.SignIn.Twitter"/>
+    <co.vine.android.widget.TypefacesEditText
+        android:id="@+id/password"
+        android:layout_marginBottom="20dp"
+        android:hint="@string/login_password"
+        android:layout_below="@+id/login_username"
+        android:inputType="textPassword"
+        style="@style/EditText.SignIn.Twitter"/>
+</LinearLayout>

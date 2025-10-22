@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="new_messages">
+        <item quantity="other">%1$s پیام جدید</item>
+        <item quantity="one">%1$s پیام جدید</item>
+    </plurals>
+    <plurals name="profile_followers">
+        <item quantity="other">&quot;%1$s&quot; دنبال کننده</item>
+        <item quantity="one">&quot;%1$s&quot; دنبال کننده</item>
+    </plurals>
+    <plurals name="profile_following">
+        <item quantity="other">&quot;%1$s&quot; را دنبال می کنید</item>
+        <item quantity="one">&quot;%1$s&quot; را دنبال می کنید</item>
+    </plurals>
+    <plurals name="profile_likes">
+        <item quantity="other">&quot;%1$s&quot; پسندیدن</item>
+        <item quantity="one">&quot;%1$s&quot; پسندیدن</item>
+    </plurals>
+    <plurals name="profile_loops">
+        <item quantity="other">%1$s حلقه</item>
+        <item quantity="one">%1$s حلقه</item>
+    </plurals>
+    <plurals name="profile_posts">
+        <item quantity="other">&quot;%1$s&quot; پست‌</item>
+        <item quantity="one">&quot;%1$s&quot; پست</item>
+    </plurals>
+    <plurals name="revine_count">
+        <item quantity="other">%1$s revine</item>
+        <item quantity="one">%1$s revine</item>
+    </plurals>
+    <plurals name="tag_post_count">
+        <item quantity="other">%1$s پست</item>
+        <item quantity="one">%1$s پست</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="other">%dروز</item>
+        <item quantity="one">۱روز</item>
+    </plurals>
+    <plurals name="time_days_verbose">
+        <item quantity="other">%d روز</item>
+        <item quantity="one">۱ روز</item>
+    </plurals>
+    <plurals name="time_days_verbose_ago">
+        <item quantity="other">%d روز قبل</item>
+        <item quantity="one">1 روز قبل</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="other">%dساعت</item>
+        <item quantity="one">۱ساعت</item>
+    </plurals>
+    <plurals name="time_hours_verbose">
+        <item quantity="other">%d ساعت</item>
+        <item quantity="one">1 ساعت</item>
+    </plurals>
+    <plurals name="time_hours_verbose_ago">
+        <item quantity="other">%d ساعت قبل</item>
+        <item quantity="one">1 ساعت قبل</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="other">%dدقیقه</item>
+        <item quantity="one">۱دقیقه</item>
+    </plurals>
+    <plurals name="time_mins_verbose">
+        <item quantity="other">%d دقیقه</item>
+        <item quantity="one">۱ دقیقه</item>
+    </plurals>
+    <plurals name="time_mins_verbose_ago">
+        <item quantity="other">%d دقیقه قبل</item>
+        <item quantity="one">1 دقیقه قبل</item>
+    </plurals>
+    <plurals name="time_months_verbose_ago">
+        <item quantity="other">%d ماه قبل</item>
+        <item quantity="one">1 ماه قبل</item>
+    </plurals>
+    <plurals name="time_secs">
+        <item quantity="other">%dثانیه</item>
+        <item quantity="one">۱ثانیه</item>
+    </plurals>
+    <plurals name="time_secs_verbose">
+        <item quantity="other">%d ثانیه</item>
+        <item quantity="one">ا ثانیه</item>
+    </plurals>
+    <plurals name="time_secs_verbose_ago">
+        <item quantity="other">%d ثانیه قبل</item>
+        <item quantity="one">1 ثانیه قبل</item>
+    </plurals>
+    <plurals name="time_weeks_verbose_ago">
+        <item quantity="other">%d هفته قبل</item>
+        <item quantity="one">1 هفته قبل</item>
+    </plurals>
+    <plurals name="time_years_verbose_ago">
+        <item quantity="other">%d سال قبل</item>
+        <item quantity="one">1 سال قبل</item>
+    </plurals>
+    <plurals name="timeline_compact_comments">
+        <item quantity="other">%1$s نظر</item>
+        <item quantity="one">%1$s نظر</item>
+    </plurals>
+    <plurals name="timeline_compact_likes">
+        <item quantity="other">%1$s پسندید</item>
+        <item quantity="one">%1$s پسندیدن</item>
+    </plurals>
+    <plurals name="timeline_likes">
+        <item quantity="other">&quot;%1$s نفر&quot; این را پسندیدند</item>
+        <item quantity="one">&quot;%1$s&quot; این را پسندید</item>
+    </plurals>
+</resources>

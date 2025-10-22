@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vine="http://schemas.android.com/apk/res-auto">
+    <co.vine.android.widget.TypefacesTextView
+        android:textSize="14sp"
+        android:textColor="@color/black_thirty_five_percent"
+        android:background="@android:color/transparent"
+        android:paddingRight="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="14dp"
+        android:text="@string/to"
+        vine:textWeight="2"
+        vine:textStyle="0"/>
+    <co.vine.android.views.FlowLayout
+        android:layout_gravity="center_vertical"
+        android:id="@+id/selected_recipients"
+        android:background="@color/solid_white"
+        android:paddingTop="2dp"
+        android:paddingRight="6dp"
+        android:paddingBottom="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <co.vine.android.widget.VMRecipientsEditText
+            android:textSize="14sp"
+            android:textColor="@color/soft_black"
+            android:gravity="center_vertical"
+            android:id="@+id/query"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:hint=" "
+            android:inputType="textNoSuggestions"
+            android:imeOptions="actionSearch"
+            vine:textWeight="3"/>
+    </co.vine.android.views.FlowLayout>
+</merge>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textColor="@color/solid_black"
+    android:id="@+id/tooltip_overlay"
+    android:background="@drawable/vm_onboarding_bubble_top"
+    android:paddingLeft="@dimen/spacing_small"
+    android:paddingTop="@dimen/spacing_small"
+    android:paddingRight="@dimen/spacing_small"
+    android:paddingBottom="9dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"/>

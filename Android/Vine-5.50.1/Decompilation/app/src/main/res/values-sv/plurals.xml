@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="new_messages">
+        <item quantity="other">%1$s nya meddelanden</item>
+        <item quantity="one">%1$s nytt meddelande</item>
+    </plurals>
+    <plurals name="profile_followers">
+        <item quantity="other">&quot;%1$s&quot; Följare</item>
+        <item quantity="one">&quot;%1$s&quot; Följare</item>
+    </plurals>
+    <plurals name="profile_following">
+        <item quantity="other">&quot;%1$s&quot; Följer</item>
+        <item quantity="one">&quot;%1$s&quot; Följer</item>
+    </plurals>
+    <plurals name="profile_likes">
+        <item quantity="other">&quot;%1$s&quot; Likes</item>
+        <item quantity="one">&quot;%1$s&quot; Like</item>
+    </plurals>
+    <plurals name="profile_loops">
+        <item quantity="other">%1$s slingor</item>
+        <item quantity="one">%1$s slinga</item>
+    </plurals>
+    <plurals name="profile_posts">
+        <item quantity="other">&quot;%1$s&quot; Inlägg</item>
+        <item quantity="one">&quot;%1$s&quot; Inlägg</item>
+    </plurals>
+    <plurals name="revine_count">
+        <item quantity="other">%1$s revines</item>
+        <item quantity="one">%1$s revine</item>
+    </plurals>
+    <plurals name="tag_post_count">
+        <item quantity="other">%1$s inlägg</item>
+        <item quantity="one">%1$s inlägg</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="other">%dd</item>
+        <item quantity="one">1d</item>
+    </plurals>
+    <plurals name="time_days_verbose">
+        <item quantity="other">%d dagar</item>
+        <item quantity="one">1 dag</item>
+    </plurals>
+    <plurals name="time_days_verbose_ago">
+        <item quantity="other">%d dagar sen</item>
+        <item quantity="one">1 dag sen</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="other">%dt</item>
+        <item quantity="one">1t</item>
+    </plurals>
+    <plurals name="time_hours_verbose">
+        <item quantity="other">%d timmar</item>
+        <item quantity="one">En timme</item>
+    </plurals>
+    <plurals name="time_hours_verbose_ago">
+        <item quantity="other">%d timmar sen</item>
+        <item quantity="one">1 timme sen</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="other">%dm</item>
+        <item quantity="one">1m</item>
+    </plurals>
+    <plurals name="time_mins_verbose">
+        <item quantity="other">%d minuter</item>
+        <item quantity="one">1 minut</item>
+    </plurals>
+    <plurals name="time_mins_verbose_ago">
+        <item quantity="other">%d minuter sen</item>
+        <item quantity="one">1 minut sen</item>
+    </plurals>
+    <plurals name="time_months_verbose_ago">
+        <item quantity="other">%d månader sen</item>
+        <item quantity="one">1 månad sen</item>
+    </plurals>
+    <plurals name="time_secs">
+        <item quantity="other">%ds</item>
+        <item quantity="one">1s</item>
+    </plurals>
+    <plurals name="time_secs_verbose">
+        <item quantity="other">%d sekunder</item>
+        <item quantity="one">1 sekund</item>
+    </plurals>
+    <plurals name="time_secs_verbose_ago">
+        <item quantity="other">%d sekunder sen</item>
+        <item quantity="one">1 sekund sen</item>
+    </plurals>
+    <plurals name="time_weeks_verbose_ago">
+        <item quantity="other">%d veckor sen</item>
+        <item quantity="one">1 vecka sen</item>
+    </plurals>
+    <plurals name="time_years_verbose_ago">
+        <item quantity="other">%d år sen</item>
+        <item quantity="one">1 år sen</item>
+    </plurals>
+    <plurals name="timeline_compact_comments">
+        <item quantity="other">%1$s kommentarer</item>
+        <item quantity="one">%1$s kommentar</item>
+    </plurals>
+    <plurals name="timeline_compact_likes">
+        <item quantity="other">%1$s gillar</item>
+        <item quantity="one">%1$s gillar</item>
+    </plurals>
+    <plurals name="timeline_likes">
+        <item quantity="other">&quot;%1$s personer&quot; gillar detta</item>
+        <item quantity="one">&quot;%1$s&quot; gillar detta</item>
+    </plurals>
+</resources>

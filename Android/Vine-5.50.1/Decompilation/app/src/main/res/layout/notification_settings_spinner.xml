@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include
+        android:id="@+id/header"
+        android:visibility="gone"
+        layout="@layout/notification_settings_header"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/settings_row_height"
+        style="@style/SettingsItemParent">
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            style="@style/SettingsLabel"/>
+        <Spinner
+            android:id="@+id/spinner"
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/settings_row_height"
+            android:layout_marginRight="@dimen/standard_spacing"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <co.vine.android.widget.RoundedDivider style="@style/RoundedDivider.Settings"/>
+</LinearLayout>

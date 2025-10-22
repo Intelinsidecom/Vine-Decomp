@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/channel_thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+        <View
+            android:background="@drawable/explore_grid_gradient"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <View
+            android:background="@color/black_twenty_percent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+    <co.vine.android.widget.TypefacesTextView
+        android:textSize="20sp"
+        android:textColor="@color/solid_white"
+        android:layout_gravity="center"
+        android:id="@+id/channel_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

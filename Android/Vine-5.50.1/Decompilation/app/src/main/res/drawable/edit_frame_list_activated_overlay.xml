@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/stroke">
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="@dimen/editor_frame_overlay_blackout_stroke_width"
+                android:color="@android:color/black"/>
+            <solid android:color="@android:color/transparent"/>
+        </shape>
+    </item>
+    <item
+        android:id="@+id/overlay"
+        android:left="@dimen/editor_frame_overlay_offset"
+        android:top="@dimen/editor_frame_overlay_offset"
+        android:right="@dimen/editor_frame_overlay_offset"
+        android:bottom="@dimen/editor_frame_overlay_offset">
+        <nine-patch android:src="@drawable/btn_time_travel_frame_selected"/>
+    </item>
+</layer-list>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vine="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/comment_icon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginRight="8dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+    <co.vine.android.widget.TypefacesTextView
+        android:textSize="14sp"
+        android:textColor="@color/black_thirty_five_percent"
+        android:gravity="center_vertical"
+        android:id="@+id/comment_text"
+        android:background="@android:color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_toLeftOf="@+id/comment_icon"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        vine:textWeight="2"
+        vine:textStyle="0"/>
+</merge>

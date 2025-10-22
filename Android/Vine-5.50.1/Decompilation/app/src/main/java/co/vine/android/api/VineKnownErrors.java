@@ -1,0 +1,72 @@
+package co.vine.android.api;
+
+import co.vine.android.util.SparseArray;
+import com.googlecode.javacv.cpp.avcodec;
+import com.googlecode.javacv.cpp.avutil;
+import twitter4j.internal.http.HttpResponseCode;
+
+/* loaded from: classes.dex */
+public enum VineKnownErrors {
+    INVALID_ERROR_CODE(-1),
+    UNKNOWN_ERROR(0),
+    UNSUPPORTED_METHOD(1),
+    MISSING_REQUIRED_FIELD(3),
+    ACCESS_DENIED(4),
+    INVALID_ARGUMENT(5),
+    NON_INTEGER_VALUE(6),
+    REQUIRES_LOGIN(100),
+    BAD_CREDENTIALS(101),
+    EXPIRED_SESSION(102),
+    INVALID_SESSION(103),
+    FACEBOOK_NOT_AUTHORIZED(104),
+    TWITTER_NOT_AUTHORIZED(105),
+    ADDRESS_BOOK_NOT_FOUND(106),
+    FACEBOOK_FF_DISABLED(107),
+    REQUIRES_ADMIN_LOGIN(avcodec.AV_CODEC_ID_JV),
+    ACCOUNT_DEACTIVATED(187),
+    USERNAME_IN_USE(HttpResponseCode.OK),
+    USERNAME_INVALID_CHARACTERS(201),
+    USERNAME_INVALID_LENGTH(202),
+    ORPHANED_USER_ACCOUNT(203),
+    DESCRIPTION_INVALID_LENGTH(205),
+    TOO_MANY_MENTIONS(206),
+    DUPLICATE_MENTIONS(207),
+    USER_DESCRIPTION_INVALID_LENGTH(208),
+    PASSWORD_INVALID(210),
+    PHONE_INVALID(211),
+    LOCATION_INVALID_LENGTH(212),
+    EMAIL_IN_USE(220),
+    EMAIL_INVALID(221),
+    TWITTER_NAME_IN_USE(222),
+    TWITTER_WRONG_ACCOUNT(223),
+    PASSWORD_RESET_TOKEN_EXPIRED(225),
+    CANT_FOLLOW_SELF(250),
+    CANT_FLAG_SELF(251),
+    FSQUARE_VENUE_INVALID(avutil.AV_PIX_FMT_YUV420P12BE),
+    VIDEOURL_INVALID(302),
+    COMMENT_INVALID_LENGTH(avutil.AV_PIX_FMT_YUV420P14BE),
+    AVATAR_INVALID(304),
+    MESSAGE_RECIPIENT_INVALID_EMAIL_ADDRESS(333),
+    RELATIONSHIP_REQUIRES_ACTION(HttpResponseCode.BAD_REQUEST),
+    CAPTCHA(419),
+    PHONE_VERIFICATION(423),
+    NOTIFICATION_REFERENCES_SELF(HttpResponseCode.INTERNAL_SERVER_ERROR),
+    RECORD_DOES_NOT_EXIST(900),
+    NO_ARGUMENTS_PROVIDED(901),
+    VERIFY_TOKEN_EXPIRED(620),
+    VERIFY_CONTACT_MISMATCH(621),
+    VERIFY_PHONE_WRONG_USER(623),
+    VERIFY_TOKEN_NOT_FOUND(624),
+    MESSAGE_RECIPIENT_OUT_OF_NETWORK(666);
+
+    public final int code;
+
+    private static class VineKnownErrorsHolder {
+        private static final SparseArray<VineKnownErrors> sKnownErrors = new SparseArray<>();
+    }
+
+    VineKnownErrors(int code) {
+        this.code = code;
+        VineKnownErrorsHolder.sKnownErrors.put(code, this);
+    }
+}

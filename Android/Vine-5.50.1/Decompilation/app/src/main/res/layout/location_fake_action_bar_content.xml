@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vine="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/custom_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <co.vine.android.widget.TypefacesTextView
+        android:textSize="18sp"
+        android:textColor="@color/solid_white"
+        android:gravity="center_vertical"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/nearby_places"
+        vine:textWeight="3"
+        vine:textStyle="0"/>
+    <co.vine.android.widget.TypefacesEditText
+        android:textSize="18sp"
+        android:textColor="@color/solid_white"
+        android:textColorHint="@color/white_twenty_percent"
+        android:gravity="center_vertical"
+        android:id="@+id/query"
+        android:background="@android:color/transparent"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="@string/location_search"
+        android:inputType="textNoSuggestions"
+        android:imeOptions="actionSearch"
+        android:textCursorDrawable="@drawable/cursor_drawable"
+        vine:textWeight="2"
+        vine:textStyle="0"/>
+</FrameLayout>

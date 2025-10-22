@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vine="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/header_content"
+    android:background="@color/solid_white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/sadface"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="@dimen/spacing_small"
+        android:src="@drawable/vm_roundel"/>
+    <co.vine.android.widget.TypefacesTextView
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:textColor="@color/soft_black"
+        android:gravity="center"
+        android:id="@+id/sadTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/menu_list_welcome"
+        vine:textWeight="4"
+        style="@style/Byline"/>
+    <co.vine.android.widget.TypefacesTextView
+        android:textSize="@dimen/font_size_medium"
+        android:textColor="@color/black_thirty_percent"
+        android:gravity="center"
+        android:id="@+id/sadwords"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="@dimen/spacing_medium"
+        android:text="@string/empty_inbox"/>
+</LinearLayout>

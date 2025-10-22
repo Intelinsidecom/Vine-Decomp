@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:layout_marginRight="8dp">
+    <Button
+        android:textSize="14sp"
+        android:textColor="@color/solid_white"
+        android:gravity="center"
+        android:id="@+id/action"
+        android:background="@drawable/share_comment_button"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:minWidth="56dp"
+        android:text="@string/add"
+        android:layout_alignParentRight="true"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/solid_white"
+        android:id="@+id/characters_remaining"
+        android:paddingRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/action"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>

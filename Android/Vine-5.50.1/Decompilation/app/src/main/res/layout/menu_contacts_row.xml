@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vine="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/conversation_menu_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@+id/section_indicator"
+            layout="@layout/recipient_section_header"/>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:id="@+id/indicator_container"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_below="@+id/section_indicator"
+            android:layout_alignParentRight="true">
+            <ImageView
+                android:id="@+id/phone_indicator"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:src="@drawable/ic_phone"/>
+            <ImageView
+                android:id="@+id/email_indicator"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:src="@drawable/ic_mail"/>
+        </LinearLayout>
+        <co.vine.android.widget.TypefacesTextView
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:id="@+id/contact_name"
+            android:paddingRight="@dimen/spacing_small"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="@dimen/spacing_small"
+            android:lines="1"
+            android:layout_toLeftOf="@+id/indicator_container"
+            android:layout_toRightOf="@+id/user_image"
+            android:layout_below="@+id/section_indicator"
+            vine:textWeight="3"
+            style="@style/Username.ConversationMenu"/>
+    </RelativeLayout>
+    <include layout="@layout/menu_divider"/>
+</LinearLayout>

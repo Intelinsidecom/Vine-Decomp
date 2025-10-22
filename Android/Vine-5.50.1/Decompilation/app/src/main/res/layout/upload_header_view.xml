@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vine="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="40dp">
+    <co.vine.android.widget.TypefacesTextView
+        android:textSize="@dimen/font_size_small"
+        android:textColor="@color/search_hint_title"
+        android:gravity="center"
+        android:id="@+id/title"
+        android:padding="@dimen/spacing_small"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAllCaps="true"
+        vine:textWeight="3"/>
+    <View
+        android:background="@color/uploads_list_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

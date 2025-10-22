@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <co.vine.android.widget.TypefacesTextView
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:id="@+id/text_view"
+        android:background="@android:color/transparent"
+        android:paddingLeft="@dimen/share_comment_spacing"
+        android:paddingTop="5dp"
+        android:paddingRight="@dimen/share_comment_spacing"
+        android:paddingBottom="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:singleLine="true"
+        android:layout_alignParentLeft="true"
+        style="@style/ShareItem.Text"/>
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginRight="20dp"
+        android:scaleType="fitXY"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+</merge>

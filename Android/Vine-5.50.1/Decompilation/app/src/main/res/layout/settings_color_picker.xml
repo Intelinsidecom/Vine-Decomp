@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<co.vine.android.widget.ColorPicker xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/color_picker"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <co.vine.android.widget.ColorPickerCircle
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <co.vine.android.widget.ColorPickerCircle
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <co.vine.android.widget.ColorPickerCircle
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <co.vine.android.widget.ColorPickerCircle
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <co.vine.android.widget.ColorPickerCircle
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <co.vine.android.widget.ColorPickerCircle
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <co.vine.android.widget.ColorPickerCircle
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <co.vine.android.widget.ColorPickerCircle
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <co.vine.android.widget.ColorPickerCircle
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <co.vine.android.widget.ColorPickerCircle
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</co.vine.android.widget.ColorPicker>

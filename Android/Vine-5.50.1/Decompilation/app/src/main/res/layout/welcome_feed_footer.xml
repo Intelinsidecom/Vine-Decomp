@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/black_five_percent"
+    android:paddingTop="28dp"
+    android:paddingBottom="28dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/check_icon"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/welcome_feed_done_icon"/>
+    <TextView
+        android:gravity="center_horizontal"
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/welcome_feed_done_message"
+        style="@style/WelcomeFeedDone"/>
+    <Button
+        android:textSize="@dimen/font_size_large"
+        android:textStyle="normal"
+        android:textColor="@color/solid_white"
+        android:id="@+id/button"
+        android:background="@drawable/welcome_feed_done_button"
+        android:layout_width="@dimen/welcome_feed_done_width"
+        android:layout_height="@dimen/welcome_feed_done_height"
+        android:text="@string/welcome_feed_done_button"/>
+</LinearLayout>

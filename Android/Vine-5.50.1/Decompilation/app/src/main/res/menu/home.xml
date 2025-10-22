@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vine="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/ic_action_inbox"
+        android:id="@+id/inbox"
+        android:title="@string/messages_title"
+        vine:showAsAction="always"/>
+    <item
+        android:icon="@drawable/btn_record"
+        android:id="@+id/capture"
+        android:title="@string/capture"
+        vine:showAsAction="always"/>
+    <item
+        android:icon="@drawable/btn_search"
+        android:id="@+id/search"
+        android:title="@string/search"
+        vine:showAsAction="never"/>
+    <item
+        android:id="@+id/find_friends"
+        android:title="@string/find_friends"
+        vine:showAsAction="never"/>
+    <item
+        android:id="@+id/audio"
+        android:title="@string/mute"
+        vine:showAsAction="never"/>
+    <item
+        android:id="@+id/settings"
+        android:title="@string/settings"
+        vine:showAsAction="never"/>
+</menu>

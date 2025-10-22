@@ -1,0 +1,20 @@
+package co.vine.android.embed.player;
+
+/* loaded from: classes.dex */
+final class WhitelistedDevices {
+    public static boolean isCurrentDeviceWhiteListed(String deviceModel, int sdkInt) {
+        if (sdkInt < 18) {
+            return false;
+        }
+        int index = deviceModel.indexOf(44);
+        String model = index == -1 ? deviceModel : deviceModel.substring(0, index);
+        if (sdkInt >= 21) {
+            return isNotBlacklisted(model);
+        }
+        return "LG-D855".equalsIgnoreCase(model) || "SM-N910V".equalsIgnoreCase(model) || "SAMSUNG-SM-G870A".equalsIgnoreCase(model) || "GT-I8190".equalsIgnoreCase(model) || "SM-G360V".equalsIgnoreCase(model) || "SM-A300FU".equalsIgnoreCase(model) || "LG-H811".equalsIgnoreCase(model) || "SM-A500FU".equalsIgnoreCase(model) || "SM-G360F".equalsIgnoreCase(model) || "SM-G900M".equalsIgnoreCase(model) || "XT1097".equalsIgnoreCase(model) || "ASUS_Z00AD".equalsIgnoreCase(model) || "XT1069".equalsIgnoreCase(model) || "GT-S7580".equalsIgnoreCase(model) || "E2303".equalsIgnoreCase(model) || "HTC6535LVW".equalsIgnoreCase(model) || "ASUS_Z002".equalsIgnoreCase(model) || "Z812".equalsIgnoreCase(model) || "SM-A500M".equalsIgnoreCase(model) || "SGH-T599N".equalsIgnoreCase(model) || "GT-I8200Q".equalsIgnoreCase(model) || "SM-G361F".equalsIgnoreCase(model) || "GT-I8190N".equalsIgnoreCase(model) || "GT-I8200N".equalsIgnoreCase(model) || "SM-E500M".equalsIgnoreCase(model) || "ALCATEL ONE TOUCH 7041X".equalsIgnoreCase(model) || "XT1254".equalsIgnoreCase(model) || "SM-N9005".equalsIgnoreCase(model) || "SM-N910T".equalsIgnoreCase(model) || "SAMSUNG-SM-N910A".equalsIgnoreCase(model) || "LG-D850".equalsIgnoreCase(model) || "Nexus 6".equalsIgnoreCase(model) || "SM-N910P".equalsIgnoreCase(model) || "SM-G900FQ".equalsIgnoreCase(model) || "LG-H345".equalsIgnoreCase(model) || "SM-N910F".equalsIgnoreCase(model) || "SM-E500H".equalsIgnoreCase(model) || "SCH-S968C".equalsIgnoreCase(model) || "SM-G900R4".equalsIgnoreCase(model) || "SM-G360T".equalsIgnoreCase(model) || "SGH-T999L".equalsIgnoreCase(model) || "SAMSUNG-SM-G850A".equalsIgnoreCase(model) || "G7-L01".equalsIgnoreCase(model) || "SM-A300H".equalsIgnoreCase(model) || "XT1096".equalsIgnoreCase(model) || "LG-D723".equalsIgnoreCase(model) || "SM-S975L".equalsIgnoreCase(model) || "ASUS_T00J-D".equalsIgnoreCase(model) || "E2306".equalsIgnoreCase(model) || "LG-H343".equalsIgnoreCase(model) || "SM-G900V".equalsIgnoreCase(model) || "SAMSUNG-SGH-I337".equalsIgnoreCase(model) || "XT1032".equalsIgnoreCase(model) || "SAMSUNG-SM-G890A".equalsIgnoreCase(model) || "HTC One M9".equalsIgnoreCase(model) || "HTC One_M8".equalsIgnoreCase(model) || "HTC One M8".equalsIgnoreCase(model) || "LG-H631".equalsIgnoreCase(model) || "LG-H815".equalsIgnoreCase(model) || "XT1058".equalsIgnoreCase(model) || "SM-T110".equalsIgnoreCase(model) || "VS986".equalsIgnoreCase(model) || "C6603".equalsIgnoreCase(model) || "LG-D852".equalsIgnoreCase(model) || "Nexus 4".equalsIgnoreCase(model) || "XT1068".equalsIgnoreCase(model) || "SM-G530FZ".equalsIgnoreCase(model) || "SM-G530T".equalsIgnoreCase(model) || "GT-I8190L".equalsIgnoreCase(model) || "General Mobile 4G".equalsIgnoreCase(model) || "ALCATEL ONE TOUCH Fierce".equalsIgnoreCase(model) || "LGL22C".equalsIgnoreCase(model) || "LG-D631".equalsIgnoreCase(model) || "D6633".equalsIgnoreCase(model) || "SAMSUNG-SM-G900A".equalsIgnoreCase(model) || "SM-G900F".equalsIgnoreCase(model) || "SM-G900P".equalsIgnoreCase(model) || "GT-I9505".equalsIgnoreCase(model) || "SM-N910C".equalsIgnoreCase(model) || "SAMSUNG-SM-G530AZ".equalsIgnoreCase(model) || "XT1030".equalsIgnoreCase(model) || "SM-G900H".equalsIgnoreCase(model) || "VS980 4G".equalsIgnoreCase(model) || "SCH-R970".equalsIgnoreCase(model) || "XT1045".equalsIgnoreCase(model) || "SM-G900I".equalsIgnoreCase(model) || "SM-N9000Q".equalsIgnoreCase(model) || "SM-G928G".equalsIgnoreCase(model) || "HTC-M9u".equalsIgnoreCase(model) || "SM-G920W8".equalsIgnoreCase(model);
+    }
+
+    private static boolean isNotBlacklisted(String deviceModel) {
+        return !"Nexus 7".equalsIgnoreCase(deviceModel);
+    }
+}

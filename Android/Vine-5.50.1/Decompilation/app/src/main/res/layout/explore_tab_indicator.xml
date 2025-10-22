@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<co.vine.android.widget.tabs.TabIndicator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_height="@dimen/tabbar_height"
+    android:layout_margin="0px"
+    android:layout_weight="1">
+    <co.vine.android.widget.TypefacesTextView
+        android:id="@+id/tab_text"
+        android:duplicateParentState="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        style="@style/Indicator"/>
+    <ImageView
+        android:id="@+id/new_indicator"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/green_dot"
+        android:layout_toLeftOf="@+id/tab_text"
+        android:layout_centerVertical="true"/>
+</co.vine.android.widget.tabs.TabIndicator>

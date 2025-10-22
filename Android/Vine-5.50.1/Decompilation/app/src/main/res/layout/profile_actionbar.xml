@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <co.vine.android.widget.TypefacesTextView
+        android:ellipsize="end"
+        android:id="@+id/username"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        style="@style/OthersProfileUsername"/>
+    <co.vine.android.widget.TypefacesTextView
+        android:id="@+id/twitterScreenname"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username"
+        style="@style/ProfileTwitterScreenname"/>
+</RelativeLayout>

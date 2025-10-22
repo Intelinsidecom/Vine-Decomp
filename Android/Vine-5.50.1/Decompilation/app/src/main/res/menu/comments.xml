@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vine="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/ic_action_bar_mention"
+        android:id="@+id/mention"
+        android:title="@string/mention_title"
+        vine:showAsAction="always"/>
+    <item
+        android:icon="@drawable/ic_action_bar_tag"
+        android:id="@+id/tag"
+        android:title="@string/tag_title"
+        vine:showAsAction="always"/>
+</menu>

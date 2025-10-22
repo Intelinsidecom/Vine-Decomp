@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="new_messages">
+        <item quantity="other">%1$s 条新私信</item>
+        <item quantity="one">%1$s 条新私信</item>
+    </plurals>
+    <plurals name="profile_followers">
+        <item quantity="other">&quot;%1$s&quot; 关注者</item>
+        <item quantity="one">&quot;%1$s&quot; 关注者</item>
+    </plurals>
+    <plurals name="profile_following">
+        <item quantity="other">&quot;%1$s&quot; 正在关注</item>
+        <item quantity="one">&quot;%1$s&quot; 正在关注</item>
+    </plurals>
+    <plurals name="profile_likes">
+        <item quantity="other">&quot;%1$s&quot; 喜欢</item>
+        <item quantity="one">&quot;%1$s&quot; 喜欢</item>
+    </plurals>
+    <plurals name="profile_loops">
+        <item quantity="other">%1$s 循环</item>
+        <item quantity="one">%1$s 循环</item>
+    </plurals>
+    <plurals name="profile_posts">
+        <item quantity="other">&quot;%1$s&quot; 视频</item>
+        <item quantity="one">&quot;%1$s&quot; 视频</item>
+    </plurals>
+    <plurals name="revine_count">
+        <item quantity="other">%1$s 转发</item>
+        <item quantity="one">%1$s 转发</item>
+    </plurals>
+    <plurals name="tag_post_count">
+        <item quantity="other">%1$s 个视频</item>
+        <item quantity="one">%1$s 个视频</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="other">%d天</item>
+        <item quantity="one">1天</item>
+    </plurals>
+    <plurals name="time_days_verbose">
+        <item quantity="other">%d天</item>
+        <item quantity="one">1天</item>
+    </plurals>
+    <plurals name="time_days_verbose_ago">
+        <item quantity="other">%d天前</item>
+        <item quantity="one">1天前</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="other">%d时</item>
+        <item quantity="one">1时</item>
+    </plurals>
+    <plurals name="time_hours_verbose">
+        <item quantity="other">%d小时</item>
+        <item quantity="one">1小时</item>
+    </plurals>
+    <plurals name="time_hours_verbose_ago">
+        <item quantity="other">%d小时前</item>
+        <item quantity="one">1小时前</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="other">%d分</item>
+        <item quantity="one">1分</item>
+    </plurals>
+    <plurals name="time_mins_verbose">
+        <item quantity="other">%d分钟</item>
+        <item quantity="one">1分钟</item>
+    </plurals>
+    <plurals name="time_mins_verbose_ago">
+        <item quantity="other">%d分钟前</item>
+        <item quantity="one">1分钟前</item>
+    </plurals>
+    <plurals name="time_months_verbose_ago">
+        <item quantity="other">%d月前</item>
+        <item quantity="one">1月前</item>
+    </plurals>
+    <plurals name="time_secs">
+        <item quantity="other">%d秒</item>
+        <item quantity="one">1秒</item>
+    </plurals>
+    <plurals name="time_secs_verbose">
+        <item quantity="other">%d秒</item>
+        <item quantity="one">1秒</item>
+    </plurals>
+    <plurals name="time_secs_verbose_ago">
+        <item quantity="other">%d秒前</item>
+        <item quantity="one">1秒前</item>
+    </plurals>
+    <plurals name="time_weeks_verbose_ago">
+        <item quantity="other">%d周前</item>
+        <item quantity="one">1周前</item>
+    </plurals>
+    <plurals name="time_years_verbose_ago">
+        <item quantity="other">%d年前</item>
+        <item quantity="one">1年前</item>
+    </plurals>
+    <plurals name="timeline_compact_comments">
+        <item quantity="other">%1$s 评论</item>
+        <item quantity="one">%1$s 评论</item>
+    </plurals>
+    <plurals name="timeline_compact_likes">
+        <item quantity="other">%1$s 喜欢</item>
+        <item quantity="one">%1$s 喜欢</item>
+    </plurals>
+    <plurals name="timeline_likes">
+        <item quantity="other">&quot;%1$s 人&quot;喜欢</item>
+        <item quantity="one">%1$s 喜欢</item>
+    </plurals>
+</resources>

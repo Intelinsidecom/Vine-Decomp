@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vine="http://schemas.android.com/apk/res-auto">
+    <co.vine.android.widget.TypefacesTextView
+        android:textSize="14sp"
+        android:textColor="@color/black_thirty_five_percent"
+        android:id="@+id/select_channel_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="@string/add_to_channel"
+        android:layout_centerVertical="true"
+        vine:textWeight="2"
+        vine:textStyle="0"/>
+    <FrameLayout
+        android:id="@+id/selected_channel_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/channel_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="15dp"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:textSize="14sp"
+            android:textColor="@color/solid_black"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/channel_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:text="@string/add_to_channel"
+            vine:textWeight="3"
+            vine:textStyle="0"/>
+    </FrameLayout>
+    <ImageView
+        android:id="@+id/channel_hamburger"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/ic_share_channel"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+</merge>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="new_messages">
+        <item quantity="other">%1$s новых сообщений</item>
+        <item quantity="one">%1$s новое сообщение</item>
+    </plurals>
+    <plurals name="profile_followers">
+        <item quantity="other">Читатели: &quot;%1$s&quot;</item>
+        <item quantity="one">Читатель: &quot;%1$s&quot;</item>
+    </plurals>
+    <plurals name="profile_following">
+        <item quantity="other">Читаемые: &quot;%1$s&quot;</item>
+        <item quantity="one">Читаемые: &quot;%1$s&quot;</item>
+    </plurals>
+    <plurals name="profile_likes">
+        <item quantity="other">Понравилось: &quot;%1$s&quot;</item>
+        <item quantity="one">Нравится: &quot;%1$s&quot;</item>
+    </plurals>
+    <plurals name="profile_loops">
+        <item quantity="other">Просмотров: %1$s</item>
+        <item quantity="one">%1$s просмотр</item>
+    </plurals>
+    <plurals name="profile_posts">
+        <item quantity="other">Записи: &quot;%1$s&quot;</item>
+        <item quantity="one">Записи: &quot;%1$s&quot;</item>
+    </plurals>
+    <plurals name="revine_count">
+        <item quantity="other">Ревайны: %1$s</item>
+        <item quantity="one">Ревайны: %1$s</item>
+    </plurals>
+    <plurals name="tag_post_count">
+        <item quantity="other">Записи: %1$s</item>
+        <item quantity="one">Запись: %1$s</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="other">%d дн</item>
+        <item quantity="one">1 день</item>
+    </plurals>
+    <plurals name="time_days_verbose">
+        <item quantity="other">%d дн</item>
+        <item quantity="one">1 день</item>
+    </plurals>
+    <plurals name="time_days_verbose_ago">
+        <item quantity="other">%d дн назад</item>
+        <item quantity="one">1 день назад</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="other">%d ч</item>
+        <item quantity="one">1 ч</item>
+    </plurals>
+    <plurals name="time_hours_verbose">
+        <item quantity="other">%d ч</item>
+        <item quantity="one">1 ч</item>
+    </plurals>
+    <plurals name="time_hours_verbose_ago">
+        <item quantity="other">%d час назад</item>
+        <item quantity="one">1 час назад</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="other">%d мин</item>
+        <item quantity="one">1 мин</item>
+    </plurals>
+    <plurals name="time_mins_verbose">
+        <item quantity="other">%d мин</item>
+        <item quantity="one">1 мин</item>
+    </plurals>
+    <plurals name="time_mins_verbose_ago">
+        <item quantity="other">%d мин назад</item>
+        <item quantity="one">1 минуту назад</item>
+    </plurals>
+    <plurals name="time_months_verbose_ago">
+        <item quantity="other">%d мес назад</item>
+        <item quantity="one">1 месяц назад</item>
+    </plurals>
+    <plurals name="time_secs">
+        <item quantity="other">%d сек</item>
+        <item quantity="one">1 сек</item>
+    </plurals>
+    <plurals name="time_secs_verbose">
+        <item quantity="other">%d сек</item>
+        <item quantity="one">1 секунда</item>
+    </plurals>
+    <plurals name="time_secs_verbose_ago">
+        <item quantity="other">%d сек назад</item>
+        <item quantity="one">1 секунду назад</item>
+    </plurals>
+    <plurals name="time_weeks_verbose_ago">
+        <item quantity="other">%d нед назад</item>
+        <item quantity="one">1 неделю назад</item>
+    </plurals>
+    <plurals name="time_years_verbose_ago">
+        <item quantity="other">%d год назад</item>
+        <item quantity="one">1 год назад</item>
+    </plurals>
+    <plurals name="timeline_compact_comments">
+        <item quantity="other">Комментарии %1$s</item>
+        <item quantity="one">Комментарий %1$s</item>
+    </plurals>
+    <plurals name="timeline_compact_likes">
+        <item quantity="other">Понравилось %1$s</item>
+        <item quantity="one">Нравится %1$s</item>
+    </plurals>
+    <plurals name="timeline_likes">
+        <item quantity="other">&quot;%1$s пользователям&quot; нравится</item>
+        <item quantity="one">&quot;%1$s&quot; пользователям нравится</item>
+    </plurals>
+</resources>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="new_messages">
+        <item quantity="other">%1$s nieuwe berichten</item>
+        <item quantity="one">%1$s nieuw bericht</item>
+    </plurals>
+    <plurals name="profile_followers">
+        <item quantity="other">&quot;%1$s&quot; volgers</item>
+        <item quantity="one">&quot;%1$s&quot; volger</item>
+    </plurals>
+    <plurals name="profile_following">
+        <item quantity="other">&quot;%1$s&quot; volgend</item>
+        <item quantity="one">&quot;%1$s&quot; volgend</item>
+    </plurals>
+    <plurals name="profile_likes">
+        <item quantity="other">&quot;%1$s&quot; vind-ik-leuks</item>
+        <item quantity="one">&quot;%1$s&quot; vind-ik-leuks</item>
+    </plurals>
+    <plurals name="profile_loops">
+        <item quantity="other">%1$s herhalingen</item>
+        <item quantity="one">%1$s herhaling</item>
+    </plurals>
+    <plurals name="profile_posts">
+        <item quantity="other">&quot;%1$s&quot; Vines</item>
+        <item quantity="one">&quot;%1$s&quot; Vine</item>
+    </plurals>
+    <plurals name="revine_count">
+        <item quantity="other">%1$s revines</item>
+        <item quantity="one">%1$s revine</item>
+    </plurals>
+    <plurals name="tag_post_count">
+        <item quantity="other">%1$s Vines</item>
+        <item quantity="one">%1$s Vine</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="other">%dd</item>
+        <item quantity="one">1d</item>
+    </plurals>
+    <plurals name="time_days_verbose">
+        <item quantity="other">%d dagen</item>
+        <item quantity="one">1 dag</item>
+    </plurals>
+    <plurals name="time_days_verbose_ago">
+        <item quantity="other">%d dagen geleden</item>
+        <item quantity="one">1 dag geleden</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="other">%du</item>
+        <item quantity="one">1u</item>
+    </plurals>
+    <plurals name="time_hours_verbose">
+        <item quantity="other">%d uur</item>
+        <item quantity="one">1 uur</item>
+    </plurals>
+    <plurals name="time_hours_verbose_ago">
+        <item quantity="other">%d uur geleden</item>
+        <item quantity="one">1 uur geleden</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="other">%dm</item>
+        <item quantity="one">1m</item>
+    </plurals>
+    <plurals name="time_mins_verbose">
+        <item quantity="other">%d minuten</item>
+        <item quantity="one">1 minuut</item>
+    </plurals>
+    <plurals name="time_mins_verbose_ago">
+        <item quantity="other">%d minuten geleden</item>
+        <item quantity="one">1 minuut geleden</item>
+    </plurals>
+    <plurals name="time_months_verbose_ago">
+        <item quantity="other">%d maanden geleden</item>
+        <item quantity="one">1 maand geleden</item>
+    </plurals>
+    <plurals name="time_secs">
+        <item quantity="other">%ds</item>
+        <item quantity="one">1s</item>
+    </plurals>
+    <plurals name="time_secs_verbose">
+        <item quantity="other">%d seconden</item>
+        <item quantity="one">1 seconde</item>
+    </plurals>
+    <plurals name="time_secs_verbose_ago">
+        <item quantity="other">%d seconden geleden</item>
+        <item quantity="one">1 seconde geleden</item>
+    </plurals>
+    <plurals name="time_weeks_verbose_ago">
+        <item quantity="other">%d weken geleden</item>
+        <item quantity="one">1 week geleden</item>
+    </plurals>
+    <plurals name="time_years_verbose_ago">
+        <item quantity="other">%d jaar geleden</item>
+        <item quantity="one">1 jaar geleden</item>
+    </plurals>
+    <plurals name="timeline_compact_comments">
+        <item quantity="other">%1$s reacties</item>
+        <item quantity="one">%1$s reactie</item>
+    </plurals>
+    <plurals name="timeline_compact_likes">
+        <item quantity="other">%1$s vinden dit leuk</item>
+        <item quantity="one">%1$s vindt dit leuk</item>
+    </plurals>
+    <plurals name="timeline_likes">
+        <item quantity="other">&quot;%1$s personen&quot; vinden dit leuk</item>
+        <item quantity="one">&quot;%1$s&quot; vindt dit leuk</item>
+    </plurals>
+</resources>

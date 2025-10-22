@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/page2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/measurableParent"
+        android:paddingTop="18dp"
+        android:paddingBottom="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <co.vine.android.widget.TypefacesTextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ProfileText"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            style="@style/ProfileText"/>
+    </LinearLayout>
+</LinearLayout>

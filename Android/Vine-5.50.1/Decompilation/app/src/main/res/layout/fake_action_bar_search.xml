@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:background="@android:color/transparent"
+    android:layout_width="32dp"
+    android:layout_height="32dp"
+    android:layout_marginLeft="8dp"
+    android:src="@drawable/ic_action_search"
+    android:layout_alignParentRight="true"/>

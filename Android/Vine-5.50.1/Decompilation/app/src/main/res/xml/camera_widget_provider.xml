@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="@dimen/widget_margin"
+    android:minWidth="@dimen/widget_size"
+    android:minHeight="@dimen/widget_size"
+    android:updatePeriodMillis="0"
+    android:initialLayout="@layout/camera_widget"
+    android:configure="co.vine.android.CameraWidgetConfigureActivity"
+    android:previewImage="@drawable/ic_launcher_capture_widget"/>

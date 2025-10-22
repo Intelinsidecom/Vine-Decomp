@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header"
+    android:background="@color/activity_header_bg"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/activity_header_height">
+    <TextView
+        android:textColor="@color/activity_header_text"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/header_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ActivityHeader"/>
+</FrameLayout>

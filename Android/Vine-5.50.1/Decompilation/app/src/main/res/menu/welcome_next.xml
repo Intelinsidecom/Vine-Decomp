@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vine="http://schemas.android.com/apk/res-auto">
+    <item
+        android:enabled="true"
+        android:id="@+id/welcome_next"
+        android:visible="true"
+        android:title="@string/next_caps"
+        vine:showAsAction="always"/>
+</menu>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="new_messages">
+        <item quantity="other">%1$s nye meldinger</item>
+        <item quantity="one">%1$s ny melding</item>
+    </plurals>
+    <plurals name="profile_followers">
+        <item quantity="other">&quot;%1$s&quot; følgere</item>
+        <item quantity="one">&quot;%1$s&quot; følger</item>
+    </plurals>
+    <plurals name="profile_following">
+        <item quantity="other">&quot;%1$s&quot; følger</item>
+        <item quantity="one">&quot;%1$s&quot; følger</item>
+    </plurals>
+    <plurals name="profile_likes">
+        <item quantity="other">&quot;%1$s&quot; liker</item>
+        <item quantity="one">&quot;%1$s&quot; liker</item>
+    </plurals>
+    <plurals name="profile_loops">
+        <item quantity="other">%1$s sløyfer</item>
+        <item quantity="one">%1$s sløyfe</item>
+    </plurals>
+    <plurals name="profile_posts">
+        <item quantity="other">&quot;%1$s&quot; vines</item>
+        <item quantity="one">&quot;%1$s&quot; vine</item>
+    </plurals>
+    <plurals name="revine_count">
+        <item quantity="other">%1$s revines</item>
+        <item quantity="one">%1$s revine</item>
+    </plurals>
+    <plurals name="tag_post_count">
+        <item quantity="other">%1$s Vines</item>
+        <item quantity="one">%1$s Vine</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="other">%d d</item>
+        <item quantity="one">1 d</item>
+    </plurals>
+    <plurals name="time_days_verbose">
+        <item quantity="other">%d dager</item>
+        <item quantity="one">1 dag</item>
+    </plurals>
+    <plurals name="time_days_verbose_ago">
+        <item quantity="other">%d dager siden</item>
+        <item quantity="one">1 dag siden</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="other">%d t</item>
+        <item quantity="one">1 t</item>
+    </plurals>
+    <plurals name="time_hours_verbose">
+        <item quantity="other">%d timer</item>
+        <item quantity="one">1 time</item>
+    </plurals>
+    <plurals name="time_hours_verbose_ago">
+        <item quantity="other">%d timer siden</item>
+        <item quantity="one">1 time siden</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="other">%d m</item>
+        <item quantity="one">1 m</item>
+    </plurals>
+    <plurals name="time_mins_verbose">
+        <item quantity="other">%d minutter</item>
+        <item quantity="one">1 minutt</item>
+    </plurals>
+    <plurals name="time_mins_verbose_ago">
+        <item quantity="other">%d minutter siden</item>
+        <item quantity="one">1 minutt siden</item>
+    </plurals>
+    <plurals name="time_months_verbose_ago">
+        <item quantity="other">%d måneder siden</item>
+        <item quantity="one">1 måned siden</item>
+    </plurals>
+    <plurals name="time_secs">
+        <item quantity="other">%d s</item>
+        <item quantity="one">1 s</item>
+    </plurals>
+    <plurals name="time_secs_verbose">
+        <item quantity="other">%d sekunder</item>
+        <item quantity="one">1 sekund</item>
+    </plurals>
+    <plurals name="time_secs_verbose_ago">
+        <item quantity="other">%d sekunder siden</item>
+        <item quantity="one">1 sekund siden</item>
+    </plurals>
+    <plurals name="time_weeks_verbose_ago">
+        <item quantity="other">%d uker siden</item>
+        <item quantity="one">1 uke siden</item>
+    </plurals>
+    <plurals name="time_years_verbose_ago">
+        <item quantity="other">%d år siden</item>
+        <item quantity="one">1 år siden</item>
+    </plurals>
+    <plurals name="timeline_compact_comments">
+        <item quantity="other">%1$s kommentarer</item>
+        <item quantity="one">%1$s kommentar</item>
+    </plurals>
+    <plurals name="timeline_compact_likes">
+        <item quantity="other">%1$s liker</item>
+        <item quantity="one">%1$s liker</item>
+    </plurals>
+    <plurals name="timeline_likes">
+        <item quantity="other">&quot;%1$s personer&quot; liker dette</item>
+        <item quantity="one">&quot;%1$s&quot; liker dette</item>
+    </plurals>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vine="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/all_deleted_overlay"
+    android:background="@color/white_twenty_percent"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/noMoreClipsIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/no_more_clips"
+        android:layout_centerInParent="true"/>
+    <co.vine.android.widget.TypefacesTextView
+        android:textSize="@dimen/font_size_medium"
+        android:textColor="@color/no_more_clips_text"
+        android:gravity="center"
+        android:id="@+id/all_deleted_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="@string/all_clips_deleted"
+        android:layout_below="@+id/noMoreClipsIcon"
+        android:layout_centerHorizontal="true"
+        vine:textWeight="2"
+        vine:textStyle="0"/>
+</RelativeLayout>

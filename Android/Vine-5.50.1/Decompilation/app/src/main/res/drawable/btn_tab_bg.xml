@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vine="http://schemas.android.com/apk/res-auto">
+    <item
+        android:state_pressed="true"
+        android:drawable="@drawable/btn_tab_pressed"/>
+    <item
+        android:state_focused="true"
+        android:drawable="@drawable/btn_tab_default"/>
+    <item
+        android:drawable="@drawable/btn_tab_selected"
+        vine:state_tab_selected="true"/>
+    <item android:drawable="@drawable/btn_tab_default"/>
+</selector>

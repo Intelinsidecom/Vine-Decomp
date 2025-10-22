@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="new_messages">
+        <item quantity="other">%1$s nuevos mensajes</item>
+        <item quantity="one">%1$s nuevo mensaje</item>
+    </plurals>
+    <plurals name="profile_followers">
+        <item quantity="other">&quot;%1$s&quot; Seguidores</item>
+        <item quantity="one">&quot;%1$s&quot; Seguidor</item>
+    </plurals>
+    <plurals name="profile_following">
+        <item quantity="other">&quot;%1$s&quot; Siguiendo</item>
+        <item quantity="one">&quot;%1$s&quot; Siguiendo</item>
+    </plurals>
+    <plurals name="profile_likes">
+        <item quantity="other">&quot;%1$s&quot; Me gusta</item>
+        <item quantity="one">&quot;%1$s&quot; Me gusta</item>
+    </plurals>
+    <plurals name="profile_loops">
+        <item quantity="other">%1$s bucles</item>
+        <item quantity="one">%1$s bucle</item>
+    </plurals>
+    <plurals name="profile_posts">
+        <item quantity="other">&quot;%1$s&quot; Publicaciones</item>
+        <item quantity="one">&quot;%1$s&quot; Publicación</item>
+    </plurals>
+    <plurals name="revine_count">
+        <item quantity="other">%1$s revineos</item>
+        <item quantity="one">%1$s revineo</item>
+    </plurals>
+    <plurals name="tag_post_count">
+        <item quantity="other">%1$s publicaciones</item>
+        <item quantity="one">%1$s publicación</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="other">%dd</item>
+        <item quantity="one">1d</item>
+    </plurals>
+    <plurals name="time_days_verbose">
+        <item quantity="other">%d días</item>
+        <item quantity="one">1 día</item>
+    </plurals>
+    <plurals name="time_days_verbose_ago">
+        <item quantity="other">hace %d días</item>
+        <item quantity="one">hace 1 día</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="other">%dh</item>
+        <item quantity="one">1h</item>
+    </plurals>
+    <plurals name="time_hours_verbose">
+        <item quantity="other">%d horas</item>
+        <item quantity="one">1 hora</item>
+    </plurals>
+    <plurals name="time_hours_verbose_ago">
+        <item quantity="other">hace %d horas</item>
+        <item quantity="one">hace 1 hora</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="other">%dm</item>
+        <item quantity="one">1m</item>
+    </plurals>
+    <plurals name="time_mins_verbose">
+        <item quantity="other">%d minutos</item>
+        <item quantity="one">1 minuto</item>
+    </plurals>
+    <plurals name="time_mins_verbose_ago">
+        <item quantity="other">hace %d minutos</item>
+        <item quantity="one">hace 1 minuto</item>
+    </plurals>
+    <plurals name="time_months_verbose_ago">
+        <item quantity="other">hace %d meses</item>
+        <item quantity="one">hace 1 mes</item>
+    </plurals>
+    <plurals name="time_secs">
+        <item quantity="other">%ds</item>
+        <item quantity="one">1s</item>
+    </plurals>
+    <plurals name="time_secs_verbose">
+        <item quantity="other">%d segundos</item>
+        <item quantity="one">1 segundo</item>
+    </plurals>
+    <plurals name="time_secs_verbose_ago">
+        <item quantity="other">hace %d segundos</item>
+        <item quantity="one">hace 1 segundo</item>
+    </plurals>
+    <plurals name="time_weeks_verbose_ago">
+        <item quantity="other">hace %d semanas</item>
+        <item quantity="one">hace 1 semana</item>
+    </plurals>
+    <plurals name="time_years_verbose_ago">
+        <item quantity="other">hace %d años</item>
+        <item quantity="one">hace 1 año</item>
+    </plurals>
+    <plurals name="timeline_compact_comments">
+        <item quantity="other">%1$s comentarios</item>
+        <item quantity="one">%1$s comentario</item>
+    </plurals>
+    <plurals name="timeline_compact_likes">
+        <item quantity="other">%1$s me gusta</item>
+        <item quantity="one">%1$s me gusta</item>
+    </plurals>
+    <plurals name="timeline_likes">
+        <item quantity="other">A &quot;%1$s personas&quot; les gusta esto</item>
+        <item quantity="one">A &quot;%1$s&quot; le gusta esto</item>
+    </plurals>
+</resources>

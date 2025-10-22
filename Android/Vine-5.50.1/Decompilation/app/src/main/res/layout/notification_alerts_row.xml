@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/notification_settings"
+    android:layout_marginRight="0dp"
+    style="@style/SettingsItemParent">
+    <co.vine.android.widget.TypefacesTextView
+        android:text="@string/settings_notifications_alerts"
+        style="@style/SettingsLabel.Selectable"/>
+    <co.vine.android.widget.RoundedDivider
+        android:layout_alignParentBottom="true"
+        style="@style/RoundedDivider.Settings"/>
+</RelativeLayout>

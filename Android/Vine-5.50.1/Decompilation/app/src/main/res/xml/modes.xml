@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modes xmlns:android="http://schemas.android.com/apk/res/android">
+    <mode
+        name="vine"
+        descriptionLabel="@string/mode_description_label"
+        selectorIcon="@drawable/cam_cap_mode_sample_icn"
+        selectorLabel="@string/mode_selector_label"
+        shortcutIcon="@drawable/store_cap_mode_sample_icn"
+        shortcutLabel="@string/mode_shortcut_label">
+        <uses-feature android:name="android.hardware.camera"/>
+    </mode>
+</modes>

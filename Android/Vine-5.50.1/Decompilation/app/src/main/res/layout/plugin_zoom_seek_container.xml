@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:paddingTop="5dp"
+    android:visibility="gone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_gravity="center_vertical"
+        android:id="@+id/zoom_minus"
+        android:layout_width="30dp"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/zoom_minus"
+            android:layout_centerInParent="true"
+            android:alpha="0.35"/>
+    </RelativeLayout>
+    <SeekBar
+        android:id="@+id/zoom_seek"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"/>
+    <RelativeLayout
+        android:layout_gravity="center_vertical"
+        android:id="@+id/zoom_plus"
+        android:layout_width="36dp"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/zoom_plus"
+            android:layout_centerInParent="true"
+            android:alpha="0.35"/>
+    </RelativeLayout>
+</LinearLayout>

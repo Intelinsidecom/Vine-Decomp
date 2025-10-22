@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <co.vine.android.widget.TypefacesEditText
+        android:id="@+id/login_username"
+        android:layout_marginBottom="11dp"
+        android:hint="@string/login_username"
+        android:inputType="textEmailAddress"
+        android:imeOptions="actionNext"
+        style="@style/EditText.SignIn"/>
+    <co.vine.android.widget.TypefacesEditText
+        android:id="@+id/login_password"
+        android:layout_marginBottom="20dp"
+        android:hint="@string/login_password"
+        android:singleLine="true"
+        android:layout_below="@+id/login_username"
+        android:inputType="textPassword"
+        android:imeOptions="actionDone"
+        style="@style/EditText.SignIn"/>
+    <co.vine.android.widget.TypefacesTextView
+        android:textSize="@dimen/font_size_medium"
+        android:textColor="@color/forgot_password"
+        android:gravity="center"
+        android:id="@+id/login_reset_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_password"/>
+</RelativeLayout>

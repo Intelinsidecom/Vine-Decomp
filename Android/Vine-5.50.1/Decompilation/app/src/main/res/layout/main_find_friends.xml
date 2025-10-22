@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vine="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <co.vine.android.widget.tabs.IconTabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:background="@color/solid_white"
+                android:padding="0px"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tabbar_height"
+                android:layout_margin="0px"
+                android:divider="@null"/>
+            <co.vine.android.widget.tabs.ViewPagerScrollBar
+                android:id="@+id/scrollbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tabbar_height"
+                vine:tabColor="@color/vine_green"
+                vine:scrollBarHeight="4dp"
+                vine:lineColors="@array/find_friends_colors"/>
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@android:id/tabs"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+    </co.vine.android.widget.tabs.IconTabHost>
+</LinearLayout>

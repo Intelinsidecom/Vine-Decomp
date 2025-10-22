@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:background="@drawable/bg_user_row"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="match_parent"
+    android:layout_height="54dp">
+    <include layout="@layout/user_row_base"/>
+    <co.vine.android.widget.VineToggleButton
+        android:id="@+id/favorite_button"
+        android:background="@drawable/btn_favorite"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="12dp"
+        android:textOn=""
+        android:textOff=""
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>

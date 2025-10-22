@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vine="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/ic_play_feed"
+        android:id="@+id/feed"
+        android:title="Feed"
+        vine:showAsAction="always"/>
+    <item
+        android:id="@+id/message"
+        android:title="@string/message"
+        vine:showAsAction="never"/>
+    <item
+        android:id="@+id/audio"
+        android:title="@string/mute"
+        vine:showAsAction="never"/>
+    <item
+        android:id="@+id/block_or_report"
+        android:title="@string/block_or_report"
+        vine:showAsAction="never"/>
+    <item
+        android:id="@+id/show_revines"
+        android:title="@string/hide_revines"
+        vine:showAsAction="never"/>
+    <item
+        android:id="@+id/share_profile"
+        android:title="@string/share_profile"
+        vine:showAsAction="never"/>
+    <item
+        android:id="@+id/create_shortcut"
+        android:title="@string/create_shortcut"
+        vine:showAsAction="never"/>
+</menu>

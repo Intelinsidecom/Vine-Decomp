@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vine="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/black_eighty_percent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:id="@+id/background_img"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:background="#b4000000"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <RelativeLayout
+            android:id="@+id/stack_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <co.vine.android.views.swipeable.SwipeFlingAdapterView
+                android:id="@+id/solicitor_pager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                vine:rotation_degrees="0"
+                vine:min_adapter_stack="5"
+                vine:max_visible="1"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

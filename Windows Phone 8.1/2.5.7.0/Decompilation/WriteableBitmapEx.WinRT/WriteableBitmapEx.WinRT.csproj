@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>WriteableBitmapEx.WinRT</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>netcore45</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="Windows" />
+    <Reference Include="System.Runtime.WindowsRuntime" />
+    <Reference Include="System.IO" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Collections" />
+    <Reference Include="System.Collections.Concurrent" />
+  </ItemGroup>
+</Project>

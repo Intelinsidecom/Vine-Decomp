@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vine="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:background="@color/solid_white"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/channel_row_height">
+    <ImageView
+        android:id="@+id/channel_image"
+        android:clickable="false"
+        android:layout_width="@dimen/channel_image_size"
+        android:layout_height="@dimen/channel_image_size"
+        android:layout_marginLeft="9dp"
+        android:scaleType="centerCrop"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"/>
+    <co.vine.android.widget.VineToggleButton
+        android:id="@+id/follow_button"
+        android:background="@drawable/btn_channel_follow"
+        android:visibility="gone"
+        android:duplicateParentState="true"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginRight="12dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        style="@style/VineToggleButton"/>
+    <co.vine.android.widget.TypefacesTextView
+        android:textSize="@dimen/font_size_xlarge"
+        android:gravity="start|center_vertical"
+        android:id="@+id/channel"
+        android:clickable="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/list_row_padding"
+        android:layout_toLeftOf="@+id/follow_button"
+        android:layout_toRightOf="@+id/channel_image"
+        android:layout_centerVertical="true"
+        vine:textWeight="3"/>
+</RelativeLayout>

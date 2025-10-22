@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="bottom|left"
+    android:orientation="horizontal"
+    android:id="@+id/revine_and_byline_container"
+    android:background="@color/solid_white"
+    android:paddingLeft="12dp"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="24dp">
+    <ImageView
+        android:id="@+id/byline_icon"
+        android:layout_width="12dp"
+        android:layout_height="8dp"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/ic_revine"
+        android:scaleType="centerCrop"/>
+    <co.vine.android.widget.TypefacesTextView
+        android:textSize="13sp"
+        android:textColor="#59000000"
+        android:id="@+id/revine_line_text"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        textWeight="2"
+        textStyle="0"/>
+    <ImageView
+        android:id="@+id/byline_icon_gear"
+        android:paddingTop="4dp"
+        android:layout_width="12dp"
+        android:layout_height="16dp"
+        android:layout_marginBottom="2dp"
+        android:scaleType="centerCrop"/>
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vine="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/solid_black"
+    android:layout_width="match_parent"
+    android:layout_height="48dp">
+    <ImageView
+        android:id="@+id/location_row_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/location_row_icon"
+        android:layout_centerVertical="true">
+        <co.vine.android.widget.TypefacesTextView
+            android:textSize="14sp"
+            android:textColor="@color/solid_white"
+            android:id="@+id/foursquare_location_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            vine:textWeight="3"
+            vine:textStyle="0"/>
+        <co.vine.android.widget.TypefacesTextView
+            android:textSize="12sp"
+            android:textColor="@color/white_eighty_percent"
+            android:id="@+id/foursquare_location_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            vine:textWeight="2"
+            vine:textStyle="0"/>
+    </LinearLayout>
+</RelativeLayout>

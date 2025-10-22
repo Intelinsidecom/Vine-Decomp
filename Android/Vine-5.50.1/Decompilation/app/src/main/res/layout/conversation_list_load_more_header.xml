@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:vine="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:gravity="center"
+        android:id="@+id/header_content"
+        android:background="@drawable/bg_conversation_menu"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/load_more_height_messages">
+        <co.vine.android.widget.TypefacesTextView
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/solid_light_gray_vm"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/load_more_messages"
+            vine:textWeight="4"/>
+        <View
+            android:layout_gravity="bottom"
+            android:id="@+id/divider"
+            android:background="@drawable/rule_horizontal_light"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"/>
+    </FrameLayout>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:id="@+id/progress"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/load_more_height_messages">
+        <co.vine.android.views.SdkProgressBar
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/progressBarStyleSmall"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="new_messages">
+        <item quantity="other">%1$s yeni mesaj</item>
+        <item quantity="one">%1$s yeni mesaj</item>
+    </plurals>
+    <plurals name="profile_followers">
+        <item quantity="other">&quot;%1$s&quot; Takipçi</item>
+        <item quantity="one">&quot;%1$s&quot; Takipçi</item>
+    </plurals>
+    <plurals name="profile_following">
+        <item quantity="other">&quot;%1$s&quot; Takip edilen</item>
+        <item quantity="one">&quot;%1$s&quot; Takip edilen</item>
+    </plurals>
+    <plurals name="profile_likes">
+        <item quantity="other">&quot;%1$s&quot; Beğeni</item>
+        <item quantity="one">&quot;%1$s&quot; Beğeni</item>
+    </plurals>
+    <plurals name="profile_loops">
+        <item quantity="other">%1$s Döngü</item>
+        <item quantity="one">%1$s Döngü</item>
+    </plurals>
+    <plurals name="profile_posts">
+        <item quantity="other">&quot;%1$s&quot; Gönderi</item>
+        <item quantity="one">&quot;%1$s&quot; Gönderi</item>
+    </plurals>
+    <plurals name="revine_count">
+        <item quantity="other">%1$s revine</item>
+        <item quantity="one">%1$s revine</item>
+    </plurals>
+    <plurals name="tag_post_count">
+        <item quantity="other">%1$s gönderi</item>
+        <item quantity="one">%1$s gönderi</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="other">%d gün</item>
+        <item quantity="one">1 gün</item>
+    </plurals>
+    <plurals name="time_days_verbose">
+        <item quantity="other">%d gün</item>
+        <item quantity="one">1 gün</item>
+    </plurals>
+    <plurals name="time_days_verbose_ago">
+        <item quantity="other">%d gün önce</item>
+        <item quantity="one">1 gün önce</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="other">%d sa</item>
+        <item quantity="one">1 sa</item>
+    </plurals>
+    <plurals name="time_hours_verbose">
+        <item quantity="other">%d saat</item>
+        <item quantity="one">1 saat</item>
+    </plurals>
+    <plurals name="time_hours_verbose_ago">
+        <item quantity="other">%d saat önce</item>
+        <item quantity="one">1 saat önce</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="other">%d dk</item>
+        <item quantity="one">1 dk</item>
+    </plurals>
+    <plurals name="time_mins_verbose">
+        <item quantity="other">%d dakika</item>
+        <item quantity="one">1 dakika</item>
+    </plurals>
+    <plurals name="time_mins_verbose_ago">
+        <item quantity="other">%d dakika önce</item>
+        <item quantity="one">1 dakika önce</item>
+    </plurals>
+    <plurals name="time_months_verbose_ago">
+        <item quantity="other">%d ay önce</item>
+        <item quantity="one">1 ay önce</item>
+    </plurals>
+    <plurals name="time_secs">
+        <item quantity="other">%d sn</item>
+        <item quantity="one">1 sn</item>
+    </plurals>
+    <plurals name="time_secs_verbose">
+        <item quantity="other">%d saniye</item>
+        <item quantity="one">1 saniye</item>
+    </plurals>
+    <plurals name="time_secs_verbose_ago">
+        <item quantity="other">%d saniye önce</item>
+        <item quantity="one">1 saniye önce</item>
+    </plurals>
+    <plurals name="time_weeks_verbose_ago">
+        <item quantity="other">%d hafta önce</item>
+        <item quantity="one">1 hafta önce</item>
+    </plurals>
+    <plurals name="time_years_verbose_ago">
+        <item quantity="other">%d yıl önce</item>
+        <item quantity="one">1 yıl önce</item>
+    </plurals>
+    <plurals name="timeline_compact_comments">
+        <item quantity="other">%1$s yorum</item>
+        <item quantity="one">%1$s yorum</item>
+    </plurals>
+    <plurals name="timeline_compact_likes">
+        <item quantity="other">%1$s beğeni</item>
+        <item quantity="one">%1$s beğeni</item>
+    </plurals>
+    <plurals name="timeline_likes">
+        <item quantity="other">&quot;%1$s kişi&quot; bunu beğendi</item>
+        <item quantity="one">&quot;%1$s&quot; bunu beğendi</item>
+    </plurals>
+</resources>

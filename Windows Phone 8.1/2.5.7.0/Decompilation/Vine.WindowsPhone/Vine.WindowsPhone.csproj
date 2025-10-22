@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{7BC17BB5-66C3-4DF7-A965-2D06E9880AB2}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">ArmThumb2</Platform>
+    <OutputType>WinExe</OutputType>
+    <LangVersion>12.0</LangVersion>
+    <AssemblyName>Vine.WindowsPhone</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhoneApp</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'ArmThumb2' ">
+    <PlatformTarget>ArmThumb2</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Runtime">
+      <HintPath>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Runtime\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Windows" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Diagnostics.Debug" />
+    <Reference Include="System.Runtime.WindowsRuntime">
+      <HintPath>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Runtime.WindowsRuntime\v4.0_4.0.0.0__b77a5c561934e089\System.Runtime.WindowsRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tools" />
+    <Reference Include="System.Collections" />
+    <Reference Include="System.IO" />
+    <Reference Include="System.Threading.Timer" />
+    <Reference Include="System.ObjectModel" />
+    <Reference Include="System.Threading" />
+    <Reference Include="System.Runtime.Serialization.Primitives" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:\Users\jlaks\OneDrive\Dokumentai\GitHub\Vine-Decomp\Windows Phone 8.1\2.5.7.0\Extracted Client\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq.Expressions" />
+    <Reference Include="Microsoft.Xaml.Interactivity">
+      <HintPath>C:\Users\jlaks\OneDrive\Dokumentai\GitHub\Vine-Decomp\Windows Phone 8.1\2.5.7.0\Extracted Client\Microsoft.Xaml.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="CellNative" />
+    <Reference Include="System.Runtime.WindowsRuntime.UI.Xaml" />
+    <Reference Include="System.Runtime.InteropServices.WindowsRuntime" />
+    <Reference Include="System.Text.RegularExpressions" />
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>C:\Users\jlaks\OneDrive\Dokumentai\GitHub\Vine-Decomp\Windows Phone 8.1\2.5.7.0\Extracted Client\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions" />
+    <Reference Include="GrayscaleTransform_Windows" />
+    <Reference Include="VideoEdit" />
+    <Reference Include="HockeyAppPCL">
+      <HintPath>C:\Users\jlaks\OneDrive\Dokumentai\GitHub\Vine-Decomp\Windows Phone 8.1\2.5.7.0\Extracted Client\HockeyAppPCL.dll</HintPath>
+    </Reference>
+    <Reference Include="HockeyApp">
+      <HintPath>C:\Users\jlaks\OneDrive\Dokumentai\GitHub\Vine-Decomp\Windows Phone 8.1\2.5.7.0\Extracted Client\HockeyApp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq" />
+    <Reference Include="System.Reflection" />
+    <Reference Include="System.Globalization" />
+    <Reference Include="NodaTime">
+      <HintPath>C:\Users\jlaks\OneDrive\Dokumentai\GitHub\Vine-Decomp\Windows Phone 8.1\2.5.7.0\Extracted Client\NodaTime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.NetworkInformation" />
+    <Reference Include="Microsoft.ApplicationInsights.Extensibility.Windows">
+      <HintPath>C:\Users\jlaks\OneDrive\Dokumentai\GitHub\Vine-Decomp\Windows Phone 8.1\2.5.7.0\Extracted Client\Microsoft.ApplicationInsights.Extensibility.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights.PersistenceChannel">
+      <HintPath>C:\Users\jlaks\OneDrive\Dokumentai\GitHub\Vine-Decomp\Windows Phone 8.1\2.5.7.0\Extracted Client\Microsoft.ApplicationInsights.PersistenceChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Vine.Background" />
+    <Reference Include="WriteableBitmapEx.WinRT">
+      <HintPath>C:\Users\jlaks\OneDrive\Dokumentai\GitHub\Vine-Decomp\Windows Phone 8.1\2.5.7.0\Extracted Client\WriteableBitmapEx.WinRT.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationConfig Include="Vine.WindowsPhone.exe.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CameraSampleCS.Models.Camera\CameraType.cs" />
+    <Compile Include="CameraSampleCS.Models.Camera\DeviceHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vine.Camera\MediaCaptureHelper.cs" />
+    <Compile Include="Vine.Common\CaptureInfo.cs" />
+    <Compile Include="Vine.Common\EntityHelper.cs" />
+    <Compile Include="Vine.Common\FolderHelper.cs" />
+    <Compile Include="Vine.Common\Logger.cs" />
+    <Compile Include="Vine.Common\Serialization.cs" />
+    <Compile Include="Vine.Common\TelemetryInitializer.cs" />
+    <Compile Include="Vine.Common\WritablePropertiesOnlyResolver.cs" />
+    <Compile Include="Vine.Converters\NoneToVisibilityConverter.cs" />
+    <Compile Include="Vine.Converters\VisibleIfTrueConverter.cs" />
+    <Compile Include="Vine.Events\AppResuming.cs" />
+    <Compile Include="Vine.Events\ConversationAdded.cs" />
+    <Compile Include="Vine.Events\ConversationDeleted.cs" />
+    <Compile Include="Vine.Events\IgnoreNavigationParameter.cs" />
+    <Compile Include="Vine.Events\LaunchParameters.cs" />
+    <Compile Include="Vine.Events\MuteSettingChanged.cs" />
+    <Compile Include="Vine.Events\ProfileChanged.cs" />
+    <Compile Include="Vine.Events\SearchPinChanged.cs" />
+    <Compile Include="Vine.Events\SigningOut.cs" />
+    <Compile Include="Vine.Framework\ApplicationSettingsBase.cs" />
+    <Compile Include="Vine.Framework\BasePage.cs" />
+    <Compile Include="Vine.Framework\BaseUserControl.cs" />
+    <Compile Include="Vine.Framework\Behavior.cs" />
+    <Compile Include="Vine.Framework\CancellationException.cs" />
+    <Compile Include="Vine.Framework\DispatcherEx.cs" />
+    <Compile Include="Vine.Framework\EventAggregator.cs" />
+    <Compile Include="Vine.Framework\EventAsync.cs" />
+    <Compile Include="Vine.Framework\Extensions.cs" />
+    <Compile Include="Vine.Framework\ExtensionsForUi.cs" />
+    <Compile Include="Vine.Framework\HashHelper.cs" />
+    <Compile Include="Vine.Framework\IEventHandler.cs" />
+    <Compile Include="Vine.Framework\IIncrementalSource.cs" />
+    <Compile Include="Vine.Framework\IncrementalLoadingBaseModel.cs" />
+    <Compile Include="Vine.Framework\IncrementalLoadingCollection.cs" />
+    <Compile Include="Vine.Framework\IPullToRefresh.cs" />
+    <Compile Include="Vine.Framework\LoadStateEventArgs.cs" />
+    <Compile Include="Vine.Framework\LoadStateEventHandler.cs" />
+    <Compile Include="Vine.Framework\MobileNetworkInfoHelper.cs" />
+    <Compile Include="Vine.Framework\NavigationHelper.cs" />
+    <Compile Include="Vine.Framework\NetworkHelper.cs" />
+    <Compile Include="Vine.Framework\NotifyPage.cs" />
+    <Compile Include="Vine.Framework\ObservableDictionary.cs" />
+    <Compile Include="Vine.Framework\OSVersionHelper.cs" />
+    <Compile Include="Vine.Framework\PagedItemsResult.cs" />
+    <Compile Include="Vine.Framework\PageStateExtensions.cs" />
+    <Compile Include="Vine.Framework\PasswordBoxUpdateBehavior.cs" />
+    <Compile Include="Vine.Framework\PerformanceLevel.cs" />
+    <Compile Include="Vine.Framework\PhonePerformanceHelper.cs" />
+    <Compile Include="Vine.Framework\PushHelper.cs" />
+    <Compile Include="Vine.Framework\RandomAccessLoadingCollection.cs" />
+    <Compile Include="Vine.Framework\RelayCommand.cs" />
+    <Compile Include="Vine.Framework\ResourceHelper.cs" />
+    <Compile Include="Vine.Framework\SaveStateEventArgs.cs" />
+    <Compile Include="Vine.Framework\SaveStateEventHandler.cs" />
+    <Compile Include="Vine.Framework\ScrollViewerExtensions.cs" />
+    <Compile Include="Vine.Framework\SimpleStopWatch.cs" />
+    <Compile Include="Vine.Framework\SuspensionManager.cs" />
+    <Compile Include="Vine.Framework\SuspensionManagerException.cs" />
+    <Compile Include="Vine.Framework\TaskManager.cs" />
+    <Compile Include="Vine.Framework\TextBoxUpdateBehavior.cs" />
+    <Compile Include="Vine.Framework\TimeStampHelper.cs" />
+    <Compile Include="Vine.Framework\ToastHelper.cs" />
+    <Compile Include="Vine.Framework\VisualTreeExtensions.cs" />
+    <Compile Include="Vine.Models.Analytics\ActivityDetails.cs" />
+    <Compile Include="Vine.Models.Analytics\AlertAction.cs" />
+    <Compile Include="Vine.Models.Analytics\AlertDetails.cs" />
+    <Compile Include="Vine.Models.Analytics\AppNavigation.cs" />
+    <Compile Include="Vine.Models.Analytics\AppState.cs" />
+    <Compile Include="Vine.Models.Analytics\AudioTrackDetails.cs" />
+    <Compile Include="Vine.Models.Analytics\ChannelDetails.cs" />
+    <Compile Include="Vine.Models.Analytics\ClientEvent.cs" />
+    <Compile Include="Vine.Models.Analytics\CommentDetails.cs" />
+    <Compile Include="Vine.Models.Analytics\CommentEvent.cs" />
+    <Compile Include="Vine.Models.Analytics\CommentItem.cs" />
+    <Compile Include="Vine.Models.Analytics\Constants.cs" />
+    <Compile Include="Vine.Models.Analytics\DeviceData.cs" />
+    <Compile Include="Vine.Models.Analytics\EventDetails.cs" />
+    <Compile Include="Vine.Models.Analytics\EventItem.cs" />
+    <Compile Include="Vine.Models.Analytics\Filtering.cs" />
+    <Compile Include="Vine.Models.Analytics\HttpPerformanceData.cs" />
+    <Compile Include="Vine.Models.Analytics\HttpRequestDetails.cs" />
+    <Compile Include="Vine.Models.Analytics\InternetAccessType.cs" />
+    <Compile Include="Vine.Models.Analytics\ItemType.cs" />
+    <Compile Include="Vine.Models.Analytics\LaunchDetails.cs" />
+    <Compile Include="Vine.Models.Analytics\LikeEvent.cs" />
+    <Compile Include="Vine.Models.Analytics\MobileRadioDetails.cs" />
+    <Compile Include="Vine.Models.Analytics\NetworkErrorCode.cs" />
+    <Compile Include="Vine.Models.Analytics\Position.cs" />
+    <Compile Include="Vine.Models.Analytics\PostItem.cs" />
+    <Compile Include="Vine.Models.Analytics\PostOrRepostDetails.cs" />
+    <Compile Include="Vine.Models.Analytics\PostPlayedEvent.cs" />
+    <Compile Include="Vine.Models.Analytics\RepostItem.cs" />
+    <Compile Include="Vine.Models.Analytics\RequestData.cs" />
+    <Compile Include="Vine.Models.Analytics\RevineEvent.cs" />
+    <Compile Include="Vine.Models.Analytics\ScribeLog.cs" />
+    <Compile Include="Vine.Models.Analytics\ScribeOrientation.cs" />
+    <Compile Include="Vine.Models.Analytics\Section.cs" />
+    <Compile Include="Vine.Models.Analytics\SessionEndedEvent.cs" />
+    <Compile Include="Vine.Models.Analytics\SessionStartedEvent.cs" />
+    <Compile Include="Vine.Models.Analytics\ShareDetails.cs" />
+    <Compile Include="Vine.Models.Analytics\ShareTarget.cs" />
+    <Compile Include="Vine.Models.Analytics\SuggestionDetails.cs" />
+    <Compile Include="Vine.Models.Analytics\TagDetails.cs" />
+    <Compile Include="Vine.Models.Analytics\TimingDetails.cs" />
+    <Compile Include="Vine.Models.Analytics\UserDetails.cs" />
+    <Compile Include="Vine.Models.Analytics\UserItem.cs" />
+    <Compile Include="Vine.Models.Analytics\VideoDownloadedEvent.cs" />
+    <Compile Include="Vine.Models.Analytics\ViewImpressionEvent.cs" />
+    <Compile Include="Vine.Models.Analytics\VMRecipient.cs" />
+    <Compile Include="Vine.Models\AccessToken.cs" />
+    <Compile Include="Vine.Models\ApplicationSettings.cs" />
+    <Compile Include="Vine.Models\AudioTracks.cs" />
+    <Compile Include="Vine.Models\AvatarResponseModel.cs" />
+    <Compile Include="Vine.Models\AvatarResponseModelMetadata.cs" />
+    <Compile Include="Vine.Models\BaseConversationModel.cs" />
+    <Compile Include="Vine.Models\BaseVineResponseModel.cs" />
+    <Compile Include="Vine.Models\ChannelMetaData.cs" />
+    <Compile Include="Vine.Models\ChannelModel.cs" />
+    <Compile Include="Vine.Models\CommentMetaModel.cs" />
+    <Compile Include="Vine.Models\CommentModel.cs" />
+    <Compile Include="Vine.Models\ConversationCacheModel.cs" />
+    <Compile Include="Vine.Models\ConversationMetaModel.cs" />
+    <Compile Include="Vine.Models\ConversationModel.cs" />
+    <Compile Include="Vine.Models\ConversationViewModel.cs" />
+    <Compile Include="Vine.Models\EmptyConversationModel.cs" />
+    <Compile Include="Vine.Models\Entity.cs" />
+    <Compile Include="Vine.Models\EntityType.cs" />
+    <Compile Include="Vine.Models\FbPermission.cs" />
+    <Compile Include="Vine.Models\FbPermissions.cs" />
+    <Compile Include="Vine.Models\FbUserModel.cs" />
+    <Compile Include="Vine.Models\FollowingStatus.cs" />
+    <Compile Include="Vine.Models\FriendFinderAllNavigationParameter.cs" />
+    <Compile Include="Vine.Models\FriendFinderListSource.cs" />
+    <Compile Include="Vine.Models\FriendFinderModel.cs" />
+    <Compile Include="Vine.Models\InteractionMetaModel.cs" />
+    <Compile Include="Vine.Models\InteractionModel.cs" />
+    <Compile Include="Vine.Models\InteractionType.cs" />
+    <Compile Include="Vine.Models\ListType.cs" />
+    <Compile Include="Vine.Models\LoopCountsModel.cs" />
+    <Compile Include="Vine.Models\LoopResponseModel.cs" />
+    <Compile Include="Vine.Models\MessageCacheModel.cs" />
+    <Compile Include="Vine.Models\MessageError.cs" />
+    <Compile Include="Vine.Models\MessageException.cs" />
+    <Compile Include="Vine.Models\Milestone.cs" />
+    <Compile Include="Vine.Models\MosaicImageViewModel.cs" />
+    <Compile Include="Vine.Models\MosaicType.cs" />
+    <Compile Include="Vine.Models\NotifyObject.cs" />
+    <Compile Include="Vine.Models\PathConstants.cs" />
+    <Compile Include="Vine.Models\PostCommentModel.cs" />
+    <Compile Include="Vine.Models\RecordingClipModel.cs" />
+    <Compile Include="Vine.Models\RecordingVineModel.cs" />
+    <Compile Include="Vine.Models\RecordType.cs" />
+    <Compile Include="Vine.Models\ReplyVmParameters.cs" />
+    <Compile Include="Vine.Models\RepostModel.cs" />
+    <Compile Include="Vine.Models\RequestModel.cs" />
+    <Compile Include="Vine.Models\RequestType.cs" />
+    <Compile Include="Vine.Models\RetryJobCommand.cs" />
+    <Compile Include="Vine.Models\RevineModel.cs" />
+    <Compile Include="Vine.Models\SearchResultModel.cs" />
+    <Compile Include="Vine.Models\SearchType.cs" />
+    <Compile Include="Vine.Models\SingleVineViewParams.cs" />
+    <Compile Include="Vine.Models\Track.cs" />
+    <Compile Include="Vine.Models\TwitterErrorModel.cs" />
+    <Compile Include="Vine.Models\TwitterErrorResponseModel.cs" />
+    <Compile Include="Vine.Models\UploadJob.cs" />
+    <Compile Include="Vine.Models\UploadJobsViewModel.cs" />
+    <Compile Include="Vine.Models\UploadLoopsModel.cs" />
+    <Compile Include="Vine.Models\UploadMessageModel.cs" />
+    <Compile Include="Vine.Models\UploadRequestModel.cs" />
+    <Compile Include="Vine.Models\UserControlWrapper.cs" />
+    <Compile Include="Vine.Models\UserListType.cs" />
+    <Compile Include="Vine.Models\VineAuthToken.cs" />
+    <Compile Include="Vine.Models\VineAuthTokenResult.cs" />
+    <Compile Include="Vine.Models\VineAuthUserCache.cs" />
+    <Compile Include="Vine.Models\VineCacheModel.cs" />
+    <Compile Include="Vine.Models\VineContactModel.cs" />
+    <Compile Include="Vine.Models\VineContactViewModel.cs" />
+    <Compile Include="Vine.Models\VineListViewParams.cs" />
+    <Compile Include="Vine.Models\VineLoopModel.cs" />
+    <Compile Include="Vine.Models\VineMessageActivityCounts.cs" />
+    <Compile Include="Vine.Models\VineMessageMetaModel.cs" />
+    <Compile Include="Vine.Models\VineMessageModel.cs" />
+    <Compile Include="Vine.Models\VineMessageResponseMetaModel.cs" />
+    <Compile Include="Vine.Models\VineMessageVideoResponseModel.cs" />
+    <Compile Include="Vine.Models\VineMessageViewModel.cs" />
+    <Compile Include="Vine.Models\VineModel.cs" />
+    <Compile Include="Vine.Models\VineRecentSearch.cs" />
+    <Compile Include="Vine.Models\VineSearchSuggestions.cs" />
+    <Compile Include="Vine.Models\VineStatModel.cs" />
+    <Compile Include="Vine.Models\VineTagMetaModel.cs" />
+    <Compile Include="Vine.Models\VineTagModel.cs" />
+    <Compile Include="Vine.Models\VineTimelineMetaData.cs" />
+    <Compile Include="Vine.Models\VineUnifiedSearchMetaModel.cs" />
+    <Compile Include="Vine.Models\VineUnifiedSearchResult.cs" />
+    <Compile Include="Vine.Models\VineUnifiedSearchResultMetaModel.cs" />
+    <Compile Include="Vine.Models\VineUserListViewParams.cs" />
+    <Compile Include="Vine.Models\VineUserModel.cs" />
+    <Compile Include="Vine.Models\VineUsersMetaModel.cs" />
+    <Compile Include="Vine.Models\VineUserType.cs" />
+    <Compile Include="Vine.Models\VineViewModel.cs" />
+    <Compile Include="Vine.Scribe\IScribePage.cs" />
+    <Compile Include="Vine.Scribe\ScribeTimer.cs" />
+    <Compile Include="Vine.Special\ReservedEx.cs" />
+    <Compile Include="Vine.Test\InstanceCountPopupControl.cs" />
+    <Compile Include="Vine.Test\MemoryCheckpoint.cs" />
+    <Compile Include="Vine.Test\MemoryDiagnosticsHelper.cs" />
+    <Compile Include="Vine.Test\MemoryObject.cs" />
+    <Compile Include="Vine.Tiles\ChannelTileWide.cs" />
+    <Compile Include="Vine.Tiles\GenericSmallTile.cs" />
+    <Compile Include="Vine.Tiles\SearchSmallTile.cs" />
+    <Compile Include="Vine.Tiles\SecondaryTileType.cs" />
+    <Compile Include="Vine.Tiles\SpecificTagSmallTile.cs" />
+    <Compile Include="Vine.Tiles\TileHelper.cs" />
+    <Compile Include="Vine.Views.Capture\CaptureView10.cs" />
+    <Compile Include="Vine.Views.Capture\CaptureView8.cs" />
+    <Compile Include="Vine.Views.Capture\CaptureViewHelper.cs" />
+    <Compile Include="Vine.Views.Capture\ChannelSelectView.cs" />
+    <Compile Include="Vine.Views.Capture\DraftsView.cs" />
+    <Compile Include="Vine.Views.Capture\EditClipsView.cs" />
+    <Compile Include="Vine.Views.Capture\EditClipsViewModel.cs" />
+    <Compile Include="Vine.Views.Capture\ImportListItemView.cs" />
+    <Compile Include="Vine.Views.Capture\ImportView.cs" />
+    <Compile Include="Vine.Views.Capture\ImportViewModel.cs" />
+    <Compile Include="Vine.Views.Capture\PreviewCaptureParams.cs" />
+    <Compile Include="Vine.Views.Capture\PreviewCaptureView.cs" />
+    <Compile Include="Vine.Views.Capture\ShareCaptureView.cs" />
+    <Compile Include="Vine.Views.Capture\VineCaptureExt.cs" />
+    <Compile Include="Vine.Views.designs\InteractionsTemplate.cs" />
+    <Compile Include="Vine.Views.designs\MilestoneNotificationDesign.cs" />
+    <Compile Include="Vine.Views.designs\TimelineTemplate1.cs" />
+    <Compile Include="Vine.Views.designs\TimelineTemplate2.cs" />
+    <Compile Include="Vine.Views.designs\VMTemplate1.cs" />
+    <Compile Include="Vine.Views.designs\VMTemplate2.cs" />
+    <Compile Include="Vine.Views.Settings\AttributionView.cs" />
+    <Compile Include="Vine.Views.TemplateSelectors\ContactTemplateSelector.cs" />
+    <Compile Include="Vine.Views.TemplateSelectors\FriendFinderTemplateSelector.cs" />
+    <Compile Include="Vine.Views.TemplateSelectors\InteractionTemplateSelector.cs" />
+    <Compile Include="Vine.Views.TemplateSelectors\MessageTemplateSelector.cs" />
+    <Compile Include="Vine.Views.TemplateSelectors\SearchResultTemplateSelector.cs" />
+    <Compile Include="Vine.Views.TemplateSelectors\TaggingTemplateSelector.cs" />
+    <Compile Include="Vine.Views.TemplateSelectors\VineListTemplateSelector.cs" />
+    <Compile Include="Vine.Views\AvatarControl.cs" />
+    <Compile Include="Vine.Views\AvatarCropView.cs" />
+    <Compile Include="Vine.Views\CaptchaParameter.cs" />
+    <Compile Include="Vine.Views\CaptchaView.cs" />
+    <Compile Include="Vine.Views\ChannelVineListView.cs" />
+    <Compile Include="Vine.Views\CommentNavigationObject.cs" />
+    <Compile Include="Vine.Views\CommentsView.cs" />
+    <Compile Include="Vine.Views\ConversationList.cs" />
+    <Compile Include="Vine.Views\ExploreControl.cs" />
+    <Compile Include="Vine.Views\FacebookConstants.cs" />
+    <Compile Include="Vine.Views\FacebookView.cs" />
+    <Compile Include="Vine.Views\FriendFinderAllView.cs" />
+    <Compile Include="Vine.Views\FriendFinderView.cs" />
+    <Compile Include="Vine.Views\HomeView.cs" />
+    <Compile Include="Vine.Views\InteractionsControl.cs" />
+    <Compile Include="Vine.Views\LoginEmailView.cs" />
+    <Compile Include="Vine.Views\LoginParameters.cs" />
+    <Compile Include="Vine.Views\LoginTwitterView.cs" />
+    <Compile Include="Vine.Views\MenuTag.cs" />
+    <Compile Include="Vine.Views\MusicInformationControl.cs" />
+    <Compile Include="Vine.Views\ProfileControl.cs" />
+    <Compile Include="Vine.Views\ProfileView.cs" />
+    <Compile Include="Vine.Views\PullToRefreshListControl.cs" />
+    <Compile Include="Vine.Views\ResetPasswordView.cs" />
+    <Compile Include="Vine.Views\Response.cs" />
+    <Compile Include="Vine.Views\SearchControl.cs" />
+    <Compile Include="Vine.Views\SearchTagsAllView.cs" />
+    <Compile Include="Vine.Views\SearchView.cs" />
+    <Compile Include="Vine.Views\SettingsContentView.cs" />
+    <Compile Include="Vine.Views\SettingsPrivacyView.cs" />
+    <Compile Include="Vine.Views\SettingsView.cs" />
+    <Compile Include="Vine.Views\ShareMessageControl.cs" />
+    <Compile Include="Vine.Views\ShareMessageView.cs" />
+    <Compile Include="Vine.Views\ShareViewParameters.cs" />
+    <Compile Include="Vine.Views\SignUpEmailDetailsView.cs" />
+    <Compile Include="Vine.Views\SignUpEmailView.cs" />
+    <Compile Include="Vine.Views\SingleVineView.cs" />
+    <Compile Include="Vine.Views\SwipeEvent.cs" />
+    <Compile Include="Vine.Views\TagVineListView.cs" />
+    <Compile Include="Vine.Views\TappedToLikeControl.cs" />
+    <Compile Include="Vine.Views\TOSControl.cs" />
+    <Compile Include="Vine.Views\UpgradeView.cs" />
+    <Compile Include="Vine.Views\UploadJobsView.cs" />
+    <Compile Include="Vine.Views\VerifyEmailCodeEnterView.cs" />
+    <Compile Include="Vine.Views\VerifyEmailPopupControl.cs" />
+    <Compile Include="Vine.Views\VerifyPhoneCodeEnterView.cs" />
+    <Compile Include="Vine.Views\VerifyPhoneEditControl.cs" />
+    <Compile Include="Vine.Views\VerifyPhonePopupControl.cs" />
+    <Compile Include="Vine.Views\VerifyPhoneResponse.cs" />
+    <Compile Include="Vine.Views\VineListControl.cs" />
+    <Compile Include="Vine.Views\VineMessagesInbox.cs" />
+    <Compile Include="Vine.Views\VineMessagesThreadView.cs" />
+    <Compile Include="Vine.Views\VinePressedButton.cs" />
+    <Compile Include="Vine.Views\VineToggleButton.cs" />
+    <Compile Include="Vine.Views\VineToggleButtonState.cs" />
+    <Compile Include="Vine.Views\VineUserListView.cs" />
+    <Compile Include="Vine.Views\WebView.cs" />
+    <Compile Include="Vine.Views\WelcomeView.cs" />
+    <Compile Include="Vine.Vine_WindowsPhone_XamlTypeInfo\Activator.cs" />
+    <Compile Include="Vine.Vine_WindowsPhone_XamlTypeInfo\AddToCollection.cs" />
+    <Compile Include="Vine.Vine_WindowsPhone_XamlTypeInfo\AddToDictionary.cs" />
+    <Compile Include="Vine.Vine_WindowsPhone_XamlTypeInfo\Getter.cs" />
+    <Compile Include="Vine.Vine_WindowsPhone_XamlTypeInfo\Setter.cs" />
+    <Compile Include="Vine.Vine_WindowsPhone_XamlTypeInfo\XamlMember.cs" />
+    <Compile Include="Vine.Vine_WindowsPhone_XamlTypeInfo\XamlSystemBaseType.cs" />
+    <Compile Include="Vine.Vine_WindowsPhone_XamlTypeInfo\XamlTypeInfoProvider.cs" />
+    <Compile Include="Vine.Vine_WindowsPhone_XamlTypeInfo\XamlUserType.cs" />
+    <Compile Include="Vine.Web\ApiResult.cs" />
+    <Compile Include="Vine.Web\Constants.cs" />
+    <Compile Include="Vine.Web\EmptyApiResult.cs" />
+    <Compile Include="Vine.Web\ErrorApiResult.cs" />
+    <Compile Include="Vine.Web\ErrorType.cs" />
+    <Compile Include="Vine.Web\IDataProvider.cs" />
+    <Compile Include="Vine.Web\OAuth.cs" />
+    <Compile Include="Vine.Web\ParameterCollection.cs" />
+    <Compile Include="Vine.Web\Parameters.cs" />
+    <Compile Include="Vine.Web\TwitterException.cs" />
+    <Compile Include="Vine.Web\WebDataProvider.cs" />
+    <Compile Include="Vine\App.cs" />
+    <Compile Include="Vine\Program.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

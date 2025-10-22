@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="new_messages">
+        <item quantity="other">새 메시지 %1$s개</item>
+        <item quantity="one">새 메시지 %1$s개</item>
+    </plurals>
+    <plurals name="profile_followers">
+        <item quantity="other">팔로워 &quot;%1$s&quot;명</item>
+        <item quantity="one">팔로워 &quot;%1$s&quot;명</item>
+    </plurals>
+    <plurals name="profile_following">
+        <item quantity="other">팔로잉 &quot;%1$s&quot;명</item>
+        <item quantity="one">팔로잉 &quot;%1$s&quot;명</item>
+    </plurals>
+    <plurals name="profile_likes">
+        <item quantity="other">좋아요 &quot;%1$s&quot;개</item>
+        <item quantity="one">좋아요 &quot;%1$s&quot;개</item>
+    </plurals>
+    <plurals name="profile_loops">
+        <item quantity="other">%1$s 루프</item>
+        <item quantity="one">%1$s 루프</item>
+    </plurals>
+    <plurals name="profile_posts">
+        <item quantity="other">영상 &quot;%1$s&quot;개</item>
+        <item quantity="one">영상 &quot;%1$s&quot;개</item>
+    </plurals>
+    <plurals name="revine_count">
+        <item quantity="other">리바인 %1$s회</item>
+        <item quantity="one">리바인 %1$s회</item>
+    </plurals>
+    <plurals name="tag_post_count">
+        <item quantity="other">동영상 %1$s개</item>
+        <item quantity="one">동영상 %1$s개</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="other">%d일</item>
+        <item quantity="one">1일</item>
+    </plurals>
+    <plurals name="time_days_verbose">
+        <item quantity="other">%d일</item>
+        <item quantity="one">1일</item>
+    </plurals>
+    <plurals name="time_days_verbose_ago">
+        <item quantity="other">%d일 전</item>
+        <item quantity="one">1일 전</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="other">%d시간</item>
+        <item quantity="one">1시간</item>
+    </plurals>
+    <plurals name="time_hours_verbose">
+        <item quantity="other">%d시간</item>
+        <item quantity="one">1시간</item>
+    </plurals>
+    <plurals name="time_hours_verbose_ago">
+        <item quantity="other">%d시간 전</item>
+        <item quantity="one">1시간 전</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="other">%d분</item>
+        <item quantity="one">1분</item>
+    </plurals>
+    <plurals name="time_mins_verbose">
+        <item quantity="other">%d분</item>
+        <item quantity="one">1분</item>
+    </plurals>
+    <plurals name="time_mins_verbose_ago">
+        <item quantity="other">%d분 전</item>
+        <item quantity="one">1분 전</item>
+    </plurals>
+    <plurals name="time_months_verbose_ago">
+        <item quantity="other">%d달 전</item>
+        <item quantity="one">1달 전</item>
+    </plurals>
+    <plurals name="time_secs">
+        <item quantity="other">%d초</item>
+        <item quantity="one">1초</item>
+    </plurals>
+    <plurals name="time_secs_verbose">
+        <item quantity="other">%d초</item>
+        <item quantity="one">1초</item>
+    </plurals>
+    <plurals name="time_secs_verbose_ago">
+        <item quantity="other">%d초 전</item>
+        <item quantity="one">1초 전</item>
+    </plurals>
+    <plurals name="time_weeks_verbose_ago">
+        <item quantity="other">%d주 전</item>
+        <item quantity="one">1주 전</item>
+    </plurals>
+    <plurals name="time_years_verbose_ago">
+        <item quantity="other">%d년 전</item>
+        <item quantity="one">1년 전</item>
+    </plurals>
+    <plurals name="timeline_compact_comments">
+        <item quantity="other">댓글 %1$s개</item>
+        <item quantity="one">댓글 %1$s개</item>
+    </plurals>
+    <plurals name="timeline_compact_likes">
+        <item quantity="other">좋아요 %1$s회</item>
+        <item quantity="one">좋아요 %1$s회</item>
+    </plurals>
+    <plurals name="timeline_likes">
+        <item quantity="other">&quot;%1$s명&quot;이 좋아합니다</item>
+        <item quantity="one">&quot;%1$s&quot; 님이 좋아합니다</item>
+    </plurals>
+</resources>
