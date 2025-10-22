@@ -1,0 +1,296 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                            xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+                            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                            xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+                            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Controls="clr-namespace:Vine.Controls"
+                            x:Class="Vine.Pages.Profile.ProfileControl" mc:Ignorable="d"
+                            shell:SystemTray.IsVisible="True" shell:SystemTray.Opacity="0" shell:SystemTray.ForegroundColor="#FF808080">
+
+    <UserControl.Resources>
+		<Style x:Key="UserFollowToggleButtonStyle" TargetType="ToggleButton">
+			<Setter Property="Padding" Value="8" />
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="ToggleButton">
+						<Grid x:Name="grid" Background="Transparent">
+							<VisualStateManager.VisualStateGroups>
+								<VisualStateGroup x:Name="CommonStates">
+									<VisualState x:Name="Normal" />
+									<VisualState x:Name="Disabled">
+										<Storyboard>
+											<DoubleAnimation Duration="0" To="0.5"
+        										Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="grid" d:IsOptimized="True" />
+										</Storyboard>
+									</VisualState>
+								</VisualStateGroup>
+								<VisualStateGroup x:Name="CheckStates">
+									<VisualState x:Name="Unchecked" />
+									<VisualState x:Name="Checked">
+										<Storyboard>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="Follow">
+												<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource GreyBrush}"/>
+											</ObjectAnimationUsingKeyFrames>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="rectangle">
+												<DiscreteObjectKeyFrame KeyTime="0">
+													<DiscreteObjectKeyFrame.Value>
+														<Visibility>Collapsed</Visibility>
+													</DiscreteObjectKeyFrame.Value>
+												</DiscreteObjectKeyFrame>
+											</ObjectAnimationUsingKeyFrames>
+										</Storyboard>
+									</VisualState>
+								</VisualStateGroup>
+							</VisualStateManager.VisualStateGroups>
+							<Ellipse Fill="White" Height="50" Width="50"/>
+							<Path x:Name="Follow" Data="F1 M28.5,37.939 C21.596,37.939 16,41.087 16,44.97 C16,48.852 21.596,52 28.5,52 C35.404,52 41,48.852 41,44.97 C41,41.087 35.404,37.939 28.5,37.939 z M28.5,23 C24.929,23 22.034,25.951 22.034,29.591 C22.034,33.231 24.929,36.182 28.5,36.182 C32.071,36.182 34.966,33.231 34.966,29.591 C34.966,25.951 32.071,23 28.5,23 z M37.5,2 C57.106,2 73,17.894 73,37.5 C73,57.106 57.106,73 37.5,73 C17.894,73 2,57.106 2,37.5 C2,17.894 17.894,2 37.5,2 z" Fill="{StaticResource PrincBrush}" UseLayoutRounding="False" Stretch="Uniform" Width="55"/>
+							<Rectangle x:Name="rectangle" Fill="White" HorizontalAlignment="Left" Height="12" Margin="40,20,0,0" VerticalAlignment="Top" Width="4"/>
+							<Rectangle Fill="White" HorizontalAlignment="Left" Height="4" Margin="36,24,0,0" VerticalAlignment="Top" Width="12"/>
+						</Grid>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+	</UserControl.Resources>
+
+    <Grid>
+        <ScrollViewer x:Name="Scroll" Background="{StaticResource NoStripeBrush}">
+			<Grid x:Name="LayoutRoot">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="*" />
+				</Grid.RowDefinitions>
+			
+
+				<Grid Grid.Row="0" Background="{StaticResource ModernHeaderBrush}" Margin="0">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+					</Grid.RowDefinitions>
+					<Grid Margin="16,36,0,-6">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="auto"/>
+						</Grid.ColumnDefinitions>
+						<StackPanel Margin="0,-2,0,0">
+							<Grid>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="auto"/>
+									<ColumnDefinition Width="auto"/>
+									<ColumnDefinition Width="auto"/>
+								</Grid.ColumnDefinitions>
+								<ContentControl HorizontalAlignment="Left" Height="25"  Style="{StaticResource LogoStyle}" Width="32" Margin="2,5.5,0,0" VerticalAlignment="Top"/>
+
+								<TextBlock
+									Grid.Column="1"
+									Text="{Binding Profile.Name, Converter={StaticResource ToUpperConverter}}"
+									FontFamily="Segoe WP Semibold" FontSize="24" Margin="6,0,0,0" Foreground="{StaticResource ModernForegroundBrush}" VerticalAlignment="Center"
+									HorizontalAlignment="Left" TextWrapping="Wrap" />
+								<Image 
+									Grid.Column="2"
+									Visibility="{Binding Profile.IsVerified,Converter={StaticResource VisibilityConverter},FallbackValue=Collapsed}"
+									Source="/Assets/verifiedBadge.png" Stretch="Uniform" Height="20" Margin="6,2,0,0" />
+							</Grid>
+							<TextBlock Text="{Binding Profile.FullName}" Margin="4,0,0,0"
+								FontFamily="Segoe WP SemiLight" FontSize="24" Foreground="{StaticResource DarkGreyBrush}" HorizontalAlignment="Left" TextWrapping="Wrap" />
+						</StackPanel>
+						<StackPanel VerticalAlignment="Top" Grid.Column="1">
+							<StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,7,12,0" >
+								<Grid VerticalAlignment="Top" >
+									<ToggleButton x:Name="FollowButton" IsChecked="{Binding Profile.Following}" Height="55" Width="55"
+										Style="{StaticResource UserFollowToggleButtonStyle}" Margin="12,0" Click="Follow_Click" />
+									<ProgressBar x:Name="FollowLoading" Background="{x:Null}" Margin="0" VerticalAlignment="Center" 
+                                                 Foreground="{StaticResource PrincBrush}" Visibility="Collapsed" />
+								</Grid>
+								
+							</StackPanel>
+							<TextBlock x:Name="WaitingAuthoriation" Text="{Binding LocalizedResources.WaitingAuthorization, Source={StaticResource LocalizedStrings}}"
+								Visibility="{Binding Profile.WaitingAuthorization, Converter={StaticResource VisibilityConverter}, FallbackValue=Collapsed}"
+								Margin="0,0,12,0" FontFamily="Segoe WP Light" FontSize="16" Foreground="{StaticResource DarkGreyBrush}" HorizontalAlignment="Right"
+								TextWrapping="Wrap" />
+						</StackPanel>
+					</Grid>
+					<Grid Grid.Row="2" Margin="0,24,0,0">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="auto" />
+							<ColumnDefinition Width="*" />
+						</Grid.ColumnDefinitions>
+						<StackPanel Margin="20,0,12,0">
+							<Image x:Name="Avatar"  Source="{Binding Profile.Picture}" Stretch="Uniform" VerticalAlignment="Top" HorizontalAlignment="Left" Height="80" Width="80">
+                                <Image.Clip>
+                                    <EllipseGeometry Center="40,40" RadiusX="40" RadiusY="40"/>
+                                </Image.Clip>
+                                </Image>
+
+							<TextBlock x:Name="FollowYouTextBlock" 
+                                       Visibility="{Binding Profile.IsFollowingYou, Converter={StaticResource VisibilityConverter}, FallbackValue=Collapsed}" Text="{Binding LocalizedResources.FollowYou, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" Foreground="{StaticResource DarkGreyBrush}" VerticalAlignment="Top" FontFamily="Segoe WP Light" FontSize="14"/>
+
+						</StackPanel>
+
+						<StackPanel Margin="0,-5,12,0" Grid.Column="1" HorizontalAlignment="Left">
+							<RichTextBox x:Name="DescriptionTextBlock" FontFamily="Segoe WP SemiLight"
+								Foreground="{StaticResource ModernForegroundBrush}" FontSize="18" TextWrapping="Wrap" Margin="-12,2" HorizontalAlignment="Left" />
+                            <TextBlock Text="{Binding Profile.Website}" Tap="Website_Tap" 
+                                       Visibility="{Binding Profile.Website,Converter={StaticResource NullableToVisibilityConverter},TargetNullValue=Collapsed}"
+                                       Foreground="{StaticResource PrincBrush}" FontFamily="Segoe WP Semibold" FontSize="16" TextWrapping="Wrap" />
+                        </StackPanel>
+
+					</Grid>
+					<Grid Grid.Row="3">
+						<Grid Margin="16,0,-10,12" Height="80">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="*" />
+								<ColumnDefinition Width="*" />
+								<ColumnDefinition Width="*" />
+								<ColumnDefinition Width="*" />
+							</Grid.ColumnDefinitions>
+							<Button  Click="Followers_Click" Margin="0,0,2,0" Style="{StaticResource SimpleButtonStyle}"
+								VerticalAlignment="Bottom" >
+								<StackPanel MinWidth="111" HorizontalAlignment="Right">
+									<TextBlock x:Name="FollowerCount" Text="{Binding Profile.FollowerCount, Converter={StaticResource BigNumberConverter}}" SizeChanged="AutoTextBlock_SizeChanged" FontSize="36" Margin="-2,0,0,0"
+										FontFamily="Segoe WP SemiLight" >
+										<TextBlock.Foreground>
+											<SolidColorBrush Color="{StaticResource PrincColor}" />
+										</TextBlock.Foreground>
+									</TextBlock>
+									<TextBlock
+										Text="{Binding LocalizedResources.Followers, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource ModernForegroundBrush}"
+										FontSize="16" FontFamily="Segoe WP SemiLight" Margin="0,-8,0,0" TextWrapping="Wrap" />
+								</StackPanel>
+							</Button>
+							<Button  Grid.Column="1" Margin="0,0,2,0" Click="Following_Click"
+								Style="{StaticResource SimpleButtonStyle}" VerticalAlignment="Bottom">
+								<StackPanel>
+									<TextBlock x:Name="FollowingCount"
+										Text="{Binding Profile.FollowingCount, Converter={StaticResource BigNumberConverter}}" FontSize="36" Margin="-2,0,0,0" FontFamily="Segoe WP SemiLight">
+										<TextBlock.Foreground>
+											<SolidColorBrush Color="{StaticResource PrincColor}" />
+										</TextBlock.Foreground>
+									</TextBlock>
+									<TextBlock Foreground="{StaticResource ModernForegroundBrush}" FontSize="16" FontFamily="Segoe WP SemiLight"
+										Margin="0,-8,0,0" TextWrapping="Wrap">
+										<Run Text="{Binding LocalizedResources.Following, Source={StaticResource LocalizedStrings}}" />
+									</TextBlock>
+								</StackPanel>
+							</Button>
+							<Button  Grid.Column="2" Margin="2,0,0,0" Click="Post_Click"
+								Style="{StaticResource SimpleButtonStyle}" VerticalAlignment="Bottom">
+								<StackPanel>
+									<TextBlock x:Name="PostCount"
+										Text="{Binding Profile.PostCount}" FontSize="36" Margin="-2,0,0,0" FontFamily="Segoe WP SemiLight">
+										<TextBlock.Foreground>
+											<SolidColorBrush Color="{StaticResource PrincColor}" />
+										</TextBlock.Foreground>
+									</TextBlock>
+									<TextBlock
+										Text="{Binding LocalizedResources.Posts, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource ModernForegroundBrush}"
+										FontSize="16" FontFamily="Segoe WP SemiLight" Margin="0,-8,0,0" TextWrapping="Wrap" />
+								</StackPanel>
+							</Button>
+							<Button  Grid.Column="3" Margin="2,0,0,0" Click="Tagged_Click"
+								Style="{StaticResource SimpleButtonStyle}" VerticalAlignment="Bottom">
+								<StackPanel>
+									<TextBlock x:Name="PhotoOfYouCount"
+										Text="{Binding Profile.PhotoOfYou}" FontSize="36" Margin="-2,0,0,0" FontFamily="Segoe WP SemiLight">
+										<TextBlock.Foreground>
+											<SolidColorBrush Color="{StaticResource PrincColor}" />
+										</TextBlock.Foreground>
+									</TextBlock>
+									<TextBlock x:Name="PhotoOfYouCountLabel"
+										Text="{Binding LocalizedResources.Tagged, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource ModernForegroundBrush}"
+										FontSize="16" FontFamily="Segoe WP SemiLight" Margin="0,-8,0,0" TextWrapping="Wrap" />
+								</StackPanel>
+							</Button>
+
+
+						</Grid>
+					</Grid>
+				</Grid>
+                <Rectangle Height="1"  VerticalAlignment="Bottom"
+                           Visibility="{Binding Data.UseFullScreenPost,Converter={StaticResource VisibilityConverter}}"
+                                                   Fill="{StaticResource HeaderBottomSeparatorBrush}" />
+
+                <Grid x:Name="AnswerFollowingPanel"
+					Visibility="{Binding Profile.AskFollowing, Converter={StaticResource VisibilityConverter}, FallbackValue=Collapsed}"
+					Grid.Row="1" Background="{StaticResource PrincBrush}">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="auto" />
+						<ColumnDefinition Width="auto" />
+					</Grid.ColumnDefinitions>
+					<TextBlock
+						Text="{Binding LocalizedResources.AcceptFollowRequest, Source={StaticResource LocalizedStrings}}"
+						VerticalAlignment="Center" Margin="18,12,0,12" TextWrapping="Wrap" />
+					<Button Grid.Column="1" Style="{StaticResource SimpleButtonStyle}" Margin="0,0,12,0"
+						Click="AnswerFollowYes_Click">
+						<Path FlowDirection="LeftToRight"
+							Data="M149.134,13.2319 L169.78,30.1446 L55.5978,151.221 L55.5973,151.221 L55.5967,151.221 L-5.59705,97.5936 L11.4056,78.9025 L53.1969,114.986 z"
+							Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="27.375" Stretch="Fill" UseLayoutRounding="False"
+							VerticalAlignment="Center" Width="35.25" Margin="0,12.063,0,11.688" />
+					</Button>
+					<Button Grid.Column="2" Style="{StaticResource SimpleButtonStyle}" Margin="0,0,12,0"
+						Click="AnswerFollowNo_Click">
+						<Path x:Name="ClosePath"
+							Data="M23.5557,0 L32.4443,0 L32.4443,24.4582 L56,24.4582 L56,31.5418 L32.4443,31.5418 L32.4443,56 L23.5557,56 L23.5557,31.5418 L0,31.5418 L0,24.4582 L23.5557,24.4582 z"
+							Margin="4" RenderTransformOrigin="0.5,0.5" Stretch="Fill" UseLayoutRounding="False" Width="30" Height="30" Fill="White">
+							<Path.RenderTransform>
+								<CompositeTransform Rotation="45" />
+							</Path.RenderTransform>
+						</Path>
+					</Button>
+				</Grid>
+				<Grid x:Name="ContentPanel1" Grid.Row="2">
+
+					<StackPanel Margin="0">
+
+						<TextBlock
+							Text="{Binding LocalizedResources.LoadingPosts, Source={StaticResource LocalizedStrings}}"
+							Visibility="{Binding IsLoadingPost, Converter={StaticResource VisibilityConverter}}" Margin="24,36,0,0" FontSize="30"
+							FontFamily="Segoe WP Light" Foreground="{StaticResource DarkGreyBrush}" />
+						<StackPanel>
+							<ItemsControl x:Name="ListPosts" ItemsSource="{Binding Posts}">
+								<ItemsControl.ItemsPanel>
+									<ItemsPanelTemplate>
+										<toolkit:WrapPanel />
+									</ItemsPanelTemplate>
+								</ItemsControl.ItemsPanel>
+								<ItemsControl.ItemTemplate>
+									<DataTemplate>
+										<Controls:GroupPostControl Post="{Binding }" Height="160" Width="160"
+																   Tap="Thumb_Tap"/>
+									</DataTemplate>
+								</ItemsControl.ItemTemplate>
+
+							</ItemsControl>
+						   <TextBlock 
+                                Visibility="{Binding IsProtected, Converter={StaticResource VisibilityConverter}}"
+                                Text="&#57846;" FontSize="200" HorizontalAlignment="Center" Margin="0,48,0,0"
+                                       Foreground="{StaticResource GreyBrush}" FontFamily="{StaticResource SegoeMDL2Font}"/>		
+                        
+                        
+                        </StackPanel>
+					</StackPanel>
+
+				</Grid>
+				<Rectangle x:Name="ShadowRectangle" Visibility="Collapsed"  IsHitTestVisible="False" Fill="{StaticResource ShadowBrush}" Height="4" VerticalAlignment="Top" Grid.Row="2" />
+			</Grid>
+
+		</ScrollViewer>
+
+		<Grid Visibility="{Binding IsLoading, Converter={StaticResource VisibilityConverter}}" Background="#7F000000"
+			d:IsHidden="True" >
+			<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+				<TextBlock Text="{Binding LocalizedResources.LoadingProfile, Source={StaticResource LocalizedStrings}}" />
+				<ProgressBar IsIndeterminate="{Binding IsLoading}" Background="Transparent" Foreground="{StaticResource PrincBrush}" />
+			</StackPanel>
+		</Grid>
+		<!--
+        <Image Source="/Assets/AlignmentGrid.png" Stretch="Fill" IsHitTestVisible="False"/>
+-->
+	</Grid>
+
+
+</UserControl>

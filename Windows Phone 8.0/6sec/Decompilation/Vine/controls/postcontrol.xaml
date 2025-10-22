@@ -1,0 +1,245 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone" x:Class="Vine.Controls.PostControl"
+            x:Name="RootControl"
+             mc:Ignorable="d" d:DesignHeight="800" d:DesignWidth="480">
+    <UserControl.Resources>
+
+        <Storyboard x:Name="StoryboardFrontToBack">
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationY)" Storyboard.TargetName="BackPanel">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.15" Value="90" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimation Duration="0:0:0.15" To="-90"
+                             Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationY)" Storyboard.TargetName="FrontPanel"
+                             d:IsOptimized="True" />
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)"
+                                           Storyboard.TargetName="BackPanel">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Name="StoryboardBackToFront">
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationY)" Storyboard.TargetName="FrontPanel">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.15" Value="-90" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimation Duration="0:0:0.15" To="90"
+                             Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationY)" Storyboard.TargetName="BackPanel"
+                             d:IsOptimized="True" />
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)"
+                                           Storyboard.TargetName="FrontPanel">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+
+
+        <Storyboard x:Name="StoryboardFrontLike" FillBehavior="Stop">
+            <DoubleAnimation Duration="0:0:0.7" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="FrontLikedPath" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <BackEase Amplitude="0.7" EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Duration="0:0:0.7" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="FrontLikedPath" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <BackEase Amplitude="0.7" EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="FrontLikedPath">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="FrontLikedPath">
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="StoryboardFrontDisLike" FillBehavior="Stop">
+            <DoubleAnimation Duration="0:0:0.7" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="FrontDisLikedPath" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <BackEase Amplitude="0.7" EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Duration="0:0:0.7" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="FrontDisLikedPath" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <BackEase Amplitude="0.7" EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="FrontDisLikedPath">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="StoryboardUserTagShow">
+            <DoubleAnimation Duration="0:0:0.3" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="HasUserTagged" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <CircleEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+        <Storyboard x:Name="StoryboardUserTagHide">
+            <DoubleAnimation Duration="0:0:0.3" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="HasUserTagged" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <CircleEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+        <EllipseGeometry x:Key="Avatar501Clip" Center="25,25" RadiusX="25" RadiusY="25"/>
+
+    </UserControl.Resources>
+
+    <UserControl.FontFamily>
+        <StaticResource ResourceKey="PhoneFontFamilyNormal" />
+    </UserControl.FontFamily>
+    <UserControl.FontSize>
+        <StaticResource ResourceKey="PhoneFontSizeNormal" />
+    </UserControl.FontSize>
+    <UserControl.Foreground>
+        <StaticResource ResourceKey="PhoneForegroundBrush" />
+    </UserControl.Foreground>
+
+    <Grid x:Name="LayoutRoot" Margin="14,0,0,0" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="FrontPanel" CacheMode="BitmapCache">
+            <Grid.Projection>
+                <PlaneProjection />
+            </Grid.Projection>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="452" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <StackPanel  Background="{StaticResource PostBackgroundBrush}">
+                <Image x:Name="Image" Width="432" Height="432" Margin="0,10,0,0"  DoubleTap="Front_DoubleTap"  Tap="Picture_Tap" />
+                <Grid Margin="10,12,10,3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="RevinePanel" Grid.Column="1" Visibility="Collapsed" Click="Repost_Click"
+                            Margin="0,-2,0,2" Style="{StaticResource SimpleButtonStyle}">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Assets/Revine.png" Height="16" Width="11" />
+                            <TextBlock x:Name="RevineText" FontSize="16" Margin="6,0,0,0"
+                                       Foreground="{StaticResource GreyBrush}" />
+                        </StackPanel>
+                    </Button>
+                    <Image x:Name="Avatar"  Grid.Row="1" Height="50" Width="50" Tap="Profile_Tap"
+                           VerticalAlignment="Top" Margin="0,0,6,0">
+                        <Image.Clip>
+                            <EllipseGeometry Center="25,25" RadiusX="25" RadiusY="25"/>
+                        </Image.Clip>
+                    </Image>
+                    <TextBlock x:Name="Date" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right"
+                               FontFamily="Segoe WP Light" Foreground="{StaticResource DarkGreyBrush}" FontSize="18.667" />
+
+                    <StackPanel Grid.Row="1" Grid.Column="1" Margin="0,-8,0,0">
+                        <TextBlock x:Name="NameTxt" Tap="Profile_Tap" Foreground="{Binding PostForeground,ElementName=RootControl}"
+                                   FontSize="22" TextWrapping="Wrap" />
+                        <RichTextBox x:Name="DescriptionTxt" Margin="-12,0,12,3" Foreground="{StaticResource PostForegroundBrush}" FontSize="20"
+                                     FontFamily="Segoe WP SemiLight" TextWrapping="Wrap" />
+
+                        <Button x:Name="PlacePanel" Click="Place_Click" Margin="0,4"
+                                Style="{StaticResource SimpleButtonStyle}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/Assets/Place.png" Height="16" Width="11" />
+                                <TextBlock x:Name="PlaceText" FontSize="16" Margin="6,0,0,0"
+                                           Foreground="{StaticResource GreyBrush}" />
+                            </StackPanel>
+                        </Button>
+                        <Grid x:Name="PostBottomInfo">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,4,0,8">
+                                <Button Click="Like_Click" Style="{StaticResource SimpleButtonStyle}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock x:Name="LittleLikeIcon" Text="&#57350;" FontFamily="{StaticResource SegoeMDL2Font}" FontSize="19" Foreground="{StaticResource DarkGreyBrush}" VerticalAlignment="Center"   Margin="0,0,0,-1"/>
+                                        <TextBlock x:Name="LikeLabelTxt" VerticalAlignment="Center" FontSize="19" Foreground="{StaticResource DarkGreyBrush}" FontFamily="Segoe WP SemiLight" Margin="6,0,0,0" />
+                                    </StackPanel>
+                                </Button>
+
+                                <Button Margin="32,0,0,0" Click="Comment_Click" Style="{StaticResource SimpleButtonStyle}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="&#57695;" FontFamily="{StaticResource SegoeMDL2Font}" FontSize="19" Foreground="{StaticResource DarkGreyBrush}" VerticalAlignment="Center"   Margin="0,0,0,-3"/>
+                                        <TextBlock x:Name="CommentLabelTxt" VerticalAlignment="Center" FontSize="19" Foreground="{StaticResource DarkGreyBrush}" FontFamily="Segoe WP SemiLight" Margin="6,0,0,0">
+                                        </TextBlock>
+                                    </StackPanel>
+                                </Button>
+                                <StackPanel x:Name="LoopPanel" Visibility="Collapsed" Orientation="Horizontal" Margin="32,0,0,0">
+                                    <Path Data="{StaticResource LoopPath}" Height="16" Stretch="Uniform" UseLayoutRounding="False" Fill="{StaticResource DarkGreyBrush}"/>
+                                    <TextBlock x:Name="LoopTxt" VerticalAlignment="Center" FontSize="19" Foreground="{StaticResource DarkGreyBrush}" FontFamily="Segoe WP SemiLight" Margin="6,0,0,0" />
+                                </StackPanel>
+                            </StackPanel>
+                            <Button x:Name="ShowMenuButton" Click="TurnPost_Click" HorizontalAlignment="Right" Style="{StaticResource SimpleButtonStyle}" Margin="0,-10,-10,-10">
+                                <Border Background="Transparent" >
+                                    <TextBlock Text="..." FontFamily="Segoe WP SemiBold" FontSize="34" Foreground="{StaticResource DarkGreyBrush}" Margin="12,6,12,12" />
+                                </Border>
+                            </Button>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+
+            <Rectangle  x:Name="ShadowF1" Visibility="Collapsed"  Grid.Row="1" Height="5" Fill="{StaticResource ShadowBrush}"  Grid.ColumnSpan="2" Margin="5,0,0,0" />
+            <Rectangle x:Name="ShadowF2" Visibility="Collapsed" Fill="{StaticResource ShadowBrush}" Width="5" Grid.Column="1" Margin="0,5,0,0" />
+            <Canvas x:Name="VideoContainer" VerticalAlignment="Top" Margin="10,10,0,0" Grid.ColumnSpan="2" />
+            <Canvas x:Name="UserTaggedContainer" FlowDirection="LeftToRight" VerticalAlignment="Top" Margin="13,12,0,0" Grid.ColumnSpan="2" />
+            <Path x:Name="ButtonPlay" IsHitTestVisible="False" FlowDirection="LeftToRight" Data="{StaticResource VideoPlayButton}" Fill="White" UseLayoutRounding="False" VerticalAlignment="Top" HorizontalAlignment="Center" Visibility="Collapsed" Margin="0,160,0,0"/>
+            <Path x:Name="ButtonPause" IsHitTestVisible="False" FlowDirection="LeftToRight"  Data="{StaticResource VideoPauseButton}" Fill="White" UseLayoutRounding="False" VerticalAlignment="Top" HorizontalAlignment="Center" Visibility="Collapsed" Margin="0,160,0,0"/>
+            <Path x:Name="FrontLikedPath" Stretch="Uniform" FlowDirection="LeftToRight"
+            	Data="{StaticResource LikePath}"
+            	Fill="White" UseLayoutRounding="False" VerticalAlignment="Top" HorizontalAlignment="Center" Width="114" RenderTransformOrigin="0.5,0.5" Margin="0,192,0,0" Visibility="Collapsed" >
+                <Path.RenderTransform>
+                    <CompositeTransform ScaleX="0" ScaleY="0"/>
+                </Path.RenderTransform>
+            </Path>
+            <Path x:Name="FrontDisLikedPath" Stretch="Uniform" FlowDirection="LeftToRight"
+            	Data="{StaticResource DisLikePath}"
+            	Fill="White" UseLayoutRounding="False" VerticalAlignment="Top" HorizontalAlignment="Center" Width="114" RenderTransformOrigin="0.5,0.5" Margin="168.5,192,168.5,0" Visibility="Collapsed" >
+                <Path.RenderTransform>
+                    <CompositeTransform ScaleX="0" ScaleY="0"/>
+                </Path.RenderTransform>
+            </Path>
+            <Path x:Name="HasUserTagged" FlowDirection="LeftToRight" Stretch="Uniform" IsHitTestVisible="False" Height="30" Width="32" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,399,0,0" Fill="{Binding PostForeground,ElementName=RootControl}" Data="{StaticResource UserTagPath}" Visibility="Collapsed" />
+        </Grid>
+        <Grid x:Name="BackPanel" Margin="0" Visibility="Collapsed">
+            <Grid.Projection>
+                <PlaneProjection />
+            </Grid.Projection>
+        </Grid>
+        <Rectangle x:Name="FullScreenSeparator" Height="2" Fill="#20808080" VerticalAlignment="Bottom" CacheMode="BitmapCache"
+                       Grid.Row="1" />
+    </Grid>
+</UserControl>

@@ -1,0 +1,146 @@
+﻿<phone:PhoneApplicationPage x:Class="Vine.Pages.Direct.DirectPage"
+                            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                            xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+                            xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+                            xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+                            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                            xmlns:direct="clr-namespace:Vine.Pages.Direct"
+                            xmlns:converters="clr-namespace:Vine.Converters"
+                            xmlns:controls="clr-namespace:Vine.Controls"
+                            FontFamily="{StaticResource PhoneFontFamilyNormal}" FontSize="{StaticResource PhoneFontSizeNormal}"
+                            Foreground="{StaticResource PhoneForegroundBrush}" SupportedOrientations="Portrait" Orientation="Portrait"
+                            mc:Ignorable="d" shell:SystemTray.IsVisible="True" shell:SystemTray.Opacity="0"
+                            shell:SystemTray.ForegroundColor="#FF808080">
+    <phone:PhoneApplicationPage.Resources>
+        <converters:PendingUsersConverter x:Key="PendingUsersConverter"/>
+
+        <DataTemplate x:Key="ConversationTemplate">
+            <Grid Margin="0,8,0,4">
+                <toolkit:ContextMenuService.ContextMenu>
+                    <toolkit:ContextMenu IsZoomEnabled="false" Background="White">
+                        <toolkit:MenuItem Header="{Binding LocalizedResources.Delete, Source={StaticResource LocalizedStrings}}" Click="Delete_Click" />
+                    </toolkit:ContextMenu>
+                </toolkit:ContextMenuService.ContextMenu>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    
+                </Grid.ColumnDefinitions>
+                <Border Background="{StaticResource GreyBrush}" Margin="0,6,12,0" VerticalAlignment="Top" Height="60" Width="60">
+                    <Border.Clip>
+                        <EllipseGeometry Center="30,30" RadiusX="30" RadiusY="30"/>
+                    </Border.Clip>
+                    <Image Source="{Binding User.Picture}" Stretch="UniformToFill"  />
+                </Border>
+                <StackPanel Grid.Column="1" Margin="3,0">
+                    <TextBlock Text="{Binding User.Name}" Foreground="{StaticResource PrincBrush}" FontSize="22" FontFamily="Segoe WP" />
+                    <TextBlock Text="{Binding LastConversationMessage.Created,Converter={StaticResource DateStringToTimePassedConverter}}" Foreground="{StaticResource DarkerBrush}" FontSize="18" Margin="0,-4,0,0" FontFamily="Segoe WP Light" />
+                </StackPanel>
+                <Border Grid.Column="2" Margin="0,0,0,0" Visibility="{Binding UnreadMessageCount,Converter={StaticResource IntVisibilityConverter}}" VerticalAlignment="Center" Background="{StaticResource PrincBrush}" Height="50" Width="50" CornerRadius="25" >
+                    <TextBlock Text="{Binding UnreadMessageCount}"  VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"  FontFamily="Segoe WP" FontSize="22" />
+                </Border>
+            </Grid>
+
+        </DataTemplate>
+
+    </phone:PhoneApplicationPage.Resources>
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn" />
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut" />
+            </toolkit:NavigationOutTransition.Backward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+  
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="{StaticResource ModernAppBarRowHeight}" />
+        </Grid.RowDefinitions>
+
+        <Rectangle x:Name="RectBackground" Grid.RowSpan="3" Fill="{StaticResource NoStripeBrush}" CacheMode="BitmapCache" />
+        <Grid Grid.Row="0" Height="80" Background="{StaticResource ModernHeaderBrush}">
+            <Grid Margin="24,24,0,0">
+                <ContentControl HorizontalAlignment="Left" Height="25"  Style="{StaticResource LogoStyle}" Width="32"/>
+                <TextBlock Text="{Binding LocalizedResources.Direct, Source={StaticResource LocalizedStrings},Converter={StaticResource ToUpperConverter}}" FontFamily="Segoe WP Semibold" FontSize="26.667" Margin="40,0,0,0"
+                           Foreground="{StaticResource ModernForegroundBrush}" VerticalAlignment="Center" HorizontalAlignment="Left" />
+            </Grid>
+        </Grid>
+        <Grid x:Name="ContentPanel"  Grid.Row="1" >
+
+            <phone:Pivot>
+                <phone:Pivot.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Converter={StaticResource ToUpperConverter}}"  FontSize="28" Foreground="{StaticResource DarkGreyBrush}" FontFamily="Segoe WP Light"/>
+                    </DataTemplate>
+                </phone:Pivot.HeaderTemplate>
+                <phone:PivotItem Header="{Binding LocalizedResources.Followers, Source={StaticResource LocalizedStrings}}">
+                    <Grid>
+                        <phone:LongListSelector ItemTemplate="{StaticResource ConversationTemplate}" SelectionChanged="Direct_SelectionChanged"  ItemsSource="{Binding Shares}"
+        		 Style="{StaticResource HiddenScrollLongListSelectorStyle}" Margin="12,-24,12,0">
+
+                            <phone:LongListSelector.ListHeader>
+                                <Grid Height="24"/>
+                            </phone:LongListSelector.ListHeader>
+                        </phone:LongListSelector>
+                        <TextBlock Text="{Binding LocalizedResources.NoMessages, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource DarkGreyBrush}" Margin="12,0,0,0" Visibility="{Binding Shares,Converter={StaticResource NullableToVisibilityConverter},ConverterParameter=inverse,TargetNullValue=true}" FontFamily="Segoe WP Light" TextWrapping="Wrap"/>
+                    </Grid>
+                </phone:PivotItem>
+                <phone:PivotItem Header="{Binding LocalizedResources.Others, Source={StaticResource LocalizedStrings},Converter={StaticResource ToUpperConverter}}">
+                    <Grid>
+                        <phone:LongListSelector ItemTemplate="{StaticResource ConversationTemplate}" SelectionChanged="Direct_SelectionChanged"  ItemsSource="{Binding SharesOthers}"
+        		 Style="{StaticResource HiddenScrollLongListSelectorStyle}" Margin="12,-24,12,0">
+
+                            <phone:LongListSelector.ListHeader>
+                                <Grid Height="24"/>
+                            </phone:LongListSelector.ListHeader>
+                        </phone:LongListSelector>
+                        <TextBlock Text="{Binding LocalizedResources.NoMessages, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource DarkGreyBrush}" Margin="12,0,0,0" Visibility="{Binding Shares,Converter={StaticResource NullableToVisibilityConverter},ConverterParameter=inverse,TargetNullValue=true}" FontFamily="Segoe WP Light" TextWrapping="Wrap"/>
+                    </Grid>
+                </phone:PivotItem>
+            </phone:Pivot>
+
+        </Grid>
+        <Rectangle x:Name="ShadowRectangle" Visibility="Collapsed" Grid.Row="1" IsHitTestVisible="False" Fill="{StaticResource ShadowBrush}" Height="4" VerticalAlignment="Top" />
+
+
+
+
+        <Grid x:Name="ModernAppBarContainer" Grid.RowSpan="4">
+            <controls:ModernAppBar x:Name="ModernVineAppBar" >
+                <controls:ModernAppBar.Buttons>
+                    <controls:ModernAppBarButton Content="&#57609;" Click="NewConversation_Click" Text="{Binding LocalizedResources.Add, Source={StaticResource LocalizedStrings}}"/>
+                    <controls:ModernAppBarButton Content="&#57623;" Click="Refresh_Click" Text="{Binding LocalizedResources.Refresh, Source={StaticResource LocalizedStrings}}"/>
+                </controls:ModernAppBar.Buttons>
+            </controls:ModernAppBar>
+        </Grid>
+
+
+        <Grid x:Name="LoadingPanel" Grid.RowSpan="3" Visibility="{Binding IsLoading,Converter={StaticResource VisibilityConverter}}" Background="#7F000000">
+            <StackPanel VerticalAlignment="Center" >
+                <TextBlock Text="{Binding LocalizedResources.Loading, Source={StaticResource LocalizedStrings}}" 
+                           TextAlignment="Center"/>
+                <ProgressBar Background="Transparent" Foreground="{StaticResource PrincBrush}" IsIndeterminate="{Binding IsLoading}" />
+            </StackPanel>
+        </Grid>
+
+
+
+
+    </Grid>
+
+</phone:PhoneApplicationPage>

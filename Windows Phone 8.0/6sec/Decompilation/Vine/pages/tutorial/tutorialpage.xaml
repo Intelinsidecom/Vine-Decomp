@@ -1,0 +1,197 @@
+﻿<phone:PhoneApplicationPage xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                            xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+                            xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+                          xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+                            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Controls="clr-namespace:Vine.Controls"
+                            x:Class="Vine.TutorialPage" SupportedOrientations="Portrait" Orientation="Portrait" mc:Ignorable="d"
+                            shell:SystemTray.Opacity="0" shell:SystemTray.IsVisible="True">
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut" />
+            </toolkit:NavigationOutTransition.Forward>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut" />
+            </toolkit:NavigationOutTransition.Backward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn" />
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn" />
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+
+    <phone:PhoneApplicationPage.Resources>
+        <Storyboard x:Name="StoryboardSwipe" Completed="Swipe_Completed">
+            <DoubleAnimation Duration="0:0:1.5" To="360"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Hand"
+                             d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <QuarticEase EasingMode="EaseIn" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock0">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="1" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="1" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock1">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="1" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock2">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="1" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock3">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="1" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="StoryboardStart">
+            <DoubleAnimation Duration="0:0:0.8" To="0"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="border"
+                             d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <CircleEase EasingMode="EaseOut" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Duration="0:0:1.2" To="0"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="border1"
+                             d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <CircleEase EasingMode="EaseOut" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border1">
+                <EasingDoubleKeyFrame KeyTime="0:0:3.2" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="LayoutRoot">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="1" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="StoryboardShowButton">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="button">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </phone:PhoneApplicationPage.Resources>
+
+    <phone:PhoneApplicationPage.FontFamily>
+        <StaticResource ResourceKey="PhoneFontFamilyNormal" />
+    </phone:PhoneApplicationPage.FontFamily>
+    <phone:PhoneApplicationPage.FontSize>
+        <StaticResource ResourceKey="PhoneFontSizeNormal" />
+    </phone:PhoneApplicationPage.FontSize>
+    <phone:PhoneApplicationPage.Foreground>
+        <StaticResource ResourceKey="PhoneForegroundBrush" />
+    </phone:PhoneApplicationPage.Foreground>
+    <shell:SystemTray.ForegroundColor>
+        <StaticResource ResourceKey="DarkGreyColor" />
+    </shell:SystemTray.ForegroundColor>
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="TutoPanel" Background="{StaticResource NoStripeBrush}">
+        <Grid x:Name="LayoutRoot" Opacity="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="{Binding LocalizedResources.Tutorial, Source={StaticResource LocalizedStrings}}" FontSize="30"
+                       Margin="24,72,0,0" Foreground="{StaticResource DarkGreyBrush}" />
+
+            <Controls:PostControl x:Name="Post" UseGesture="True" FullScreen="False" IsHitTestVisible="False" Grid.Row="1" VerticalAlignment="Top" Margin="0,12,0,0" />
+
+            <Grid x:Name="Hand" Grid.Row="1" Width="87" Height="215" HorizontalAlignment="Left" VerticalAlignment="Top"
+                  Margin="24,35,0,0" RenderTransformOrigin="0.5,0.5">
+                <Grid.RenderTransform>
+                    <CompositeTransform />
+                </Grid.RenderTransform>
+                <Path
+                    Data="F1 M21.3533,128.877 L4.31588,93.1896 L0.829253,75.7106 L1.73389,57.4449 L1,48.5 L1.28157,41.7887 L3.25,39.5 L9.5,45.5 L10.8745,14.5437 L13.0419,3.41522 L16.2081,1.7268 L18.7713,2.64782 L21,6.25 L21.75,31.5 C21.75,31.5 29.75,27.5 33.25,38 C33.25,38 41.5,35 44.75,48 C44.75,48 50.3882,47.5002 54.3882,57.2502 L57.6382,68.0002 L55.3526,98.1397 L53.25,107.5 L53.75,115.75 L52.111,120.358 C52.111,120.358 36.8294,135.357 21.5794,129.107"
+                    Fill="White" Canvas.Left="1.496" Canvas.Top="1.209" Stretch="Fill" UseLayoutRounding="False"
+                    Margin="1.375,2.812,1.429,2.237" />
+                <Path
+                    Data="F1M57.668,86.152C57.593,87.094 57.532,87.852 57.499,88.362 57.297,91.489 56.684,101.004 54.744,105.488 52.576,110.504 53.973,116.892 54.033,117.162L54.082,117.336C54.473,118.433 54.334,119.701 53.684,121.002 52.674,123.024 49.477,126.885 39.424,130.027 27.363,133.796 23.813,130.21 23.571,129.945 22.501,128.156 2.534,94.533 3.163,78.813 3.248,72.753 3.517,56.616 3.736,54.759 3.917,53.22 3.668,51.121 3.404,48.898 3.152,46.774 2.684,42.82 3.239,42.182 3.239,42.182 3.34,42.165 3.584,42.235L3.872,42.287C4.029,42.303 7.645,42.76 9.39,48.961 9.341,52.041 9.295,55.296 9.252,58.739 9.216,61.621 9.19,63.748 9.164,64.753 9.01,70.607 7.029,74.378 7.009,74.415L8.33,75.126 9.648,75.839C9.744,75.664 11.989,71.449 12.163,64.832 12.189,63.82 12.216,61.678 12.252,58.777 12.295,55.271 12.344,51.944 12.397,48.776L12.451,48.762C12.436,48.699 12.416,48.645 12.399,48.583 12.853,21.462 13.639,6.737 14.735,4.804 15.653,3.458 17.142,2.762 18.445,3.07 19.575,3.338 20.308,4.316 20.509,5.824 20.715,7.368 20.973,12.727 21.272,18.933 22.148,37.141 22.99,52.51 24.434,56.175L27.225,55.076C26.313,52.759 25.572,42.993 25.004,33.098 26.558,32.783 27.918,32.993 29.145,33.736 31.895,35.401 33.598,39.614 34.275,43.003 34.963,46.442 35.744,55.618 35.752,55.71L38.74,55.457C38.709,55.073 37.938,46.019 37.217,42.415 37.129,41.974 36.973,41.29 36.74,40.474 42.55,40.351 44.002,46.195 44.155,46.902 44.795,49.845 49.033,61.363 49.213,61.852L52.029,60.815C51.117,58.341 49.668,54.32 48.563,51.048 52.016,51.549 53.871,55.104 55.842,59.615 56.388,60.863 56.902,62.042 57.457,62.974 59.279,66.044 58.066,81.179 57.668,86.152 M60.035,61.443C59.577,60.67 59.098,59.574 58.592,58.414 56.728,54.149 53.976,47.852 47.563,47.979 47.34,47.253 47.172,46.658 47.087,46.265 46.293,42.612 42.997,36.794 35.702,37.549 34.689,35.187 33.109,32.63 30.699,31.17 28.937,30.103 26.968,29.75 24.836,30.09 24.618,26.052 24.428,22.116 24.268,18.789 23.954,12.256 23.706,7.097 23.483,5.427 23.117,2.682 21.492,0.71 19.138,0.151 16.638,-0.443 13.87,0.748 12.257,3.113 10.829,5.208 10.006,16.593 9.503,42.534 7.358,39.936 4.974,39.412 4.284,39.316 2.841,38.943 1.907,39.401 1.37,39.858 -0.499,41.449 -0.071,45.065 0.425,49.251 0.657,51.203 0.896,53.222 0.756,54.408 0.475,56.798 0.175,77.875 0.164,78.732 -0.513,95.654 20.165,130.109 21.045,131.568L21.102,131.654C21.401,132.08 23.531,134.754 29.796,134.754 32.482,134.754 35.93,134.261 40.318,132.89 50.875,129.591 54.873,125.334 56.367,122.343 57.358,120.361 57.563,118.267 56.945,116.433 56.807,115.754 55.832,110.533 57.498,106.679 59.422,102.23 60.129,94.205 60.493,88.555 60.525,88.056 60.584,87.314 60.658,86.392 61.535,75.455 62.065,64.861 60.035,61.443"
+                    Fill="#FF7E8083" Canvas.Left="0" Canvas.Top="0" Stretch="Fill" />
+            </Grid>
+            <Grid x:Name="LegendPanel" Grid.Row="1">
+
+                <TextBlock x:Name="textBlock0" HorizontalAlignment="Center" Margin="0,124,0,0"
+                	TextWrapping="Wrap" VerticalAlignment="Top" Foreground="{StaticResource DarkerBrush}" FontSize="22" Opacity="0"
+                	 />
+
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="24,265,0,0" Width="130" TextAlignment="Center" TextWrapping="Wrap"
+                       Text="{Binding LocalizedResources.ILike, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top"
+                       Foreground="{StaticResource DarkerBrush}" FontSize="22" Opacity="0" />
+                <TextBlock x:Name="textBlock1" HorizontalAlignment="Center" Margin="0,265,0,0" Width="130" TextAlignment="Center" 
+                       TextWrapping="Wrap" Text="{Binding LocalizedResources.Share, Source={StaticResource LocalizedStrings}}"
+                       VerticalAlignment="Top" Foreground="{StaticResource DarkerBrush}" FontSize="22" Opacity="0" />
+
+                <TextBlock x:Name="textBlock2" HorizontalAlignment="Right" Margin="0,265,24,0" Width="130" TextAlignment="Center" 
+                       TextWrapping="Wrap" Text="{Binding LocalizedResources.Comment, Source={StaticResource LocalizedStrings}}"
+                       VerticalAlignment="Top" Foreground="{StaticResource DarkerBrush}" FontSize="22" Opacity="0" />
+                <TextBlock x:Name="textBlock3" HorizontalAlignment="Center" Margin="0,395,0,0"
+                       TextWrapping="Wrap" VerticalAlignment="Top" Foreground="{StaticResource DarkerBrush}" FontSize="22" Opacity="0"
+                       Text="revine" />
+            </Grid>
+            <Button x:Name="button" Click="Next_Click"
+                    Content="{Binding LocalizedResources.LetsGo, Source={StaticResource LocalizedStrings}}"
+                    Background="{StaticResource PrincBrush}" Grid.Row="2" BorderThickness="0" Margin="12,0,12,12" Opacity="0" />
+            <!--TitlePanel contains the name of the application and page title-->
+
+            <!--ContentPanel - place additional content here-->
+        </Grid>
+        <Border x:Name="border" Background="{StaticResource PrincBrush}" VerticalAlignment="Top" HorizontalAlignment="Left"
+                Margin="12,140,0,0" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <CompositeTransform TranslateX="-800" />
+            </Border.RenderTransform>
+            <TextBlock Text="{Binding LocalizedResources.TutoMessage1, Source={StaticResource LocalizedStrings}}"
+                       FontSize="34.667" Margin="3" FontFamily="Segoe WP SemiLight" />
+        </Border>
+        <Border x:Name="border1" Background="{StaticResource PrincBrush}" VerticalAlignment="Top" HorizontalAlignment="Left"
+                Margin="12,230,0,0" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <CompositeTransform TranslateX="-800" />
+            </Border.RenderTransform>
+            <TextBlock Text="{Binding LocalizedResources.TutoMessage2, Source={StaticResource LocalizedStrings}}"
+                       FontSize="34.667" Margin="3" FontFamily="Segoe WP SemiLight" />
+        </Border>
+    </Grid>
+</phone:PhoneApplicationPage>

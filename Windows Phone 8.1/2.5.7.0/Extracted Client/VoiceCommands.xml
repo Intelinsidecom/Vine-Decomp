@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<VoiceCommands  xmlns="http://schemas.microsoft.com/voicecommands/1.1">
+  <CommandSet xml:lang="en" Name="vineCommandSet">
+    <CommandPrefix>Vine</CommandPrefix>
+    
+    <Example>vine record</Example>
+
+    <Command   Name="VineRecord">
+      <Example>record </Example>
+      <ListenFor>Record</ListenFor>
+      <Feedback> Vine Record...</Feedback>
+      <Navigate Target="Views/Capture/CaptureView.xaml"/>
+    </Command>
+    
+    <Command   Name="VineSearchTag">
+      <Example>search michael jordan</Example>
+      <ListenFor>Search [for] {tagSearch}</ListenFor>
+      <Feedback> Searching Vine...</Feedback>
+      <Navigate Target="TagVineListView.xaml"/>
+    </Command>
+
+    <PhraseTopic Label="tagSearch" Scenario="Search">
+      <Subject>Tag</Subject>
+    </PhraseTopic>
+
+  </CommandSet>
+</VoiceCommands>

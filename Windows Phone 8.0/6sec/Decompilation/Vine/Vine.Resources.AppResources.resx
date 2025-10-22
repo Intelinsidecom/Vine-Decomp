@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="FrontCamera" xml:space="preserve"><value>front camera</value></data>
+  <data name="BestFriends" xml:space="preserve"><value>Best friends</value></data>
+  <data name="ShareTwitter" xml:space="preserve"><value>share on Twitter</value></data>
+  <data name="ToastMessagePostedOnFacebook" xml:space="preserve"><value>post published on Facebook</value></data>
+  <data name="AddSomeFriendsToSeePosts" xml:space="preserve"><value>Add some friends to see their posts</value></data>
+  <data name="ToastEmailNotValid" xml:space="preserve"><value>Email not valid</value></data>
+  <data name="Stories" xml:space="preserve"><value>Stories</value></data>
+  <data name="Website" xml:space="preserve"><value>website</value></data>
+  <data name="Information" xml:space="preserve"><value>information</value></data>
+  <data name="PhoneNumber" xml:space="preserve"><value>phone number</value></data>
+  <data name="UsePositionFromImageFile" xml:space="preserve"><value>Do you want to use the geolocation from the image file or your current position?</value></data>
+  <data name="FollowButtonUnchecked" xml:space="preserve"><value>following</value></data>
+  <data name="CollageInnerBorder" xml:space="preserve"><value>inner border</value></data>
+  <data name="ToastYourAreDisconnected" xml:space="preserve"><value>you're disconnected</value></data>
+  <data name="SelectAPicture" xml:space="preserve"><value>select a picture</value></data>
+  <data name="PreviewSubtitle" xml:space="preserve"><value>not the final render</value></data>
+  <data name="SpecialThanksTo" xml:space="preserve"><value>special thanks to:</value></data>
+  <data name="Eraser" xml:space="preserve"><value>eraser</value></data>
+  <data name="ResourceLanguage" xml:space="preserve"><value>en-US</value></data>
+  <data name="FollowButtonChecked" xml:space="preserve"><value>follow</value></data>
+  <data name="WhoIsIt" xml:space="preserve"><value>who's this?</value></data>
+  <data name="NoInstagramPost" xml:space="preserve"><value>No instagram posts</value></data>
+  <data name="ToastMuteAudioMessage" xml:space="preserve"><value>Video play will stop your music. Do you want to disable auto-play mode?</value></data>
+  <data name="TimestampDayAgo" xml:space="preserve"><value>{0} day ago</value></data>
+  <data name="FilterBlurNormal" xml:space="preserve"><value>normal</value></data>
+  <data name="FilterBlurManual" xml:space="preserve"><value>manual</value></data>
+  <data name="ImageSaved" xml:space="preserve"><value>image saved</value></data>
+  <data name="Filter" xml:space="preserve"><value>filter</value></data>
+  <data name="FindFriendsMessage" xml:space="preserve"><value>Import contacts from your phone or from social networks</value></data>
+  <data name="BackCamera" xml:space="preserve"><value>rear camera</value></data>
+  <data name="Gender" xml:space="preserve"><value>gender</value></data>
+  <data name="PrimaryAccount" xml:space="preserve"><value>primary account</value></data>
+  <data name="VideoTooShort" xml:space="preserve"><value>Videos must be longer than 3 seconds.</value></data>
+  <data name="AboutTwitter" xml:space="preserve"><value>twitter:</value></data>
+  <data name="Delete" xml:space="preserve"><value>delete</value></data>
+  <data name="Direct" xml:space="preserve"><value>Direct</value></data>
+  <data name="MyProfile" xml:space="preserve"><value>my profile</value></data>
+  <data name="ChooseLocation" xml:space="preserve"><value>choose location...</value></data>
+  <data name="ToastCloseBeforeEndEncodingTitle" xml:space="preserve"><value>post not ready</value></data>
+  <data name="ToastCantPostVideo" xml:space="preserve"><value>can't post</value></data>
+  <data name="TutoCameraNice" xml:space="preserve"><value>Nice! Let's continue</value></data>
+  <data name="OnTheRise" xml:space="preserve"><value>on the rise</value></data>
+  <data name="AddToPhotoMap" xml:space="preserve"><value>add to the photo map</value></data>
+  <data name="Colors" xml:space="preserve"><value>colors</value></data>
+  <data name="NbrEncodingInProgress" xml:space="preserve"><value>1 encoding in progress...</value></data>
+  <data name="Cancel" xml:space="preserve"><value>cancel</value></data>
+  <data name="BlockThisPerson" xml:space="preserve"><value>block this person</value></data>
+  <data name="Create" xml:space="preserve"><value>create</value></data>
+  <data name="TitleConnecting" xml:space="preserve"><value>CONNECTING</value></data>
+  <data name="InstagramAppBaseline" xml:space="preserve"><value>client app for Instagram™</value></data>
+  <data name="StoryAddToDescription" xml:space="preserve"><value>Adding a Snap to your Story allows your followers to view your Snap an unlimited number of times for 24 hours. Would you like to add this Snap to your Story?</value></data>
+  <data name="ShowLastComments" xml:space="preserve"><value>show last comments</value></data>
+  <data name="Sending" xml:space="preserve"><value>sending...</value></data>
+  <data name="FriendRequest" xml:space="preserve"><value>friend requests</value></data>
+  <data name="Invert" xml:space="preserve"><value>invert</value></data>
+  <data name="UseMyPosition" xml:space="preserve"><value>use my current position</value></data>
+  <data name="FilterBlur" xml:space="preserve"><value>blur</value></data>
+  <data name="PhoneContacts" xml:space="preserve"><value>phone contacts</value></data>
+  <data name="FindFriendsPhone" xml:space="preserve"><value>find on my phone</value></data>
+  <data name="TitlePostVine" xml:space="preserve"><value>UPLOAD</value></data>
+  <data name="Nearby" xml:space="preserve"><value>nearby</value></data>
+  <data name="UseMyAccentColourForLiveTile" xml:space="preserve"><value>use a transparent tile</value></data>
+  <data name="NightTo" xml:space="preserve"><value>to</value></data>
+  <data name="ToastPasswordMissing" xml:space="preserve"><value>password missing</value></data>
+  <data name="AlreadyHaveAccount" xml:space="preserve"><value>Already have an account?</value></data>
+  <data name="AskGeoPosition" xml:space="preserve"><value>Would you allow the application to use your GPS position?</value></data>
+  <data name="PrivateMessage" xml:space="preserve"><value>private message</value></data>
+  <data name="Others" xml:space="preserve"><value>Others</value></data>
+  <data name="MyTimeline" xml:space="preserve"><value>my timeline</value></data>
+  <data name="Logout" xml:space="preserve"><value>Log Out</value></data>
+  <data name="LetsGo" xml:space="preserve"><value>let's go</value></data>
+  <data name="YouHaveBeenLoggedOut" xml:space="preserve"><value>you have been logged out</value></data>
+  <data name="OneComment" xml:space="preserve"><value>comment</value></data>
+  <data name="FollowerRequests" xml:space="preserve"><value>FOLLOWER REQUESTS</value></data>
+  <data name="BackgroundAgent" xml:space="preserve"><value>background agent</value></data>
+  <data name="ActivateToastNotification" xml:space="preserve"><value>activate notifications every 30 minutes</value></data>
+  <data name="ThemeBlackAndWhite" xml:space="preserve"><value>black and white theme</value></data>
+  <data name="ToastCantDisconnect" xml:space="preserve"><value>can't disconnect</value></data>
+  <data name="UsernameOrEmail" xml:space="preserve"><value>username or email</value></data>
+  <data name="General" xml:space="preserve"><value>general</value></data>
+  <data name="YourLikes" xml:space="preserve"><value>your likes</value></data>
+  <data name="ToastTweetPosted" xml:space="preserve"><value>Tweet posted</value></data>
+  <data name="RemoveMyPost" xml:space="preserve"><value>delete post</value></data>
+  <data name="LiveTile" xml:space="preserve"><value>live tile</value></data>
+  <data name="FriendSuggestions" xml:space="preserve"><value>FRIEND SUGGESTIONS</value></data>
+  <data name="TurnOffTorch" xml:space="preserve"><value>flash off</value></data>
+  <data name="TitleActivity" xml:space="preserve"><value>ACTIVITY</value></data>
+  <data name="SelectAsPrimaryAccount" xml:space="preserve"><value>select as primary account</value></data>
+  <data name="ChooseChannel" xml:space="preserve"><value>CHOOSE CHANNEL</value></data>
+  <data name="PhoneNumberOptional" xml:space="preserve"><value>phone (optional)</value></data>
+  <data name="AppVersion" xml:space="preserve"><value>version:</value></data>
+  <data name="RatingYes" xml:space="preserve"><value>rate the app</value></data>
+  <data name="PendingRequests" xml:space="preserve"><value>{0} pending requests</value></data>
+  <data name="ToastCommentPosted" xml:space="preserve"><value>your comment has been posted</value></data>
+  <data name="FindFriendsVine" xml:space="preserve"><value>find on Vine</value></data>
+  <data name="ToastCantPostComment" xml:space="preserve"><value>can't post comment, try again</value></data>
+  <data name="Tagged" xml:space="preserve"><value>tagged</value></data>
+  <data name="ToastVideoUnliked" xml:space="preserve"><value>post unliked</value></data>
+  <data name="LikeOrNot" xml:space="preserve"><value>like or not</value></data>
+  <data name="TitlePlaceSelection" xml:space="preserve"><value>PLACE SELECTION</value></data>
+  <data name="TitleEncodingQueue" xml:space="preserve"><value>ENCODING QUEUE</value></data>
+  <data name="NoChannel" xml:space="preserve"><value>no channel set</value></data>
+  <data name="Connecting" xml:space="preserve"><value>connecting</value></data>
+  <data name="Remove" xml:space="preserve"><value>remove</value></data>
+  <data name="CreateAccount" xml:space="preserve"><value>Create an account</value></data>
+  <data name="FollowYou" xml:space="preserve"><value>follows you</value></data>
+  <data name="Followers" xml:space="preserve"><value>followers</value></data>
+  <data name="Following" xml:space="preserve"><value>following</value></data>
+  <data name="Validate" xml:space="preserve"><value>validate</value></data>
+  <data name="TakeVideo" xml:space="preserve"><value>make Vine</value></data>
+  <data name="EncodingInProgress" xml:space="preserve"><value>Preparing video...</value></data>
+  <data name="ActivityFollowing" xml:space="preserve"><value>following</value></data>
+  <data name="Search" xml:space="preserve"><value>search</value></data>
+  <data name="SendTo" xml:space="preserve"><value>Send to...</value></data>
+  <data name="Social" xml:space="preserve"><value>social</value></data>
+  <data name="SignIn" xml:space="preserve"><value>sign in</value></data>
+  <data name="TutoCameraContinueToPress" xml:space="preserve"><value>keep pressing...</value></data>
+  <data name="TutoMessage1" xml:space="preserve"><value>before starting...</value></data>
+  <data name="TutoMessage2" xml:space="preserve"><value>here are some tips</value></data>
+  <data name="ToastCantResetPassword" xml:space="preserve"><value>can't reset your password</value></data>
+  <data name="VineUploadBegin" xml:space="preserve"><value>beginning...</value></data>
+  <data name="DisconnectFacebook" xml:space="preserve"><value>disconnect Facebook</value></data>
+  <data name="VineUploadError" xml:space="preserve"><value>an error has occurred</value></data>
+  <data name="FilterBlurManualFocus" xml:space="preserve"><value>manual focus</value></data>
+  <data name="Preview" xml:space="preserve"><value>Preview</value></data>
+  <data name="SignUpEmail" xml:space="preserve"><value>sign up with an Email</value></data>
+  <data name="ReplyComment" xml:space="preserve"><value>reply to comment</value></data>
+  <data name="Profile" xml:space="preserve"><value>profile</value></data>
+  <data name="ToastWelcome" xml:space="preserve"><value>welcome {0}!</value></data>
+  <data name="PullToRefresh" xml:space="preserve"><value>Pull To Refresh</value></data>
+  <data name="ToastDeleteVideoTitle" xml:space="preserve"><value>delete video</value></data>
+  <data name="BlurLevel" xml:space="preserve"><value>blur level</value></data>
+  <data name="CancelUploadingMessage" xml:space="preserve"><value>You have an upload in progress. Do you want to cancel it?</value></data>
+  <data name="FilterBorder" xml:space="preserve"><value>border</value></data>
+  <data name="ToastPleaseSetEmailFirst" xml:space="preserve"><value>Please set your email address first</value></data>
+  <data name="SignInNow" xml:space="preserve"><value>sign in now</value></data>
+  <data name="AcceptFollowRequest" xml:space="preserve"><value>accept follow request?</value></data>
+  <data name="TimestampMinutesAgo" xml:space="preserve"><value>{0} minutes ago</value></data>
+  <data name="Tutorial" xml:space="preserve"><value>TUTORIAL</value></data>
+  <data name="TagMePhotoOfYou" xml:space="preserve"><value>Photo of you</value></data>
+  <data name="TagMeShowOnMyProfile" xml:space="preserve"><value>show on my profile</value></data>
+  <data name="Connect" xml:space="preserve"><value>connect</value></data>
+  <data name="Comment" xml:space="preserve"><value>comment</value></data>
+  <data name="ToastCantFindYourPosition" xml:space="preserve"><value>can't find your location</value></data>
+  <data name="SelectAFile" xml:space="preserve"><value>select a file...</value></data>
+  <data name="Password" xml:space="preserve"><value>password</value></data>
+  <data name="DeleteMyAccount" xml:space="preserve"><value>delete my account</value></data>
+  <data name="Activity" xml:space="preserve"><value>activity</value></data>
+  <data name="ToastFailToConnect" xml:space="preserve"><value>failed to connect</value></data>
+  <data name="ShareFacebook" xml:space="preserve"><value>share on Facebook</value></data>
+  <data name="Caption" xml:space="preserve"><value>caption</value></data>
+  <data name="Capture" xml:space="preserve"><value>capture</value></data>
+  <data name="LoadingProfile" xml:space="preserve"><value>Loading Profile...</value></data>
+  <data name="UserIsNowUnblocked" xml:space="preserve"><value>user is now unblocked</value></data>
+  <data name="SearchWith" xml:space="preserve"><value>search with {0}</value></data>
+  <data name="RemoveStripes" xml:space="preserve"><value>remove stripes on the background</value></data>
+  <data name="FacebookSelectWhereToPost" xml:space="preserve"><value>select where you want to post</value></data>
+  <data name="TimestampDaysAgo" xml:space="preserve"><value>{0} days ago</value></data>
+  <data name="RemoveLastPart" xml:space="preserve"><value>remove last part</value></data>
+  <data name="FindFriendsTwitter" xml:space="preserve"><value>find on Twitter</value></data>
+  <data name="TitleSearch" xml:space="preserve"><value>SEARCH</value></data>
+  <data name="DisableToastDuringNight" xml:space="preserve"><value>disable toast notifications during the night</value></data>
+  <data name="BackgroundAgentActivate" xml:space="preserve"><value>activate background agent</value></data>
+  <data name="RecentUpdates" xml:space="preserve"><value>Recent Updates</value></data>
+  <data name="FacebookFriendsFindButton" xml:space="preserve"><value>find your Facebook Friends</value></data>
+  <data name="VineUploadUploadTo6SecServer" xml:space="preserve"><value>upload video to {0} server...</value></data>
+  <data name="TutoCameraPressToCapture" xml:space="preserve"><value>tap and hold the camera preview to capture your video</value></data>
+  <data name="Initialization" xml:space="preserve"><value>initialization</value></data>
+  <data name="ForgetSomething" xml:space="preserve"><value>Forget something?</value></data>
+  <data name="ToastPostEdited" xml:space="preserve"><value>post edited!</value></data>
+  <data name="TimestampMinuteAbbreviation" xml:space="preserve"><value>m</value></data>
+  <data name="ToastCantUploadAvatar" xml:space="preserve"><value>can't upload avatar</value></data>
+  <data name="ToastRemovePostTitle" xml:space="preserve"><value>remove post</value></data>
+  <data name="OnePendingRequest" xml:space="preserve"><value>1 pending request</value></data>
+  <data name="PersonalPlaces" xml:space="preserve"><value>personal places</value></data>
+  <data name="FullName" xml:space="preserve"><value>full name</value></data>
+  <data name="GenderNotSpecified" xml:space="preserve"><value>not specified</value></data>
+  <data name="ResetYourPassword" xml:space="preserve"><value>reset password</value></data>
+  <data name="ContinueCaptureDescription" xml:space="preserve"><value>Do you want continue your last creation?</value></data>
+  <data name="TitleComments" xml:space="preserve"><value>COMMENTS</value></data>
+  <data name="GenderMale" xml:space="preserve"><value>male</value></data>
+  <data name="FollowEditorPicks" xml:space="preserve"><value>follow editor's picks</value></data>
+  <data name="FilterBlurTiltEffect" xml:space="preserve"><value>tilt effect</value></data>
+  <data name="NeverShowAgain" xml:space="preserve"><value>Never show again</value></data>
+  <data name="SynchronizeWithTwitter" xml:space="preserve"><value>sync with Twitter</value></data>
+  <data name="FilterRotate" xml:space="preserve"><value>rotate</value></data>
+  <data name="TutoCameraTooSmall" xml:space="preserve"><value>Your video must be at least 1.5 seconds. Record some more.</value></data>
+  <data name="PreviewButton" xml:space="preserve"><value>render and upload</value></data>
+  <data name="ActiveUpload" xml:space="preserve"><value>activate unlimited uploads</value></data>
+  <data name="OneLike" xml:space="preserve"><value>like</value></data>
+  <data name="OnePost" xml:space="preserve"><value>post</value></data>
+  <data name="Trending" xml:space="preserve"><value>trending</value></data>
+  <data name="Popular" xml:space="preserve"><value>popular</value></data>
+  <data name="EmptyInternetCache" xml:space="preserve"><value>empty internet cache</value></data>
+  <data name="Highlight" xml:space="preserve"><value>highlight</value></data>
+  <data name="Requests" xml:space="preserve"><value>REQUESTS</value></data>
+  <data name="ME" xml:space="preserve"><value>ME</value></data>
+  <data name="PopularNow" xml:space="preserve"><value>popular now</value></data>
+  <data name="CornerRadius" xml:space="preserve"><value>radius</value></data>
+  <data name="ToastUploadDone" xml:space="preserve"><value>upload done!</value></data>
+  <data name="OtherAppBy" xml:space="preserve"><value>other apps by Rudy</value></data>
+  <data name="ReplyAll" xml:space="preserve"><value>reply all</value></data>
+  <data name="TitleSettings" xml:space="preserve"><value>SETTINGS</value></data>
+  <data name="SensitivePostsDescription" xml:space="preserve"><value>your posts can contain sensitive material</value></data>
+  <data name="WaitingAuthorization" xml:space="preserve"><value>waiting for authorization</value></data>
+  <data name="SynchronizeWithFacebook" xml:space="preserve"><value>sync with Facebook</value></data>
+  <data name="VineUploadGetImage" xml:space="preserve"><value>retrieving image...</value></data>
+  <data name="VineUploadGetVideo" xml:space="preserve"><value>retrieving video...</value></data>
+  <data name="HideSponsoredPosts" xml:space="preserve"><value>hide sponsored posts</value></data>
+  <data name="SearchAnUser" xml:space="preserve"><value>search an user</value></data>
+  <data name="RevinedBy" xml:space="preserve"><value>revined by {0}</value></data>
+  <data name="SendDirect" xml:space="preserve"><value>send direct</value></data>
+  <data name="SnapAddedToYourStory" xml:space="preserve"><value>Snap added to your story</value></data>
+  <data name="RatingLater" xml:space="preserve"><value>later</value></data>
+  <data name="SplitHorizontally" xml:space="preserve"><value>horizontal</value></data>
+  <data name="RatingTitle" xml:space="preserve"><value>Do you like {0}?</value></data>
+  <data name="ShowGrid" xml:space="preserve"><value>show grid</value></data>
+  <data name="Add" xml:space="preserve"><value>add</value></data>
+  <data name="Map" xml:space="preserve"><value>map</value></data>
+  <data name="Yes" xml:space="preserve"><value>yes</value></data>
+  <data name="Email" xml:space="preserve"><value>email</value></data>
+  <data name="Suggestions" xml:space="preserve"><value>suggestions</value></data>
+  <data name="About" xml:space="preserve"><value>about</value></data>
+  <data name="AppBy" xml:space="preserve"><value>app created by:</value></data>
+  <data name="Flash" xml:space="preserve"><value>flash</value></data>
+  <data name="Meter" xml:space="preserve"><value>m</value></data>
+  <data name="Brush" xml:space="preserve"><value>brush</value></data>
+  <data name="ILike" xml:space="preserve"><value>like</value></data>
+  <data name="Likes" xml:space="preserve"><value>likes</value></data>
+  <data name="Login" xml:space="preserve"><value>Log in</value></data>
+  <data name="Users" xml:space="preserve"><value>users</value></data>
+  <data name="Disconnect" xml:space="preserve"><value>disconnect</value></data>
+  <data name="TitleAbout" xml:space="preserve"><value>ABOUT</value></data>
+  <data name="Reply" xml:space="preserve"><value>reply</value></data>
+  <data name="Retry" xml:space="preserve"><value>retry</value></data>
+  <data name="Score" xml:space="preserve"><value>Score:</value></data>
+  <data name="Share" xml:space="preserve"><value>share</value></data>
+  <data name="Pause" xml:space="preserve"><value>pause</value></data>
+  <data name="Posts" xml:space="preserve"><value>posts</value></data>
+  <data name="TitleLikes" xml:space="preserve"><value>LIKES</value></data>
+  <data name="LoadingInProgress" xml:space="preserve"><value>loading...</value></data>
+  <data name="Geolocation" xml:space="preserve"><value>geolocation...</value></data>
+  <data name="ChangeColor" xml:space="preserve"><value>change color</value></data>
+  <data name="ChangeFocus" xml:space="preserve"><value>change focus</value></data>
+  <data name="ToastCantSyncFacebook" xml:space="preserve"><value>can't sync your account with Facebook</value></data>
+  <data name="ToastBadUserPassword" xml:space="preserve"><value>Incorrect username/password</value></data>
+  <data name="ToastCantPostFacebook" xml:space="preserve"><value>can't post to Facebook</value></data>
+  <data name="Username" xml:space="preserve"><value>username</value></data>
+  <data name="ToastMessageRevined" xml:space="preserve"><value>Revined.</value></data>
+  <data name="ToastCantPostMessage" xml:space="preserve"><value>can't post message</value></data>
+  <data name="Synchronize" xml:space="preserve"><value>synchronize</value></data>
+  <data name="TimestampHoursAgo" xml:space="preserve"><value>{0} hours ago</value></data>
+  <data name="UseProgressBar" xml:space="preserve"><value>progress bar for the rendering of videos</value></data>
+  <data name="Favorite" xml:space="preserve"><value>favorite</value></data>
+  <data name="CancelUploadingTitle" xml:space="preserve"><value>upload in progress</value></data>
+  <data name="VineUploadUploadVineImage" xml:space="preserve"><value>upload image to {0}...</value></data>
+  <data name="SaveVideoToSkydrive" xml:space="preserve"><value>Windows Phone doesn't currently allow apps to save videos to phone library. Do you want to upload video to Onedrive?</value></data>
+  <data name="VineUploadUploadVineVideo" xml:space="preserve"><value>upload video to {0}...</value></data>
+  <data name="Comments" xml:space="preserve"><value>comments</value></data>
+  <data name="SelectSaveDestination" xml:space="preserve"><value>SELECT DESTINATION</value></data>
+  <data name="DisplayRecent" xml:space="preserve"><value>display recent</value></data>
+  <data name="SplitVertically" xml:space="preserve"><value>vertical</value></data>
+  <data name="ToastVideoLiked" xml:space="preserve"><value>post liked</value></data>
+  <data name="GenderFemale" xml:space="preserve"><value>female</value></data>
+  <data name="TitleEditPost" xml:space="preserve"><value>EDIT</value></data>
+  <data name="EditMyProfile" xml:space="preserve"><value>edit my profile</value></data>
+  <data name="Explore" xml:space="preserve"><value>explore</value></data>
+  <data name="FacebookChangePage" xml:space="preserve"><value>change page...</value></data>
+  <data name="RemoveFavorite" xml:space="preserve"><value>remove favorite</value></data>
+  <data name="LostPassword" xml:space="preserve"><value>Lost Password</value></data>
+  <data name="ToastDataUpdated" xml:space="preserve"><value>{0} updated</value></data>
+  <data name="Birthday" xml:space="preserve"><value>birthday</value></data>
+  <data name="ToastMuteAudioTitle" xml:space="preserve"><value>You are currently playing music</value></data>
+  <data name="LoadingNotifications" xml:space="preserve"><value>Loading Notifications...</value></data>
+  <data name="Settings" xml:space="preserve"><value>settings</value></data>
+  <data name="LoadingPlaces" xml:space="preserve"><value>Loading Places...</value></data>
+  <data name="SetFocus" xml:space="preserve"><value>set focus</value></data>
+  <data name="BackgroundAgentMessage" xml:space="preserve"><value>The background agent is used to regularly update tiles</value></data>
+  <data name="FindFriends" xml:space="preserve"><value>find friends</value></data>
+  <data name="SendComment" xml:space="preserve"><value>send</value></data>
+  <data name="RemoveAds" xml:space="preserve"><value>remove ads</value></data>
+  <data name="RemoveTag" xml:space="preserve"><value>remove tag</value></data>
+  <data name="CheckpointEnterCredential" xml:space="preserve"><value>Once checked, sign in again with your credentials</value></data>
+  <data name="Favorites" xml:space="preserve"><value>favorites</value></data>
+  <data name="RatingNo" xml:space="preserve"><value>sorry, I don't want to rate it</value></data>
+  <data name="FindFriendsInstagram" xml:space="preserve"><value>find on Instagram</value></data>
+  <data name="ToastCloseBeforeEndEncodingMessage" xml:space="preserve"><value>Do you want to add this video to the upload queue for later posting?</value></data>
+  <data name="TitleExplore" xml:space="preserve"><value>EXPLORE</value></data>
+  <data name="Changelog" xml:space="preserve"><value>changelog</value></data>
+  <data name="UploadLimitation" xml:space="preserve"><value>You have reached the trial upload limit. Do you want to remove the upload limitation?</value></data>
+  <data name="UserIsNowBlocked" xml:space="preserve"><value>user is now blocked</value></data>
+  <data name="LoadingComments" xml:space="preserve"><value>Loading Comments...</value></data>
+  <data name="UnBlockThisPerson" xml:space="preserve"><value>unblock this person</value></data>
+  <data name="ToastSyncTwitterAccountTitle" xml:space="preserve"><value>New account</value></data>
+  <data name="UploadToSkydrive" xml:space="preserve"><value>upload to Onedrive</value></data>
+  <data name="ApplyFilter" xml:space="preserve"><value>apply filter</value></data>
+  <data name="SavePicture" xml:space="preserve"><value>save picture</value></data>
+  <data name="InAppPurchase" xml:space="preserve"><value>in-app purchase</value></data>
+  <data name="UploadLimitBatterySaver" xml:space="preserve"><value>Uploading not possible when battery saver mode is turned on in your phone's settings</value></data>
+  <data name="AutoFit" xml:space="preserve"><value>auto fit</value></data>
+  <data name="HideGrid" xml:space="preserve"><value>hide grid</value></data>
+  <data name="DisplayPopular" xml:space="preserve"><value>display popular</value></data>
+  <data name="ReplyToSomeone" xml:space="preserve"><value>reply to {0}</value></data>
+  <data name="ToastDeleteVideoMessage" xml:space="preserve"><value>Are you sure?</value></data>
+  <data name="SelectFriends" xml:space="preserve"><value>Select friends</value></data>
+  <data name="TitleAccountManager" xml:space="preserve"><value>ACCOUNT MANAGER</value></data>
+  <data name="LoadingPosts" xml:space="preserve"><value>Loading Posts...</value></data>
+  <data name="ToastResetPasswordTitle" xml:space="preserve"><value>Reset Password</value></data>
+  <data name="FacebookFriendsSearchDescription" xml:space="preserve"><value>Instagram is more fun with friends. Find your Facebook friends who use Instagram</value></data>
+  <data name="BackgroundAgentProblem" xml:space="preserve"><value>Background agent for this application has been disabled by the user.</value></data>
+  <data name="VineUploadReadyToPublish" xml:space="preserve"><value>ready to publish</value></data>
+  <data name="NbrEncodingsInProgress" xml:space="preserve"><value>{0} encodings in progress...</value></data>
+  <data name="ThemeLight" xml:space="preserve"><value>light theme</value></data>
+  <data name="Opacity" xml:space="preserve"><value>opacity</value></data>
+  <data name="AppDesign" xml:space="preserve"><value>application design</value></data>
+  <data name="VineUploadCompleted" xml:space="preserve"><value>post uploaded!</value></data>
+  <data name="DisableDoubleTapToLike" xml:space="preserve"><value>disable double-tap to 'like'</value></data>
+  <data name="TutoCameraReleaseToStop" xml:space="preserve"><value>you can now release to pause the capture</value></data>
+  <data name="WhoAddedMe" xml:space="preserve"><value>who added me</value></data>
+  <data name="TagMeRemoved" xml:space="preserve"><value>tag removed</value></data>
+  <data name="SensitivePosts" xml:space="preserve"><value>Sensitive Posts</value></data>
+  <data name="CollageEmptyImage" xml:space="preserve"><value>empty image</value></data>
+  <data name="YourComment" xml:space="preserve"><value>your comment</value></data>
+  <data name="YourContent" xml:space="preserve"><value>personal settings</value></data>
+  <data name="PostAreProtectedDescription" xml:space="preserve"><value>only your followers can view your posts</value></data>
+  <data name="EditPost" xml:space="preserve"><value>edit...</value></data>
+  <data name="CantExportDataToSkydrive" xml:space="preserve"><value>can't upload the content to Onedrive</value></data>
+  <data name="CopyLink" xml:space="preserve"><value>copy link</value></data>
+  <data name="FromContacts" xml:space="preserve"><value>from contacts</value></data>
+  <data name="LoadingResults" xml:space="preserve"><value>Loading Results...</value></data>
+  <data name="LoadingRecords" xml:space="preserve"><value>Loading Records...</value></data>
+  <data name="ChoosePosition" xml:space="preserve"><value>CHOOSE POSITION</value></data>
+  <data name="Kilometer" xml:space="preserve"><value>km</value></data>
+  <data name="TagMeRemoveMeFromPhoto" xml:space="preserve"><value>remove me from photo</value></data>
+  <data name="LinkCopied" xml:space="preserve"><value>link copied</value></data>
+  <data name="NoMessages" xml:space="preserve"><value>No message for the moment...</value></data>
+  <data name="DisconnectTwitter" xml:space="preserve"><value>disconnect Twitter</value></data>
+  <data name="LoadMoreComments" xml:space="preserve"><value>load more comments</value></data>
+  <data name="TurnOnTorch" xml:space="preserve"><value>flash on</value></data>
+  <data name="ContinueCapture" xml:space="preserve"><value>Continue the capture</value></data>
+  <data name="ManyPosts" xml:space="preserve"><value>posts</value></data>
+  <data name="IdentifyPeople" xml:space="preserve"><value>identify people</value></data>
+  <data name="SaveImageWhenPublish" xml:space="preserve"><value>save image to camera roll when publish</value></data>
+  <data name="SendTweet" xml:space="preserve"><value>send tweet</value></data>
+  <data name="ToastAvatarUpdated" xml:space="preserve"><value>your profile picture has been updated</value></data>
+  <data name="EditFilter" xml:space="preserve"><value>adjust filter strength</value></data>
+  <data name="FacebookShareToPage" xml:space="preserve"><value>share to</value></data>
+  <data name="Recents" xml:space="preserve"><value>recents</value></data>
+  <data name="Refresh" xml:space="preserve"><value>refresh</value></data>
+  <data name="ThemeDark" xml:space="preserve"><value>dark theme</value></data>
+  <data name="SendVine" xml:space="preserve"><value>Send post</value></data>
+  <data name="FacebookFriends" xml:space="preserve"><value>FACEBOOK FRIENDS</value></data>
+  <data name="ToastFullnameMandatory" xml:space="preserve"><value>Full name is required</value></data>
+  <data name="VineUploadWaitingEncodingResult" xml:space="preserve"><value>waiting for rendering...</value></data>
+  <data name="Loading" xml:space="preserve"><value>Loading</value></data>
+  <data name="RatingMessage" xml:space="preserve"><value>We've worked hard to give you the best app for Windows Phone.  Support our efforts by rating the app!</value></data>
+  <data name="ToastCantFollowThisPerson" xml:space="preserve"><value>can't follow this person</value></data>
+  <data name="CancelAll" xml:space="preserve"><value>cancel all</value></data>
+  <data name="ReportBugsSuggestions" xml:space="preserve"><value>report bugs/suggestions</value></data>
+  <data name="ToastRemovePostMessage" xml:space="preserve"><value>Do you want to remove this post?</value></data>
+  <data name="EnterYourSearch" xml:space="preserve"><value>enter your search...</value></data>
+  <data name="VideoSavedLocally" xml:space="preserve"><value>Video saved!</value></data>
+  <data name="TimestampHourAgo" xml:space="preserve"><value>{0} hour ago</value></data>
+  <data name="NightFrom" xml:space="preserve"><value>from</value></data>
+  <data name="PolicyPrivacy" xml:space="preserve"><value>privacy policy</value></data>
+  <data name="ResourceFlowDirection" xml:space="preserve"><value>LeftToRight</value></data>
+  <data name="CollageOuterBorder" xml:space="preserve"><value>outer border</value></data>
+  <data name="AppBaseline" xml:space="preserve"><value>client app for Vine™</value></data>
+  <data name="Optional" xml:space="preserve"><value>optional</value></data>
+  <data name="Channels" xml:space="preserve"><value>channels</value></data>
+  <data name="TimestampDayAbbreviation" xml:space="preserve"><value>d</value></data>
+  <data name="SelectAnAccount" xml:space="preserve"><value>select an account</value></data>
+  <data name="AcceptPolicyPrivacy" xml:space="preserve"><value>accept privacy policy</value></data>
+  <data name="NoRemoveIt" xml:space="preserve"><value>no, delete it</value></data>
+  <data name="Description" xml:space="preserve"><value>description</value></data>
+  <data name="MyStory" xml:space="preserve"><value>My story</value></data>
+  <data name="PinToStart" xml:space="preserve"><value>pin to start</value></data>
+  <data name="ToastSyncTwitterAccountMessage" xml:space="preserve"><value>You are about to create a new Vine account associated with this Twitter account. Do you want to continue?</value></data>
+  <data name="TimestampMinuteAgo" xml:space="preserve"><value>{0} minute ago</value></data>
+  <data name="SignInTwitter" xml:space="preserve"><value>sign in with Twitter</value></data>
+  <data name="MyLikes" xml:space="preserve"><value>likes</value></data>
+  <data name="FilterContrast" xml:space="preserve"><value>contrast</value></data>
+  <data name="SwitchAccount" xml:space="preserve"><value>switch accounts</value></data>
+  <data name="TwitterContacts" xml:space="preserve"><value>Twitter contacts</value></data>
+  <data name="FindFriendsFacebook" xml:space="preserve"><value>find on Facebook</value></data>
+  <data name="ToastEmailMandatory" xml:space="preserve"><value>Email is required</value></data>
+  <data name="CreateACustomLocation" xml:space="preserve"><value>create a custom location</value></data>
+  <data name="PostAreProtected" xml:space="preserve"><value>Protected Posts</value></data>
+  <data name="TimestampHourAbbreviation" xml:space="preserve"><value>h</value></data>
+  <data name="ToastCantConnect" xml:space="preserve"><value>can't connect</value></data>
+  <data name="Duration" xml:space="preserve"><value>duration:</value></data>
+  <data name="AddFriends" xml:space="preserve"><value>Add friends</value></data>
+  <data name="VideoSaved" xml:space="preserve"><value>your video has been uploaded to Onedrive!</value></data>
+  <data name="ActivityNews" xml:space="preserve"><value>news</value></data>
+  <data name="UseCustomToastSound" xml:space="preserve"><value>use a custom sound</value></data>
+  <data name="SocialShare" xml:space="preserve"><value>social share</value></data>
+  <data name="ChoosePicture" xml:space="preserve"><value>choose picture</value></data>
+  <data name="EditorsPicks" xml:space="preserve"><value>Editor's Picks</value></data>
+  <data name="GoToTheTop" xml:space="preserve"><value>go to the top</value></data>
+  <data name="SaveVideo" xml:space="preserve"><value>save video</value></data>
+  <data name="StoryAddTo" xml:space="preserve"><value>Add to your story</value></data>
+  <data name="EncodeLogOtherUser" xml:space="preserve"><value>Do you want to log you as {0}?</value></data>
+  <data name="Downloading" xml:space="preserve"><value>downloading...</value></data>
+  <data name="ConnectToTwitter" xml:space="preserve"><value>Connect To Twitter</value></data>
+  <data name="AddALocation" xml:space="preserve"><value>Add "{0}"</value></data>
+  <data name="ToastCantCreateAccount" xml:space="preserve"><value>can't create account</value></data>
+  <data name="ReceiverTo" xml:space="preserve"><value>To</value></data>
+  <data name="SendingComment" xml:space="preserve"><value>sending comment</value></data>
+  <data name="ToastResetPasswordMessage" xml:space="preserve"><value>Instructions will be sent to your email address</value></data>
+  <data name="ToastResetPasswordInstructions" xml:space="preserve"><value>A link to reset your password was sent to your email</value></data>
+  <data name="Location" xml:space="preserve"><value>location</value></data>
+  <data name="AutoPlayVideos" xml:space="preserve"><value>auto-play videos</value></data>
+  <data name="Contributors" xml:space="preserve"><value>other contributors</value></data>
+  <data name="MorePosts" xml:space="preserve"><value>more posts</value></data>
+  <data name="FullScreenPosts" xml:space="preserve"><value>display posts on full-screen</value></data>
+  <data name="Protection" xml:space="preserve"><value>protection</value></data>
+  <data name="Next" xml:space="preserve"><value>next</value></data>
+  <data name="Home" xml:space="preserve"><value>home</value></data>
+  <data name="View" xml:space="preserve"><value>view</value></data>
+  <data name="Tags" xml:space="preserve"><value>hashtags</value></data>
+  <data name="Skip" xml:space="preserve"><value>skip</value></data>
+  <data name="Play" xml:space="preserve"><value>play</value></data>
+  <data name="Friends" xml:space="preserve"><value>friends</value></data>
+  <data name="AddFavorite" xml:space="preserve"><value>add favorite</value></data>
+  <data name="FacebookShareLikeDesc" xml:space="preserve"><value>publish on facebook when you like a post</value></data>
+  <data name="UseFilePosition" xml:space="preserve"><value>use the position included in the file</value></data>
+  <data name="CheckpointMessage" xml:space="preserve"><value>For security purposes, {0} needs to check and validate your account online</value></data>
+  <data name="JustAMomentAgo" xml:space="preserve"><value>just a moment ago</value></data>
+  <data name="ToastCantDownload" xml:space="preserve"><value>can't download</value></data>
+  </root>

@@ -1,0 +1,265 @@
+﻿<phone:PhoneApplicationPage x:Class="Vine.CreateAccountPage"
+                            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                            xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+                            xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+                            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                            FontFamily="{StaticResource PhoneFontFamilyNormal}" FontSize="{StaticResource PhoneFontSizeNormal}"
+                            Foreground="{StaticResource PhoneForegroundBrush}" SupportedOrientations="Portrait" Orientation="Portrait"
+                            mc:Ignorable="d" shell:SystemTray.IsVisible="True" shell:SystemTray.Opacity="0"
+                            shell:SystemTray.ForegroundColor="#fffffe" d:DesignHeight="768" d:DesignWidth="480">
+    <phone:PhoneApplicationPage.Resources>
+        <Storyboard x:Name="StoryboardLaunch">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="button">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="1" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="button1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="button1_Copy">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="1" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="StoryboardShowLogin">
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)"
+                Storyboard.TargetName="LoginPanel">
+                <EasingDoubleKeyFrame KeyTime="0" Value="855" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="StoryboardHideLogin">
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)"
+                Storyboard.TargetName="LoginPanel">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="855">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseIn" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="StoryboardShowCreate">
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)"
+                Storyboard.TargetName="CreatePanel">
+                <EasingDoubleKeyFrame KeyTime="0" Value="855" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="StoryboardHideCreate">
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)"
+                Storyboard.TargetName="CreatePanel">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="855">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseIn" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="StoryboardHideTwitter">
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)"
+                Storyboard.TargetName="TwitterPanel">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="855">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseIn" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="StoryboardShowTwitter">
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)"
+                Storyboard.TargetName="TwitterPanel">
+                <EasingDoubleKeyFrame KeyTime="0" Value="855" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    
+       
+    </phone:PhoneApplicationPage.Resources>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot">
+
+        <!--TitlePanel contains the name of the application and page title-->
+
+        <!--ContentPanel - place additional content here-->
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" d:IsHidden="True">
+            <MediaElement x:Name="Media" Opacity="0" MediaOpened="Media_MediaOpened_1" AutoPlay="True"
+                          Stretch="UniformToFill" />
+            <StackPanel Margin="12,0">
+                <Image Margin="0,40,0,0" Source="/Assets/TransLogo.png" Height="140" />
+                <TextBlock Text="{Binding LocalizedResources.AppBaseline, Source={StaticResource LocalizedStrings}}"
+                           HorizontalAlignment="Center" FontFamily="Segoe WP Light" Margin="0,-8,0,0" />
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="12,0,12,24" VerticalAlignment="Bottom">
+                <Button x:Name="button1_Copy"
+                        Content="{Binding LocalizedResources.SignInTwitter, Source={StaticResource LocalizedStrings}}"
+                        Click="TwitterAuth_Click" Background="#FF35B1F1" BorderThickness="0" Padding="10,7,10,8" Opacity="0" />
+                <Button x:Name="button1"
+                        Content="{Binding LocalizedResources.SignUpEmail, Source={StaticResource LocalizedStrings}}" Click="ShowCreate_Click"
+                        Background="{StaticResource GreyBrush}" Foreground="{StaticResource DarkGreyBrush}" BorderThickness="0"
+                        Padding="10,7,10,8" Opacity="0" />
+                <Button x:Name="button" Click="ShowLogin_Click" Background="Transparent" BorderThickness="0"
+                        FontFamily="Segoe WP Semibold" Margin="0,24,0,0" Opacity="0">
+                    <TextBlock FontFamily="Segoe WP SemiLight">
+                        <Run Text="{Binding LocalizedResources.AlreadyHaveAccount, Source={StaticResource LocalizedStrings}}" />
+                        <Run FontFamily="Segoe WP Semibold"
+                             Text="{Binding LocalizedResources.SignInNow, Source={StaticResource LocalizedStrings}}" />
+                    </TextBlock>
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="LoginPanel" RenderTransformOrigin="0.5,0.5" Background="{StaticResource NoStripeBrush}" d:IsHidden="True">
+            <Grid.RenderTransform>
+                <CompositeTransform TranslateY="855" />
+            </Grid.RenderTransform>
+            <StackPanel Margin="12,0">
+                <TextBlock Text="{Binding LocalizedResources.SignIn, Source={StaticResource LocalizedStrings}}"
+                           HorizontalAlignment="Left" FontFamily="Segoe WP SemiLight" FontSize="53.333" TextWrapping="Wrap" Margin="12,32,0,24"
+                           Foreground="{StaticResource DarkGreyBrush}" />
+                <TextBlock Text="{Binding LocalizedResources.Email, Source={StaticResource LocalizedStrings}}"
+                           Margin="12,0,-24,0" Foreground="{StaticResource DarkGreyBrush}" />
+
+                <TextBox x:Name="Login" KeyUp="Login_KeyUp" InputScope="EmailUserName" />
+                <TextBlock Text="{Binding LocalizedResources.Password, Source={StaticResource LocalizedStrings}}"
+                           Margin="12,0,-24,0" Foreground="{StaticResource DarkGreyBrush}" />
+                <PasswordBox x:Name="LoginPassword" KeyUp="LoginPassword_KeyUp"  />
+                <CheckBox x:Name="LoginAcceptPolicy" Foreground="Black" Background="White" BorderBrush="Black"  >
+                    <TextBlock Text="{Binding LocalizedResources.AcceptPolicyPrivacy, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource DarkGreyBrush}" TextWrapping="Wrap" />
+                </CheckBox>
+                <Button Content="{Binding LocalizedResources.Connect, Source={StaticResource LocalizedStrings}}" IsEnabled="{Binding IsChecked,ElementName=LoginAcceptPolicy}"
+                        Click="Login_Click" BorderThickness="0" Background="{StaticResource PrincBrush}" Padding="10,7,10,8" Margin="0,12,0,0" />
+                <Button Style="{StaticResource SimpleButtonStyle}" Margin="0,12,12,0" HorizontalAlignment="Right"
+                        Foreground="{StaticResource DarkGreyBrush}" Click="PasswordLost_Click">
+                    <TextBlock FontSize="16">
+                        <Run
+                            Text="{Binding LocalizedResources.ForgetSomething, Source={StaticResource LocalizedStrings}}" />
+                        <Run
+                            Text="{Binding LocalizedResources.ResetYourPassword, Source={StaticResource LocalizedStrings}}"
+                            FontFamily="Segoe WP SemiBold" />
+                    </TextBlock>
+                </Button>
+                <TextBlock Tap="OpenPrivacyPolicy_Tap" Text="{Binding LocalizedResources.PolicyPrivacy, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource DarkGreyBrush}" Margin="0,48,11.42,0" TextDecorations="Underline" HorizontalAlignment="Right" />
+            </StackPanel>
+        </Grid>
+        <Grid x:Name="CreatePanel" RenderTransformOrigin="0.5,0.5" Background="{StaticResource NoStripeBrush}" d:IsHidden="True">
+            <Grid.RenderTransform>
+                <CompositeTransform TranslateY="855" />
+            </Grid.RenderTransform>
+            <StackPanel Margin="12,0" RenderTransformOrigin="0.5,0.5">
+
+                <TextBlock
+                    Text="{Binding   LocalizedResources.CreateAccount, Source={StaticResource LocalizedStrings}}"
+                    HorizontalAlignment="Left" FontFamily="Segoe WP SemiLight" FontSize="37.333" Margin="12,32,0,12"
+                    Foreground="{StaticResource DarkGreyBrush}" />
+                <TextBlock Text="{Binding LocalizedResources.FullName, Source={StaticResource LocalizedStrings}}"
+                           Margin="12,0,0,-6" Foreground="{StaticResource DarkGreyBrush}" />
+                <TextBox x:Name="FullnameTxt" KeyUp="FullName_KeyUp" InputScope="PersonalFullName" Margin="0" />
+                <StackPanel x:Name="EmailZone">
+                    <TextBlock Text="{Binding LocalizedResources.Email, Source={StaticResource LocalizedStrings}}"
+                               Margin="12,0,0,-6" Foreground="{StaticResource DarkGreyBrush}" />
+                    <TextBox x:Name="EmailTxt" KeyUp="EmailTxt_KeyUp" InputScope="EmailUserName" />
+                </StackPanel>
+                <StackPanel x:Name="PasswordZone">
+                    <TextBlock Text="{Binding LocalizedResources.Password, Source={StaticResource LocalizedStrings}}"
+                               Margin="12,0,0,-6" Foreground="{StaticResource DarkGreyBrush}" />
+                    <TextBox x:Name="PasswordTxt" KeyUp="Password_KeyUp" InputScope="Password" />
+                </StackPanel>
+                <TextBlock
+                    Text="{Binding LocalizedResources.PhoneNumberOptional, Source={StaticResource LocalizedStrings}}" Margin="12,0,0,-6"
+                    Foreground="{StaticResource DarkGreyBrush}" />
+                <TextBox x:Name="PhoneTxt" KeyUp="Phone_KeyUp" InputScope="TelephoneNumber" />
+
+                <CheckBox x:Name="CreateAcceptPolicy" Foreground="Black" Background="White" BorderBrush="Black"  >
+                    <TextBlock Text="{Binding LocalizedResources.AcceptPolicyPrivacy, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource DarkGreyBrush}" TextWrapping="Wrap" />
+                </CheckBox>
+
+                <Button x:Name="CreateButton"
+                IsEnabled="{Binding IsChecked, ElementName=CreateAcceptPolicy}"        Content="{Binding LocalizedResources.Create, Source={StaticResource LocalizedStrings}}" Click="Create_Click"
+                        Background="{StaticResource PrincBrush}" BorderThickness="0" />
+                <TextBlock Tap="OpenPrivacyPolicy_Tap" Text="{Binding LocalizedResources.PolicyPrivacy, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource DarkGreyBrush}" Margin="0,48,11.42,0" TextDecorations="Underline" HorizontalAlignment="Right" />
+            </StackPanel>
+        </Grid>
+        <Grid x:Name="TwitterPanel" RenderTransformOrigin="0.5,0.5"
+              Background="{StaticResource NoStripeBrush}">
+            <Grid.RenderTransform>
+                <CompositeTransform TranslateY="855" />
+            </Grid.RenderTransform>
+            <StackPanel Margin="12,0" RenderTransformOrigin="0.5,0.5">
+
+                <TextBlock Text="{Binding LocalizedResources.SignInTwitter, Source={StaticResource LocalizedStrings}}"
+                           HorizontalAlignment="Left" FontFamily="Segoe WP Light" FontSize="37.333" Margin="12,32,0,12"
+                           Foreground="{StaticResource DarkGreyBrush}" />
+                <TextBlock
+                    Text="{Binding LocalizedResources.UsernameOrEmail, Source={StaticResource LocalizedStrings}}" Margin="12,24,0,0"
+                    Foreground="{StaticResource DarkGreyBrush}" />
+                <TextBox x:Name="EmailTwitter" KeyUp="EmailTwitter_KeyUp" InputScope="EmailUserName" />
+                <TextBlock Text="{Binding LocalizedResources.Password, Source={StaticResource LocalizedStrings}}"
+                           Margin="12,0,0,0" Foreground="{StaticResource DarkGreyBrush}" />
+                <PasswordBox x:Name="PasswordTwitter" KeyUp="Password_KeyUp" />
+                <CheckBox x:Name="AcceptPolicyTwitter" Foreground="Black" Background="White" BorderBrush="Black"  >
+                    <TextBlock Text="{Binding LocalizedResources.AcceptPolicyPrivacy, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource DarkGreyBrush}" TextWrapping="Wrap" />
+                </CheckBox>
+                <Button x:Name="CreateButton1" IsEnabled="{Binding IsChecked,ElementName=AcceptPolicyTwitter}"
+                        Margin="0,12,0,0" Content="{Binding LocalizedResources.SignIn, Source={StaticResource LocalizedStrings}}" Click="TwitterSignIn_Click"
+                        Background="{StaticResource PrincBrush}" BorderThickness="0" />
+                <TextBlock Tap="OpenPrivacyPolicy_Tap" Text="{Binding LocalizedResources.PolicyPrivacy, Source={StaticResource LocalizedStrings}}" Foreground="{StaticResource DarkGreyBrush}" Margin="0,48,10.84,0" TextDecorations="Underline" HorizontalAlignment="Right" />
+            </StackPanel>
+        </Grid>
+        <Grid x:Name="LostPasswordPanel" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed"
+              Background="{StaticResource NoStripeBrush}">
+            <StackPanel Margin="12,0">
+                <TextBlock Text="{Binding LocalizedResources.LostPassword, Source={StaticResource LocalizedStrings}}"
+                           HorizontalAlignment="Left" FontFamily="Segoe WP SemiLight" FontSize="53.333" TextWrapping="Wrap" Margin="12,32,0,24"
+                           Foreground="{StaticResource DarkGreyBrush}" />
+                <TextBlock Text="{Binding LocalizedResources.Email, Source={StaticResource LocalizedStrings}}"
+                           Margin="12,0,-24,0" Foreground="{StaticResource DarkGreyBrush}" />
+
+                <TextBox x:Name="EmailLostPasswordTxt" InputScope="EmailUserName" />
+                <Button
+                    Content="{Binding LocalizedResources.ResetYourPassword, Source={StaticResource LocalizedStrings}}"
+                    Click="ResetPassword_Click" BorderThickness="0" Background="{StaticResource PrincBrush}" Padding="10,7,10,8"
+                    Margin="0,12,0,0" />
+            </StackPanel>
+        </Grid>
+        <Grid x:Name="LoadingPanel" Visibility="Collapsed" Background="#50000000">
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock
+                    Text="{Binding LocalizedResources.TitleConnecting, Source={StaticResource LocalizedStrings}}" TextAlignment="Center"/>
+                <ProgressBar x:Name="ProgressLoading" Foreground="White"  Background="Transparent"
+                             IsIndeterminate="False" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

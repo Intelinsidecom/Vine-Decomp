@@ -1,0 +1,175 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>Vine</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>wp81</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="style\screenphabletstyle.xaml" />
+    <None Remove="pages\profile\profilecontrol.xaml" />
+    <None Remove="style\colorsstyle.xaml" />
+    <None Remove="pages\main\mainpage.xaml" />
+    <None Remove="pages\selectdirectfriends\selectdirectfriendspage.xaml" />
+    <None Remove="style\screennormalstyle.xaml" />
+    <None Remove="pages\cropvideo\cropcontrol.xaml" />
+    <None Remove="style\toaststyle.xaml" />
+    <None Remove="pages\placeselection\placeselectionpage.xaml" />
+    <None Remove="pages\otherapps\otherapppage.xaml" />
+    <None Remove="pages\twitterauth\twitterauthpage.xaml" />
+    <None Remove="pages\chat\chatpage.xaml" />
+    <None Remove="pages\choosechannel\choosechannelpage.xaml" />
+    <None Remove="pages\analyzeuri\analyzeuripage.xaml" />
+    <None Remove="ads\adrotator.xaml" />
+    <None Remove="pages\fullpicture\fullpicturepage.xaml" />
+    <None Remove="pages\previewvideo\previewvideopage.xaml" />
+    <None Remove="pages\facebook\facebookauthpage.xaml" />
+    <None Remove="ads\miniadrotator.xaml" />
+    <None Remove="buttonresourcedictionary.xaml" />
+    <None Remove="controls\rateappcontrol.xaml" />
+    <None Remove="pages\tutorial\tutorialpage.xaml" />
+    <None Remove="pages\checkpoint\checkpointpage.xaml" />
+    <None Remove="controls\modernappbar\modernappbar.xaml" />
+    <None Remove="controls\postcontrol.xaml" />
+    <None Remove="controls\postcontrolback.xaml" />
+    <None Remove="themes\generic.xaml" />
+    <None Remove="pages\explore\explorepage.xaml" />
+    <None Remove="controls\commentcontrol.xaml" />
+    <None Remove="pages\search\searchpage.xaml" />
+    <None Remove="pages\likes\likespage.xaml" />
+    <None Remove="controls\grouppostcontrol.xaml" />
+    <None Remove="controls\directstatecontrol.xaml" />
+    <None Remove="pages\profile\profilepage.xaml" />
+    <None Remove="pages\manageaccount\manageaccountpage.xaml" />
+    <None Remove="pages\direct\directpage.xaml" />
+    <None Remove="controls\pullrefreshcontrol.xaml" />
+    <None Remove="pages\transcoding\transcodingpage.xaml" />
+    <None Remove="fonts\fonts.zip" />
+    <None Remove="pages\createaccount\createaccountpage.xaml" />
+    <None Remove="pages\nfc\nfcpage.xaml" />
+    <None Remove="pages\postvideo\postvideopage.xaml" />
+    <None Remove="pages\camera\camerapage.xaml" />
+    <None Remove="pages\about\aboutpage.xaml" />
+    <None Remove="pages\settings\settingspage.xaml" />
+    <None Remove="pages\notifications\notificationcontrol.xaml" />
+    <None Remove="app.xaml" />
+    <None Remove="pages\cropvideo\cropvideopage.xaml" />
+    <None Remove="pages\notifications\notificationspage.xaml" />
+    <None Remove="style\customstyle.xaml" />
+    <EmbeddedResource Include="style\screenphabletstyle.xaml" LogicalName="style/screenphabletstyle.xaml" />
+    <EmbeddedResource Include="pages\profile\profilecontrol.xaml" LogicalName="pages/profile/profilecontrol.xaml" />
+    <EmbeddedResource Include="style\colorsstyle.xaml" LogicalName="style/colorsstyle.xaml" />
+    <EmbeddedResource Include="pages\main\mainpage.xaml" LogicalName="pages/main/mainpage.xaml" />
+    <EmbeddedResource Include="pages\selectdirectfriends\selectdirectfriendspage.xaml" LogicalName="pages/selectdirectfriends/selectdirectfriendspage.xaml" />
+    <EmbeddedResource Include="style\screennormalstyle.xaml" LogicalName="style/screennormalstyle.xaml" />
+    <EmbeddedResource Include="pages\cropvideo\cropcontrol.xaml" LogicalName="pages/cropvideo/cropcontrol.xaml" />
+    <EmbeddedResource Include="style\toaststyle.xaml" LogicalName="style/toaststyle.xaml" />
+    <EmbeddedResource Include="pages\placeselection\placeselectionpage.xaml" LogicalName="pages/placeselection/placeselectionpage.xaml" />
+    <EmbeddedResource Include="pages\otherapps\otherapppage.xaml" LogicalName="pages/otherapps/otherapppage.xaml" />
+    <EmbeddedResource Include="pages\twitterauth\twitterauthpage.xaml" LogicalName="pages/twitterauth/twitterauthpage.xaml" />
+    <EmbeddedResource Include="pages\chat\chatpage.xaml" LogicalName="pages/chat/chatpage.xaml" />
+    <EmbeddedResource Include="pages\choosechannel\choosechannelpage.xaml" LogicalName="pages/choosechannel/choosechannelpage.xaml" />
+    <EmbeddedResource Include="pages\analyzeuri\analyzeuripage.xaml" LogicalName="pages/analyzeuri/analyzeuripage.xaml" />
+    <EmbeddedResource Include="ads\adrotator.xaml" LogicalName="ads/adrotator.xaml" />
+    <EmbeddedResource Include="pages\fullpicture\fullpicturepage.xaml" LogicalName="pages/fullpicture/fullpicturepage.xaml" />
+    <EmbeddedResource Include="pages\previewvideo\previewvideopage.xaml" LogicalName="pages/previewvideo/previewvideopage.xaml" />
+    <EmbeddedResource Include="pages\facebook\facebookauthpage.xaml" LogicalName="pages/facebook/facebookauthpage.xaml" />
+    <EmbeddedResource Include="ads\miniadrotator.xaml" LogicalName="ads/miniadrotator.xaml" />
+    <EmbeddedResource Include="buttonresourcedictionary.xaml" LogicalName="buttonresourcedictionary.xaml" />
+    <EmbeddedResource Include="controls\rateappcontrol.xaml" LogicalName="controls/rateappcontrol.xaml" />
+    <EmbeddedResource Include="pages\tutorial\tutorialpage.xaml" LogicalName="pages/tutorial/tutorialpage.xaml" />
+    <EmbeddedResource Include="pages\checkpoint\checkpointpage.xaml" LogicalName="pages/checkpoint/checkpointpage.xaml" />
+    <EmbeddedResource Include="controls\modernappbar\modernappbar.xaml" LogicalName="controls/modernappbar/modernappbar.xaml" />
+    <EmbeddedResource Include="controls\postcontrol.xaml" LogicalName="controls/postcontrol.xaml" />
+    <EmbeddedResource Include="controls\postcontrolback.xaml" LogicalName="controls/postcontrolback.xaml" />
+    <EmbeddedResource Include="themes\generic.xaml" LogicalName="themes/generic.xaml" />
+    <EmbeddedResource Include="pages\explore\explorepage.xaml" LogicalName="pages/explore/explorepage.xaml" />
+    <EmbeddedResource Include="controls\commentcontrol.xaml" LogicalName="controls/commentcontrol.xaml" />
+    <EmbeddedResource Include="pages\search\searchpage.xaml" LogicalName="pages/search/searchpage.xaml" />
+    <EmbeddedResource Include="pages\likes\likespage.xaml" LogicalName="pages/likes/likespage.xaml" />
+    <EmbeddedResource Include="controls\grouppostcontrol.xaml" LogicalName="controls/grouppostcontrol.xaml" />
+    <EmbeddedResource Include="controls\directstatecontrol.xaml" LogicalName="controls/directstatecontrol.xaml" />
+    <EmbeddedResource Include="pages\profile\profilepage.xaml" LogicalName="pages/profile/profilepage.xaml" />
+    <EmbeddedResource Include="pages\manageaccount\manageaccountpage.xaml" LogicalName="pages/manageaccount/manageaccountpage.xaml" />
+    <EmbeddedResource Include="pages\direct\directpage.xaml" LogicalName="pages/direct/directpage.xaml" />
+    <EmbeddedResource Include="controls\pullrefreshcontrol.xaml" LogicalName="controls/pullrefreshcontrol.xaml" />
+    <EmbeddedResource Include="pages\transcoding\transcodingpage.xaml" LogicalName="pages/transcoding/transcodingpage.xaml" />
+    <EmbeddedResource Include="fonts\fonts.zip" LogicalName="fonts/fonts.zip" />
+    <EmbeddedResource Include="pages\createaccount\createaccountpage.xaml" LogicalName="pages/createaccount/createaccountpage.xaml" />
+    <EmbeddedResource Include="pages\nfc\nfcpage.xaml" LogicalName="pages/nfc/nfcpage.xaml" />
+    <EmbeddedResource Include="pages\postvideo\postvideopage.xaml" LogicalName="pages/postvideo/postvideopage.xaml" />
+    <EmbeddedResource Include="pages\camera\camerapage.xaml" LogicalName="pages/camera/camerapage.xaml" />
+    <EmbeddedResource Include="pages\about\aboutpage.xaml" LogicalName="pages/about/aboutpage.xaml" />
+    <EmbeddedResource Include="pages\settings\settingspage.xaml" LogicalName="pages/settings/settingspage.xaml" />
+    <EmbeddedResource Include="pages\notifications\notificationcontrol.xaml" LogicalName="pages/notifications/notificationcontrol.xaml" />
+    <EmbeddedResource Include="app.xaml" LogicalName="app.xaml" />
+    <EmbeddedResource Include="pages\cropvideo\cropvideopage.xaml" LogicalName="pages/cropvideo/cropvideopage.xaml" />
+    <EmbeddedResource Include="pages\notifications\notificationspage.xaml" LogicalName="pages/notifications/notificationspage.xaml" />
+    <EmbeddedResource Include="style\customstyle.xaml" LogicalName="style/customstyle.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Windows" />
+    <Reference Include="System.Windows">
+      <HintPath>..\..\..\..\..\..\..\..\..\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\System.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Vine.Services">
+      <HintPath>..\..\Extracted Client\6sec-patched2\Vine.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\..\Extracted Client\6sec-patched2\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net">
+      <HintPath>..\..\..\..\..\..\..\..\..\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\System.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>..\..\..\..\..\..\..\..\..\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook">
+      <HintPath>..\..\Extracted Client\6sec-patched2\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>..\..\..\..\..\..\..\..\..\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\System.Xml.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.WP8">
+      <HintPath>..\..\Extracted Client\6sec-patched2\GalaSoft.MvvmLight.WP8.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>..\..\Extracted Client\6sec-patched2\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Reactive" />
+    <Reference Include="System.Runtime.WindowsRuntime" />
+    <Reference Include="Lumia.Imaging" />
+    <Reference Include="VideoEffects" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Extracted Client\6sec-patched2\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Input.Touch" />
+    <Reference Include="SmaatoWP8">
+      <HintPath>..\..\Extracted Client\6sec-patched2\SmaatoWP8.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Advertising.Mobile.UI">
+      <HintPath>..\..\Extracted Client\6sec-patched2\Microsoft.Advertising.Mobile.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Advertising.Mobile.Common">
+      <HintPath>..\..\Extracted Client\6sec-patched2\Microsoft.Advertising.Mobile.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="FlurryWP8SDK">
+      <HintPath>..\..\Extracted Client\6sec-patched2\FlurryWP8SDK.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework" />
+    <Reference Include="ZLib">
+      <HintPath>..\..\Extracted Client\6sec-patched2\ZLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.GamerServices" />
+    <Reference Include="Lumia.Imaging.Managed">
+      <HintPath>..\..\Extracted Client\6sec-patched2\Lumia.Imaging.Managed.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

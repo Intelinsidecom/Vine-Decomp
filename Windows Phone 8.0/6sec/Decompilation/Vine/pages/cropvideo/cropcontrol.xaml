@@ -1,0 +1,27 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:Vine.Controls">
+	<Style
+        TargetType="controls:CropControl">
+		<Setter
+            Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+                    TargetType="controls:CropControl">
+					<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+						<ContentPresenter 
+                            x:Name="PART_Image" />
+
+						<Canvas
+                        x:Name="PART_Canvas"
+                        Background="#00000000">
+
+							
+						</Canvas>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

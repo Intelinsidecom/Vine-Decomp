@@ -1,0 +1,526 @@
+﻿<phone:PhoneApplicationPage xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                            xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+                            xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+                            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:Vine.Controls"
+                        xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+                        xmlns:controls="clr-namespace:Vine.Controls"
+                        x:Class="Vine.MainPage"
+                            x:Name="Page"
+                            mc:Ignorable="d" SupportedOrientations="Portrait" Orientation="Portrait"
+                            shell:SystemTray.IsVisible="False" shell:SystemTray.Opacity="0.5" shell:SystemTray.ForegroundColor="Black"
+                            shell:SystemTray.BackgroundColor="#d0d0d0">
+
+    <phone:PhoneApplicationPage.Resources>
+
+      
+     
+        <Storyboard x:Name="StoryboardChangeNotificationCounter">
+            <DoubleAnimationUsingKeyFrames
+        		Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="NotifButton">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1.3">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseIn" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames
+        		Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="NotifButton">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1.3">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseIn" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="StoryboardShowPost" >
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="ListPost">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <ExponentialEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="ListPost">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <ExponentialEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimation Duration="0:0:0.4" To="2" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="ListPostGrid" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0:0:0.4" To="2" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="ListPostGrid" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0:0:0.4" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="ListPostGrid" d:IsOptimized="True"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="ListPost">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+
+        <Storyboard x:Name="StoryboardShowGrid" >
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="ListPostGrid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <ExponentialEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="ListPostGrid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <ExponentialEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimation Duration="0:0:0.4" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="ListPost" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0:0:0.4" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="ListPost" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0:0:0.4" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="ListPost" d:IsOptimized="True"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="ListPostGrid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </phone:PhoneApplicationPage.Resources>
+
+    <phone:PhoneApplicationPage.FontFamily>
+        <StaticResource ResourceKey="PhoneFontFamilyNormal"/>
+    </phone:PhoneApplicationPage.FontFamily>
+    <phone:PhoneApplicationPage.FontSize>
+        <StaticResource ResourceKey="PhoneFontSizeNormal"/>
+    </phone:PhoneApplicationPage.FontSize>
+    <phone:PhoneApplicationPage.Foreground>
+        <StaticResource ResourceKey="PhoneForegroundBrush"/>
+    </phone:PhoneApplicationPage.Foreground>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut" />
+            </toolkit:NavigationOutTransition.Forward>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut" />
+            </toolkit:NavigationOutTransition.Backward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn" />
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn" />
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="MainPanel" >
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="HeaderState">
+                <VisualStateGroup.Transitions>
+                    <VisualTransition GeneratedDuration="0:0:0.4">
+                        <VisualTransition.GeneratedEasingFunction>
+                            <ExponentialEase EasingMode="EaseOut"/>
+                        </VisualTransition.GeneratedEasingFunction>
+                    </VisualTransition>
+                </VisualStateGroup.Transitions>
+                <VisualState x:Name="Normal"/>
+                <VisualState x:Name="HeaderHidden">
+                    <Storyboard>
+                        <DoubleAnimation Duration="0" To="-76" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Header" d:IsOptimized="True"/>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+            <VisualStateGroup x:Name="DeviceType">
+            	<VisualState x:Name="PhabletMode">
+            		<Storyboard>
+            			<DoubleAnimation Duration="0" To="40" Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="MeButtonImage" d:IsOptimized="True"/>
+            			<DoubleAnimation Duration="0" To="40" Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="MeButtonImage" d:IsOptimized="True"/>
+            			<DoubleAnimation Duration="0" To="60" Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="Header" d:IsOptimized="True"/>
+            			<DoubleAnimation Duration="0" To="38" Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="border" d:IsOptimized="True"/>
+            			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Style)" Storyboard.TargetName="DirectButton">
+            				<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource SmallRoundButtonStyle}"/>
+            			</ObjectAnimationUsingKeyFrames>
+            			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Style)" Storyboard.TargetName="NotifButton">
+            				<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource SmallRoundButtonStyle}"/>
+            			</ObjectAnimationUsingKeyFrames>
+            			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Style)" Storyboard.TargetName="MeButton">
+            				<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource SmallRoundButtonStyle}"/>
+            			</ObjectAnimationUsingKeyFrames>
+            			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="NotifButton">
+            				<DiscreteObjectKeyFrame KeyTime="0">
+            					<DiscreteObjectKeyFrame.Value>
+            						<Thickness>12,0</Thickness>
+            					</DiscreteObjectKeyFrame.Value>
+            				</DiscreteObjectKeyFrame>
+            			</ObjectAnimationUsingKeyFrames>
+            		</Storyboard>
+            	</VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Rectangle x:Name="RectBackground" Fill="{StaticResource NoStripeBrush}" CacheMode="BitmapCache" />
+
+        <Grid x:Name="RootPanel" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="{StaticResource ModernAppBarRowHeight}" />
+            </Grid.RowDefinitions>
+            <!--         <TextBlock TextWrapping="Wrap" Grid.Row="2" LineHeight="90" LineStackingStrategy="BlockLineHeight"
+        		FontFamily="Segoe WP Black" FontSize="90" Margin="0,42,0,0" Opacity="0.3" VerticalAlignment="Top">
+        		<Run x:Name="TypeText" Foreground="{StaticResource GreyBrush}"  />
+            </TextBlock>
+-->
+            <phone:LongListSelector x:Name="ListPost" 
+				RenderTransformOrigin="0.5,0.5"
+				ScrollViewer.VerticalScrollBarVisibility="Hidden" 
+				ItemsSource="{Binding Posts}" 
+				ItemUnrealized="LongListSelector_ItemUnrealized" ManipulationStateChanged="LongListSelector_ManipulationStateChanged" ItemRealized="LongListSelector_ItemRealized" 
+                                   Grid.Row="1" Grid.RowSpan="2" Style="{StaticResource HiddenScrollLongListSelectorStyle}">
+                <phone:LongListSelector.RenderTransform>
+                    <CompositeTransform/>
+                </phone:LongListSelector.RenderTransform>
+                <phone:LongListSelector.ListHeader>
+                    <StackPanel x:Name="PullrefreshPanel">
+                        <local:PullRefreshControl x:Name="Pullrefreshcontrol" Margin="0,0,0,36"  />
+                        <Button x:Name="EncodingButton" Margin="-12,-12,-12,-12"  Visibility="{Binding Data.Encodings.Count, Converter={StaticResource IntVisibilityConverter}, FallbackValue=Collapsed}"
+							Background="{StaticResource PrincBrush}" BorderThickness="0"
+							Content="{Binding Data.Encodings.Count, Converter={StaticResource EncodingInProgressConverter}}" FontSize="22" FontFamily="Segoe WP Light" Padding="0,4" Click="Job_Click"/>
+                    </StackPanel>
+                </phone:LongListSelector.ListHeader>
+                 <phone:LongListSelector.ItemTemplate>
+                    <DataTemplate>
+                        <local:PostControl Post="{Binding }" PostForeground="{Binding PostForeground,ElementName=Page}" Share="Share_Selected" SaveMedia="PostControl_OnSaveMedia" SelectedMyselfTagPeople="Post_SelectedMyselfTagPeople"
+							SelectedHashTag="Post_SelectedTag" />
+                    </DataTemplate>
+                </phone:LongListSelector.ItemTemplate>
+
+            </phone:LongListSelector>
+
+
+            <Grid x:Name="LayoutRoot" Grid.Row="2">
+
+                <Grid x:Name="NoItemInFeedPanel" Visibility="{Binding IsLoading, ConverterParameter=inverse, Converter={StaticResource VisibilityConverter}}">
+                    <StackPanel  Margin="24,48,24,0" 
+						Visibility="{Binding Posts.Count, ConverterParameter=inverse, Converter={StaticResource IntVisibilityConverter}, FallbackValue=Visible}">
+                        <TextBlock Text="{Binding LocalizedResources.NoInstagramPost, Source={StaticResource LocalizedStrings}}"
+							Foreground="#404040"
+							FontSize="30"
+							FontFamily="Segoe WP Semilight"
+							TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding LocalizedResources.AddSomeFriendsToSeePosts, Source={StaticResource LocalizedStrings}}" 
+							Foreground="#404040"
+							FontFamily="Segoe WP Semilight"
+							TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Grid>
+                <phone:LongListSelector x:Name="ListPostGrid" GridCellSize="160,160"
+                                        LayoutMode="Grid" SelectionChanged="PhotoGrid_SelectionChanged" 
+                                        ScrollViewer.ManipulationMode="Control" Opacity="0" Visibility="Collapsed" RenderTransformOrigin="0.5,0.5"
+                                        Style="{StaticResource HiddenScrollLongListSelectorStyle}" >
+                    <phone:LongListSelector.RenderTransform>
+                        <CompositeTransform/>
+                    </phone:LongListSelector.RenderTransform>
+                   <phone:LongListSelector.ItemTemplate>
+                        <DataTemplate>
+                            <local:GroupPostControl Post="{Binding }"  />
+                        </DataTemplate>
+                    </phone:LongListSelector.ItemTemplate>
+                    <phone:LongListSelector.ListFooter>
+                        <Grid x:Name="ListPostGridFooter"/>
+                    </phone:LongListSelector.ListFooter>
+                </phone:LongListSelector>
+                <StackPanel Visibility="{Binding NoFeed, Converter={StaticResource VisibilityConverter}}" VerticalAlignment="Center">
+                    <Path 
+						Data="{StaticResource RetryPath}"
+						Fill="White" Stretch="Fill" UseLayoutRounding="False" Width="220" Height="220" />
+                    <Button Content="{Binding LocalizedResources.Retry, Source={StaticResource LocalizedStrings}}"
+						HorizontalAlignment="Center" FontSize="29.333" Foreground="{StaticResource DarkerBrush}" BorderThickness="0"
+						Click="Retry_Click" />
+                </StackPanel>
+                <Grid x:Name="LoadingPanel" Visibility="{Binding IsLoading, Converter={StaticResource VisibilityConverter}}" 
+					VerticalAlignment="Top" Background="#7FBDC2C1">
+                    <ProgressBar Foreground="White" IsIndeterminate="{Binding IsLoading}" VerticalAlignment="Top" />
+                    <TextBlock Text="{Binding LoadingMessage}"
+						FontSize="26.667" FontFamily="Segoe WP Light" Margin="6,6,0,6" />
+                </Grid>
+            </Grid>
+            <Grid x:Name="MapHeader" Grid.Row="1" Visibility="Collapsed" Height="80">
+                <Image x:Name="VenueImage" Source="/Assets/FakeMap.png" Stretch="UniformToFill" />
+                <Rectangle Fill="{StaticResource PrincBrush}" Opacity="0.8" />
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock x:Name="VenueName" FontSize="26.667" TextAlignment="Center" />
+                    <TextBlock x:Name="VenueAddress" HorizontalAlignment="Center" FontSize="16" Margin="0,-4,0,0"
+						FontFamily="Segoe WP Light" />
+                </StackPanel>
+
+            </Grid>
+
+
+            <Grid x:Name="Header" Visibility="Collapsed" Grid.Row="1" Background="{StaticResource ModernHeaderBrush}" Height="76" RenderTransformOrigin="0.5,0.5">
+                <Grid.RenderTransform>
+                    <CompositeTransform/>
+                </Grid.RenderTransform>
+
+                <Border x:Name="border" HorizontalAlignment="Left" Height="45" Margin="24,0,0,0"  Background="Transparent" Tap="Logo_Tap" >
+                    <ContentControl  Style="{StaticResource LogoStyle}"/>
+                </Border>
+
+                <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Orientation="Horizontal">
+
+
+                    <Button x:Name="DirectButton" Background="{StaticResource DarkerBrush}"
+						Style="{StaticResource RoundButtonStyle}" BorderThickness="0" Padding="0,0,0,1" Click="Direct_Click"
+						RenderTransformOrigin="0.5,0.5">
+                        <Grid>
+                            <Path x:Name="path" Data="{StaticResource DirectPath}" Visibility="{Binding NotifCounter, ConverterParameter=inverse, Converter={StaticResource IntVisibilityConverter}}" Fill="White" Stretch="Uniform" Height="20"/>
+                            <TextBlock Text="{Binding NotifCounter}" Visibility="{Binding NotifCounter, Converter={StaticResource IntVisibilityConverter}}" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        </Grid>
+                    </Button>
+                    <Button x:Name="NotifButton" Background="{StaticResource PrincBrush}"
+						Style="{StaticResource RoundButtonStyle}" BorderThickness="0" Content="?" Padding="0,0,0,1" Click="Notif_Click"
+						RenderTransformOrigin="0.5,0.5">
+                        <Button.RenderTransform>
+                            <CompositeTransform />
+                        </Button.RenderTransform>
+                    </Button>
+                    <Button x:Name="MeButton" Click="MyProfile_Click" BorderThickness="0" Background="#FFFE5548" Style="{StaticResource RoundButtonStyle}"
+						 FontStyle="Italic" >
+                        <Grid>
+                            <TextBlock Text="{Binding LocalizedResources.ME, Source={StaticResource LocalizedStrings}}" Margin="0,0,4,1" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                            <Image x:Name="MeButtonImage" Stretch="UniformToFill" Source="{Binding Data.CurrentUser.User.Picture}" Width="51.4" Height="51.4" Margin="-0.2" HorizontalAlignment="Center" VerticalAlignment="Center">
+								  <Image.Clip>
+                                    <EllipseGeometry  RadiusX="25.7" RadiusY="25.7" Center="25.7,25.7"/>
+                        </Image.Clip>
+						</Image>
+
+                        </Grid>
+                    </Button>
+                </StackPanel>
+                <Rectangle Fill="{StaticResource ShadowBrush}" Height="2" VerticalAlignment="Bottom" />
+                <ProgressBar Visibility="{Binding IsLoading, Converter={StaticResource VisibilityConverter}}" Foreground="{StaticResource PrincBrush}" 
+                             IsIndeterminate="{Binding IsLoading}" VerticalAlignment="Bottom" Margin="0,0,0,-1" />
+            </Grid>
+            <Grid x:Name="AdPanel" Grid.Row="0"/>
+        </Grid>
+
+        <Grid x:Name="ModernAppBarContainer" >
+
+
+            <controls:ModernAppBar x:Name="ModernVineAppBar" Visibility="Collapsed" Padding="{StaticResource ModernAppPaddingForHomeAppBar}">
+                <controls:ModernAppBar.LeftButtons>
+                    <controls:ModernAppBarButton Content="&#59402;" 
+                                                 Click="AppBarSwitchView_Click" 
+                                                 />
+                </controls:ModernAppBar.LeftButtons>
+                <controls:ModernAppBar.Buttons>
+                    <controls:ModernAppBarButton Content="&#57622;" Click="Camera_Click" Hold="Camera_Hold" Padding="{StaticResource CameraModernAppBarButtonPadding}" Text="{Binding LocalizedResources.Capture, Source={StaticResource LocalizedStrings}}" FontSize="{StaticResource CameraModernAppBarButtonFontSize}"/>
+                    <controls:ModernAppBarButton Content="&#59536;" Click="Explore_Click" Text="{Binding LocalizedResources.Explore, Source={StaticResource LocalizedStrings}}"/>
+                    <controls:ModernAppBarButton Content="&#57492;" Click="Search_Click" Text="{Binding LocalizedResources.Search, Source={StaticResource LocalizedStrings}}"/>
+                </controls:ModernAppBar.Buttons>
+                <controls:ModernAppBar.MenuItems>
+                    <controls:ModernAppBarMenuItem Content="{Binding LocalizedResources.Refresh, Source={StaticResource LocalizedStrings}}" Click="Refresh_Click" />
+                    <controls:ModernAppBarMenuItem Content="{Binding LocalizedResources.SwitchAccount, Source={StaticResource LocalizedStrings}}" Click="SwitchAccount_Click" />
+                    <controls:ModernAppBarMenuItem Content="{Binding LocalizedResources.Settings, Source={StaticResource LocalizedStrings}}" Click="Settings_Click" />
+                    <controls:ModernAppBarMenuItem Content="{Binding LocalizedResources.YourLikes, Source={StaticResource LocalizedStrings}}" Click="YourLikes_Click" />
+                   <controls:ModernAppBarMenuItem Content="{Binding LocalizedResources.PinToStart, Source={StaticResource LocalizedStrings}}" Click="Pin_Click" />
+                    <controls:ModernAppBarMenuItem Content="{Binding LocalizedResources.About, Source={StaticResource LocalizedStrings}}" Click="About_Click" />
+                </controls:ModernAppBar.MenuItems>
+            </controls:ModernAppBar>
+
+
+
+
+
+            <controls:ModernAppBar x:Name="ModernVineFavAppBar" Visibility="Collapsed">
+                <controls:ModernAppBar.LeftButtons>
+                    <controls:ModernAppBarButton Content="&#59402;" 
+                                                 Click="AppBarSwitchView_Click" 
+                                                 />
+                </controls:ModernAppBar.LeftButtons>
+                <controls:ModernAppBar.Buttons>
+                    <controls:ModernAppBarButton Content="&#57615;" Click="GoHome_Click" Text="{Binding LocalizedResources.Home, Source={StaticResource LocalizedStrings}}"/>
+                    <controls:ModernAppBarButton Content="&#59456;" Click="PinStart_Click" Text="{Binding LocalizedResources.PinToStart, Source={StaticResource LocalizedStrings}}"/>
+                    <controls:ModernAppBarButton Content="&#59670;" Click="SwitchTagMode_Click" Text=""/>
+                    <controls:ModernAppBarButton Content="&#57623;" Click="Refresh_Click" Text="{Binding LocalizedResources.Refresh, Source={StaticResource LocalizedStrings}}"/>
+                </controls:ModernAppBar.Buttons>
+                <controls:ModernAppBar.MenuItems>
+                    <controls:ModernAppBarMenuItem Content="{Binding LocalizedResources.RemoveAds, Source={StaticResource LocalizedStrings}}" 
+                        Click="RemoveAds_Click" />
+                </controls:ModernAppBar.MenuItems>
+            </controls:ModernAppBar>
+
+
+            <controls:ModernAppBar x:Name="ModernInstaAppBar" Visibility="Collapsed" Padding="{StaticResource ModernAppPaddingForHomeAppBar}">
+                <controls:ModernAppBar.LeftButtons>
+                    <controls:ModernAppBarButton Content="&#59402;" 
+                                                 Click="AppBarSwitchView_Click" 
+                                                 />
+                </controls:ModernAppBar.LeftButtons>
+                <controls:ModernAppBar.Buttons>
+                    <controls:ModernAppBarButton Content="&#xE114;" Click="Camera_Click" Hold="Camera_Hold" Padding="{StaticResource CameraModernAppBarButtonPadding}" Text="{Binding LocalizedResources.Capture, Source={StaticResource LocalizedStrings}}" FontSize="{StaticResource CameraModernAppBarButtonFontSize}"/>
+                    <controls:ModernAppBarButton Content="&#60047;" Click="InstaFollowing_Click" Text="{Binding LocalizedResources.Activity, Source={StaticResource LocalizedStrings}}"/>
+                    <controls:ModernAppBarButton Content="&#57492;" Click="Search_Click" Text="{Binding LocalizedResources.Search, Source={StaticResource LocalizedStrings}}"/>
+                </controls:ModernAppBar.Buttons>
+                <controls:ModernAppBar.MenuItems>
+                    <controls:ModernAppBarMenuItem Content="{Binding LocalizedResources.Refresh, Source={StaticResource LocalizedStrings}}" Click="Refresh_Click" />
+                    <controls:ModernAppBarMenuItem Content="{Binding LocalizedResources.SwitchAccount, Source={StaticResource LocalizedStrings}}" Click="SwitchAccount_Click" />
+                    <controls:ModernAppBarMenuItem Content="{Binding LocalizedResources.Settings, Source={StaticResource LocalizedStrings}}" Click="Settings_Click" />
+                    <controls:ModernAppBarMenuItem Content="{Binding LocalizedResources.YourLikes, Source={StaticResource LocalizedStrings}}" Click="YourLikes_Click" />
+                    <controls:ModernAppBarMenuItem Content="{Binding LocalizedResources.LikeOrNot, Source={StaticResource LocalizedStrings}}" Click="LikeOrNot_Click" />
+                    <controls:ModernAppBarMenuItem Content="{Binding LocalizedResources.Nearby, Source={StaticResource LocalizedStrings}}" Click="Nearby_Click" />
+                    <controls:ModernAppBarMenuItem Content="{Binding LocalizedResources.PinToStart, Source={StaticResource LocalizedStrings}}" Click="Pin_Click" />
+                    <controls:ModernAppBarMenuItem Content="{Binding LocalizedResources.About, Source={StaticResource LocalizedStrings}}" Click="About_Click" />
+                </controls:ModernAppBar.MenuItems>
+            </controls:ModernAppBar>
+
+
+
+            <controls:ModernAppBar x:Name="ModernNearbyAppBar" Visibility="Collapsed">
+                <controls:ModernAppBar.LeftButtons>
+                    <controls:ModernAppBarButton Content="&#59402;" 
+                                                 Click="AppBarSwitchView_Click" 
+                                                 />
+                </controls:ModernAppBar.LeftButtons>
+                <controls:ModernAppBar.Buttons>
+                    <controls:ModernAppBarButton Content="&#57623;" Click="Refresh_Click" Text="{Binding LocalizedResources.Refresh, Source={StaticResource LocalizedStrings}}"/>
+                    <controls:ModernAppBarButton Content="&#57621;" Click="NearbyShowCustomSettings_Click" Text="{Binding LocalizedResources.Settings, Source={StaticResource LocalizedStrings}}"/>
+                    <controls:ModernAppBarButton Content="&#57640;" Click="NearbyMap_Click" Text="{Binding LocalizedResources.Map, Source={StaticResource LocalizedStrings}}"/>
+                </controls:ModernAppBar.Buttons>
+                <controls:ModernAppBar.MenuItems>
+                    <controls:ModernAppBarMenuItem 
+                        Content="{Binding LocalizedResources.RemoveAds, Source={StaticResource LocalizedStrings}}" 
+                        Click="RemoveAds_Click" />
+                </controls:ModernAppBar.MenuItems>
+            </controls:ModernAppBar>
+
+
+            <controls:ModernAppBar x:Name="ModernOtherAppBar" Visibility="Collapsed">
+                <controls:ModernAppBar.LeftButtons>
+                    <controls:ModernAppBarButton Content="&#59402;" 
+                                                 Click="AppBarSwitchView_Click" 
+                                                 />
+                </controls:ModernAppBar.LeftButtons>
+                <controls:ModernAppBar.Buttons>
+                    <controls:ModernAppBarButton Content="&#57615;" Click="GoHome_Click" Text="{Binding LocalizedResources.Home, Source={StaticResource LocalizedStrings}}"/>
+                    <controls:ModernAppBarButton Content="&#57623;" Click="Refresh_Click" Text="{Binding LocalizedResources.Refresh, Source={StaticResource LocalizedStrings}}"/>
+                </controls:ModernAppBar.Buttons>
+                <controls:ModernAppBar.MenuItems>
+                    <controls:ModernAppBarMenuItem 
+                        Content="{Binding LocalizedResources.RemoveAds, Source={StaticResource LocalizedStrings}}"
+                        Click="RemoveAds_Click" />
+                </controls:ModernAppBar.MenuItems>
+            </controls:ModernAppBar>
+
+            <controls:ModernAppBar x:Name="ModernInstaFavAppBar" Visibility="Collapsed">
+                <controls:ModernAppBar.LeftButtons>
+                    <controls:ModernAppBarButton Content="&#59402;" 
+                                                 Click="AppBarSwitchView_Click" 
+                                                 />
+                </controls:ModernAppBar.LeftButtons>
+                <controls:ModernAppBar.Buttons>
+                    <controls:ModernAppBarButton Content="&#57615;" Click="GoHome_Click" Text="{Binding LocalizedResources.Home, Source={StaticResource LocalizedStrings}}"/>
+                    <controls:ModernAppBarButton Content="&#59456;" Click="PinStart_Click" Text="{Binding LocalizedResources.PinToStart, Source={StaticResource LocalizedStrings}}"/>
+                    <controls:ModernAppBarButton Content="&#57623;" Click="Refresh_Click" Text="{Binding LocalizedResources.Refresh, Source={StaticResource LocalizedStrings}}"/>
+                </controls:ModernAppBar.Buttons>
+                <controls:ModernAppBar.MenuItems>
+                    <controls:ModernAppBarMenuItem Content="{Binding LocalizedResources.RemoveAds, Source={StaticResource LocalizedStrings}}" 
+                        Click="RemoveAds_Click" />
+                </controls:ModernAppBar.MenuItems>
+            </controls:ModernAppBar>
+
+
+            <controls:ModernAppBar x:Name="ModernVineChannelAppBar" Visibility="Collapsed">
+                <controls:ModernAppBar.LeftButtons>
+                    <controls:ModernAppBarButton Content="&#59402;" 
+                                                 Click="AppBarSwitchView_Click" />
+                </controls:ModernAppBar.LeftButtons>
+                <controls:ModernAppBar.Buttons>
+                    <controls:ModernAppBarButton Content="&#57615;" Click="GoHome_Click" Text="{Binding LocalizedResources.Home, Source={StaticResource LocalizedStrings}}"/>
+                    <controls:ModernAppBarButton Content="&#57609;" Click="ChannelAdd_Click" Text="{Binding LocalizedResources.Home, Source={StaticResource LocalizedStrings}}"/>
+                    <controls:ModernAppBarButton Content="&#59670;" Click="SwitchChannelMode_Click" Text=""/>
+                    <controls:ModernAppBarButton Content="&#57623;" Click="Refresh_Click" Text="{Binding LocalizedResources.Refresh, Source={StaticResource LocalizedStrings}}"/>
+                </controls:ModernAppBar.Buttons>
+                <controls:ModernAppBar.MenuItems>
+                    <controls:ModernAppBarMenuItem Content="{Binding LocalizedResources.RemoveAds, Source={StaticResource LocalizedStrings}}" 
+                        Click="RemoveAds_Click" />
+                </controls:ModernAppBar.MenuItems>
+            </controls:ModernAppBar>
+
+
+        </Grid>
+
+        <Grid x:Name="SharePanel" Visibility="Collapsed" Background="#7FFFFFFF">
+            <StackPanel x:Name="stackPanel" HorizontalAlignment="Center" Width="400" VerticalAlignment="Center">
+                <Button x:Name="ShareTwitter" Content="twitter" Background="{StaticResource GreyBrush}" BorderThickness="0"
+					Padding="12,7,12,8" Foreground="{StaticResource DarkerBrush}" FontSize="34.667" FontFamily="Segoe WP SemiLight"
+					Click="ShareTwitter_Click" />
+                <Button x:Name="ShareFacebook" Content="facebook" Background="{StaticResource GreyBrush}" BorderThickness="0"
+					Padding="12,7,12,8" Foreground="{StaticResource DarkerBrush}" FontSize="34.667" FontFamily="Segoe WP SemiLight"
+					Click="ShareFacebook_Click" />
+
+                <Button Content="{Binding LocalizedResources.SocialShare, Source={StaticResource LocalizedStrings}}"
+					x:Name="ShareEmbedButton" Background="{StaticResource GreyBrush}" BorderThickness="0" Padding="12,7,12,8"
+					Foreground="{StaticResource DarkerBrush}" FontSize="34.667" FontFamily="Segoe WP SemiLight" Click="ShareEmbed_Click" />
+                <Button Content="NFC"
+					x:Name="ShareNFC" Background="{StaticResource GreyBrush}" BorderThickness="0" Padding="12,7,12,8"
+					Foreground="{StaticResource DarkerBrush}" FontSize="34.667" FontFamily="Segoe WP SemiLight" Click="ShareNFC_Click" />
+                <Button Content="{Binding LocalizedResources.CopyLink, Source={StaticResource LocalizedStrings}}"
+					x:Name="ShareCopyLinkButton" Background="{StaticResource GreyBrush}" BorderThickness="0" Padding="12,7,12,8"
+					Foreground="{StaticResource DarkerBrush}" FontSize="34.667" FontFamily="Segoe WP SemiLight" Click="ShareCopyLink_Click" />
+            </StackPanel>
+
+        </Grid>
+        <Grid x:Name="NearbySettingsPanel" Visibility="Collapsed" VerticalAlignment="Bottom" Height="76" Background="Black">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Slider x:Name="NearbySlide" Margin="0,0,0,-31" Minimum="200" Maximum="5000" LargeChange="10" SmallChange="1" Value="200" Foreground="{StaticResource PrincBrush}" />
+            <TextBlock Text="{Binding Value, Converter={StaticResource DistanceConverter}, ElementName=NearbySlide}" Grid.Column="1" Margin="0" VerticalAlignment="Center" HorizontalAlignment="Left" />
+            <Button Grid.Column="2" Click="NearbySettingsOK_Click" Padding="0" BorderThickness="0">
+                <Grid>
+                    <Ellipse Height="48" Width="48" Stroke="White" StrokeThickness="3" Fill="#19FFFFFF"/>
+                    <Image Source="/Toolkit.Content/ApplicationBar.Check.png"/>
+                </Grid>
+            </Button>
+        </Grid>
+        <Grid x:Name="TagInfoPanel" Visibility="Collapsed" Background="#8F989898">
+            <Grid Background="#FFFFFF" Width="400" VerticalAlignment="Center">
+                <StackPanel Margin="0,12">
+                    <TextBlock Text="{Binding LocalizedResources.TagMePhotoOfYou, Source={StaticResource LocalizedStrings}}" FontSize="37.333" FontFamily="Segoe WP Light" Margin="12,0,0,0" Foreground="{StaticResource DarkGreyBrush}"/>
+                    <TextBlock Text="{Binding LocalizedResources.TagMeShowOnMyProfile, Source={StaticResource LocalizedStrings}}" Margin="12,12,0,-12" Foreground="{StaticResource DarkGreyBrush}" />
+                    <toolkit:ToggleSwitch x:Name="TagMeAcceptToggle" BorderThickness="0"  Padding="12,7,12,8" Foreground="{StaticResource DarkerBrush}" Click="TagMeChangeVisibility_Click"  />
+                    <Button Content="{Binding LocalizedResources.TagMeRemoveMeFromPhoto, Source={StaticResource LocalizedStrings}}" BorderThickness="0"
+						Padding="12,7,12,8" Foreground="{StaticResource DarkerBrush}" FontFamily="Segoe WP SemiLight"
+						Click="TagMeRemove_Click" Margin="0,0,0,0" Background="#FFC7C7C7" />
+                </StackPanel>
+            </Grid>
+        </Grid>
+
+       
+
+        <Grid x:Name="SaveMediaLoadingPanel" Visibility="Collapsed" >
+            <Rectangle Fill="{StaticResource ModernHeaderBrush}" Opacity="0.5"/>
+            <ProgressBar x:Name="SaveMediaLoadingProgress" Foreground="{StaticResource PrincBrush}" />
+        </Grid>
+    </Grid>
+</phone:PhoneApplicationPage>

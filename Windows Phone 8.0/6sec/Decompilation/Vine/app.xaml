@@ -1,0 +1,55 @@
+﻿<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+             xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib" 
+			 xmlns:Converters="clr-namespace:Vine.Converters" xmlns:resource="clr-namespace:Vine.Resources" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:utils="clr-namespace:Vine.Utils"
+             xmlns:control="clr-namespace:Vine.Controls"
+             mc:Ignorable="d" x:Class="Vine.App">
+
+    <!--Application Resources-->
+    <Application.Resources>
+        <ResourceDictionary>
+
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Style/ColorsStyle.xaml" />
+                <ResourceDictionary Source="Style/CustomStyle.xaml" />
+                <ResourceDictionary Source="Style/ToastStyle.xaml" />
+                <ResourceDictionary Source="ButtonResourceDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+
+
+            <!--	<local:LocalizedStrings xmlns:local="clr-namespace:Vine" x:Key="LocalizedStrings"  />
+    	-->
+            <utils:PhoneSizeUtils x:Key="PhoneSizeUtils"/>
+            <resource:LocalizedStrings x:Key="LocalizedStrings" />
+            <Converters:EnumToBoolConverter x:Key="EnumToBoolConverter"/>
+            <Converters:BigNumberConverter x:Key="BigNumberConverter"/>
+            <Converters:NullableToVisibilityConverter x:Key="NullableToVisibilityConverter"/>
+            <Converters:VisibilityConverter x:Key="VisibilityConverter" />
+            <Converters:IntVisibilityConverter x:Key="IntVisibilityConverter" />
+            <Converters:StateToStringConverter x:Key="StateToStringConverter" />
+            <Converters:ToUpperConverter x:Key="ToUpperConverter" />
+            <Converters:DistanceConverter x:Key="DistanceConverter" />
+            <Converters:DateStringToTimePassedConverter x:Key="DateStringToTimePassedConverter" />
+            <Converters:TrimConverter x:Key="TrimConverter" />
+            <Converters:StringToVisibilityConverter x:Key="StringToVisibilityConverter" />
+            <Converters:ShortTimerConverter x:Key="ShortTimerConverter"/>
+            <Converters:EncodingInProgressConverter x:Key="EncodingInProgressConverter"/>
+ 
+            <sys:String x:Key="RetryPath">M112.222,136.191 C72.9366,136.191 54.6046,167.619 54.6046,167.619 C54.6046,167.619 42.1635,185.623 70.3156,172.856 C98.4712,160.088 112.222,162.38 112.222,162.38 C112.222,162.38 128.919,162.707 148.887,172.856 C156.377,176.663 161.47,178.028 164.809,178.092 C170.376,178.202 171.066,174.698 169.84,172.856 C167.876,169.911 151.507,136.191 112.222,136.191 z M144.047,57.621 C136.817,57.621 130.953,69.3468 130.953,83.81 C130.953,98.2762 136.817,110.002 144.047,110.002 C151.28,110.002 157.144,98.2762 157.144,83.81 C157.144,69.3468 151.28,57.621 144.047,57.621 z M75.953,57.621 C68.7198,57.621 62.859,69.3468 62.859,83.81 C62.859,98.2762 68.7198,110.002 75.953,110.002 C83.1861,110.002 89.047,98.2762 89.047,83.81 C89.047,69.3468 83.1861,57.621 75.953,57.621 z M110,0 C170.752,0 220,49.2494 220,110.002 C220,170.751 170.752,220 110,220 C49.2506,220 0,170.751 0,110.002 C0,49.2494 49.2506,0 110,0 z</sys:String>
+       
+      
+
+
+        </ResourceDictionary>
+    </Application.Resources>
+    <Application.ApplicationLifetimeObjects>
+        <!--Required object that handles lifetime events for the application-->
+        <shell:PhoneApplicationService Launching="Application_Launching" Closing="Application_Closing"
+                                       Activated="Application_Activated" Deactivated="Application_Deactivated" />
+    </Application.ApplicationLifetimeObjects>
+</Application>

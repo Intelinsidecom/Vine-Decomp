@@ -1,0 +1,55 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+   xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toast="clr-namespace:Vine.Controls.Toast"
+    mc:Ignorable="d"
+   >
+ <ResourceDictionary.MergedDictionaries>
+     <ResourceDictionary Source="CustomStyle.xaml"/>
+ </ResourceDictionary.MergedDictionaries>
+  
+  
+    <Style TargetType="toast:ToastPrompt">
+        <Setter Property="FontFamily" Value="{StaticResource PhoneFontFamilyNormal}"/>
+        <Setter Property="FontSize" Value="{StaticResource PhoneFontSizeSmall}"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Background" Value="{StaticResource PrincBrush}"/>
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="Overlay" Value="{StaticResource TransparentBrush}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="toast:ToastPrompt">
+                    <Border
+						VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                        Background="{TemplateBinding Background}">
+                        <StackPanel 
+							VerticalAlignment="Bottom" 
+							Margin="24, 28, 10, 5" 
+							Orientation="{TemplateBinding TextOrientation}">
+                            <StackPanel
+                                Margin="0,0,16,0"
+                                VerticalAlignment="Bottom"
+                                Orientation="Horizontal">
+                                <TextBlock 
+                                    x:Name="ToastName"
+								    Text="{TemplateBinding Title}"
+								    FontWeight="Bold"
+                                    VerticalAlignment="Center"
+								    Margin="0"
+                                    Padding="0" />
+                            </StackPanel>
+                            <TextBlock 
+                                Text="{TemplateBinding Message}" 
+								Margin="0"
+                                 VerticalAlignment="Bottom"
+								  TextWrapping="Wrap"
+                                Padding="0" />
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

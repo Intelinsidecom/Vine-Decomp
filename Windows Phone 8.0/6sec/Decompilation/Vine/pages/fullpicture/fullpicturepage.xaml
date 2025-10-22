@@ -1,0 +1,239 @@
+﻿<phone:PhoneApplicationPage xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                            xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+                            xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+                            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                           xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+                            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                            xmlns:toolkitPrimitives="clr-namespace:Microsoft.Phone.Controls.Primitives;assembly=Microsoft.Phone.Controls.Toolkit"
+                            xmlns:Vine="clr-namespace:Vine" xmlns:Controls="clr-namespace:Vine.Controls"
+                            xmlns:controls="clr-namespace:Vine.Controls"
+                            x:Class="Vine.Pages.FullPicture.FullPicturePage" SupportedOrientations="Portrait" Orientation="Portrait" mc:Ignorable="d"
+                            shell:SystemTray.IsVisible="False" shell:SystemTray.Opacity="0">
+	<phone:PhoneApplicationPage.Resources>
+		<Storyboard x:Name="StoryboardShowCommentPanel">
+			<DoubleAnimation Duration="0:0:0.4" To="0"
+        		Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)"
+        		Storyboard.TargetName="MyCommentPanel" d:IsOptimized="True">
+				<DoubleAnimation.EasingFunction>
+					<CircleEase EasingMode="EaseOut" />
+				</DoubleAnimation.EasingFunction>
+			</DoubleAnimation>
+		</Storyboard>
+
+
+
+		<shell:ApplicationBar x:Key="WriteApplicationBar" Opacity="0.99"
+                              BackgroundColor="{StaticResource PhoneChromeColor}" >
+			<shell:ApplicationBarIconButton Click="PostComment_Click" IconUri="/Assets/AppBar/sendmessage.png"
+        		IsEnabled="True" Text="send comment" />
+		</shell:ApplicationBar>
+	</phone:PhoneApplicationPage.Resources>
+	<shell:SystemTray.ForegroundColor>
+		<StaticResource ResourceKey="DarkGreyColor"/>
+	</shell:SystemTray.ForegroundColor>
+	<toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Forward>
+				<toolkit:TurnstileTransition Mode="ForwardIn" />
+			</toolkit:NavigationInTransition.Forward>
+		</toolkit:NavigationInTransition>
+	</toolkit:TransitionService.NavigationInTransition>
+	<toolkit:TransitionService.NavigationOutTransition>
+		<toolkit:NavigationOutTransition>
+
+			<toolkit:NavigationOutTransition.Backward>
+				<toolkit:TurnstileTransition Mode="BackwardOut" />
+			</toolkit:NavigationOutTransition.Backward>
+		</toolkit:NavigationOutTransition>
+	</toolkit:TransitionService.NavigationOutTransition>
+	<phone:PhoneApplicationPage.FontFamily>
+		<StaticResource ResourceKey="PhoneFontFamilyNormal" />
+	</phone:PhoneApplicationPage.FontFamily>
+	<phone:PhoneApplicationPage.FontSize>
+		<StaticResource ResourceKey="PhoneFontSizeNormal" />
+	</phone:PhoneApplicationPage.FontSize>
+	<phone:PhoneApplicationPage.Foreground>
+		<StaticResource ResourceKey="PhoneForegroundBrush" />
+	</phone:PhoneApplicationPage.Foreground>
+
+	<!--LayoutRoot is the root grid where all page content is placed-->
+	<Grid>
+		<Rectangle x:Name="RectBackground" Fill="{StaticResource NoStripeBrush}" CacheMode="BitmapCache" />
+		<Grid x:Name="LayoutRoot" >
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="*" />
+                <RowDefinition Height="{StaticResource ModernAppBarRowHeight}"/>
+			</Grid.RowDefinitions>
+			<Grid x:Name="AdPanel"/>
+			<Grid x:Name="ContentPanel1" Grid.Row="1"  >
+				<phone:LongListSelector x:Name="CommentsList"  
+					ItemsSource="{Binding Comments}" Style="{StaticResource HiddenScrollLongListSelectorStyle}">
+					<phone:LongListSelector.ItemTemplate>
+						<DataTemplate>
+							<Controls:CommentControl  Comment="{Binding}"/>
+						</DataTemplate>
+					</phone:LongListSelector.ItemTemplate>
+                    <phone:LongListSelector.ListHeader>
+                        <Grid>
+                            <StackPanel>
+                                <Controls:PostControl x:Name="Post" IsFullComment="True"  Post="{Binding Post}" SelectedHashTag="Post_SelectedTag" Share="Share_Selected" Comment="CommentPost" SaveMedia="Post_OnSaveMedia" />
+                                <Grid  x:Name="ToPanel"   Background="{StaticResource PostBackgroundBrush}" Height="70" Visibility="{Binding IsDirect, Converter={StaticResource VisibilityConverter}}" Margin="0,0,0,12">
+                                    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+                                        <StackPanel Orientation="Horizontal" Margin="24,0,0,0">
+                                            <TextBlock Text="{Binding LocalizedResources.ReceiverTo, Source={StaticResource LocalizedStrings}}" FontFamily="Segoe WP Light" Foreground="{StaticResource PostForegroundBrush}" FontSize="24" Margin="0,-6,12,0" VerticalAlignment="Center" />
+                                            <ItemsControl ItemsSource="{Binding Post.RecipientsOnly}">
+                                                <ItemsControl.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <Grid>
+                                                            <Image Source="{Binding User.Picture}" Tap="ViewToProfile_Tap" Height="50" Margin="6,0" Width="50" Stretch="UniformToFill">
+                                                                <Image.Clip>
+                                                                    <EllipseGeometry RadiusX="25" RadiusY="25" Center="25,25"/>
+                                                                </Image.Clip>
+                                                            </Image>
+                                                            <Controls:DirectStateControl State="{Binding State}" Height="24" Width="24" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="5,0,0,5"/>
+                                                        </Grid>
+                                                    </DataTemplate>
+                                                </ItemsControl.ItemTemplate>
+                                                <ItemsControl.ItemsPanel>
+                                                    <ItemsPanelTemplate>
+                                                        <StackPanel Orientation="Horizontal"/>
+                                                    </ItemsPanelTemplate>
+                                                </ItemsControl.ItemsPanel>
+                                            </ItemsControl>
+                                        </StackPanel>
+                                    </ScrollViewer>
+                                </Grid>
+                                <Button Style="{StaticResource SimpleButtonStyle}" 
+									Visibility="{Binding HasMoreComments, Converter={StaticResource VisibilityConverter}}"
+									Margin="24,6,0,6"
+									Click="LoadMoreComments_Click">
+                                    <TextBlock Text="{Binding LocalizedResources.LoadMoreComments, Source={StaticResource LocalizedStrings}}" FontFamily="Segoe WP Light" Foreground="{StaticResource DarkGreyBrush}" />
+                                </Button>
+                            </StackPanel>
+                            <ProgressBar Margin="0,0,0,-2" Visibility="{Binding IsCommentLoading, Converter={StaticResource VisibilityConverter}}" IsIndeterminate="{Binding IsCommentLoading}" VerticalAlignment="Bottom" Foreground="{StaticResource PrincBrush}"  />
+                        </Grid>
+                    </phone:LongListSelector.ListHeader>
+                </phone:LongListSelector>
+
+            </Grid>
+            <Grid x:Name="ModernAppBarContainer"  Grid.RowSpan="3">
+
+                <controls:ModernAppBar x:Name="ModernInstaAppBar" >
+
+                    <controls:ModernAppBar.Buttons>
+                        <controls:ModernAppBarButton Content="&#57605;" Click="AppBarSave_Click" Text="save"/>
+                        <controls:ModernAppBarButton Content="&#xE15F;" Click="WriteComment_Click" Text="{Binding LocalizedResources.Comment, Source={StaticResource LocalizedStrings}}"/>
+                        <controls:ModernAppBarButton Content="&#xE117;" Click="Refresh_Click" Text="{Binding LocalizedResources.Refresh, Source={StaticResource LocalizedStrings}}"/>
+                    </controls:ModernAppBar.Buttons>
+                    <controls:ModernAppBar.MenuItems>
+                        <controls:ModernAppBarMenuItem Content="{Binding LocalizedResources.GoToTheTop, Source={StaticResource LocalizedStrings}}" Click="GoTop_Click" />
+                        <controls:ModernAppBarMenuItem Content="{Binding LocalizedResources.ShowLastComments, Source={StaticResource LocalizedStrings}}" Click="ShowLasdComments_Click" />
+                    </controls:ModernAppBar.MenuItems>
+                </controls:ModernAppBar>
+            </Grid>
+
+
+        </Grid>
+		<Grid x:Name="SharePanel" Visibility="Collapsed" Background="#7FFFFFFF">
+			<StackPanel x:Name="stackPanel" HorizontalAlignment="Center" Width="400" VerticalAlignment="Center">
+				<Button x:Name="ShareTwitter" Content="twitter" Background="{StaticResource GreyBrush}" BorderThickness="0"
+					Padding="12,7,12,8" Foreground="{StaticResource DarkerBrush}" FontSize="34.667" FontFamily="Segoe WP SemiLight"
+					Click="ShareTwitter_Click" />
+				<Button x:Name="ShareFacebook" Content="facebook" Background="{StaticResource GreyBrush}" BorderThickness="0"
+					Padding="12,7,12,8" Foreground="{StaticResource DarkerBrush}" FontSize="34.667" FontFamily="Segoe WP SemiLight"
+					Click="ShareFacebook_Click" />
+
+				<Button Content="{Binding LocalizedResources.SocialShare, Source={StaticResource LocalizedStrings}}"
+					x:Name="ShareEmbedButton" Background="{StaticResource GreyBrush}" BorderThickness="0" Padding="12,7,12,8"
+					Foreground="{StaticResource DarkerBrush}" FontSize="34.667" FontFamily="Segoe WP SemiLight" Click="ShareEmbed_Click" />
+				<Button Content="NFC"
+					x:Name="ShareNFC" Background="{StaticResource GreyBrush}" BorderThickness="0" Padding="12,7,12,8"
+					Foreground="{StaticResource DarkerBrush}" FontSize="34.667" FontFamily="Segoe WP SemiLight" Click="ShareNFC_Click" />
+				<Button Content="{Binding LocalizedResources.CopyLink, Source={StaticResource LocalizedStrings}}"
+					x:Name="ShareCopyLinkButton" Background="{StaticResource GreyBrush}" BorderThickness="0" Padding="12,7,12,8"
+					Foreground="{StaticResource DarkerBrush}" FontSize="34.667" FontFamily="Segoe WP SemiLight" Click="ShareCopyLink_Click" />
+			</StackPanel>
+
+		</Grid>
+
+		<Grid x:Name="MyCommentPanel" Background="{StaticResource NoStripeBrush}" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed">
+			<Grid.RenderTransform>
+				<CompositeTransform TranslateY="870" />
+			</Grid.RenderTransform>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="auto"/>
+			</Grid.RowDefinitions>
+			<ScrollViewer x:Name="PrincScroll">
+				<StackPanel Margin="0,26,0,24">
+					<TextBlock Margin="12,0,0,0" 
+						Text="{Binding LocalizedResources.YourComment, Source={StaticResource LocalizedStrings}}" FontFamily="Segoe WP Light"
+						FontSize="26.667" Foreground="{StaticResource DarkGreyBrush}" />
+					<TextBox x:Name="MyComment" Style="{StaticResource CommentTextBoxStyle}"  BorderBrush="{StaticResource DarkGreyBrush}" TextChanged="MyComment_TextChanged" InputScope="Text" AcceptsReturn="True"
+						GotFocus="Comment_GotFocus" LostFocus="Comment_LostFocus" MaxLength="140" MinHeight="157" MaxHeight="260" Margin="0,0,6,0" TextWrapping="Wrap" />
+					<StackPanel x:Name="CommentCounter" HorizontalAlignment="Right" Margin="0,-12,12,0" Orientation="Horizontal">
+						<TextBlock x:Name="NbrCaractText" FontFamily="Segoe WP Light"
+							Foreground="{StaticResource DarkGreyBrush}" Text="{Binding Text.Length, ElementName=MyComment}" FontSize="22"
+							Margin="0" Padding="0,2,0,0" />
+						<TextBlock FontFamily="Segoe WP Light" FontSize="24" Foreground="{StaticResource DarkGreyBrush}"
+							Text="/140" />
+					</StackPanel>
+
+
+				</StackPanel>
+			</ScrollViewer>
+
+
+		<Grid x:Name="SuggestionsPanel" Grid.RowSpan="4"  VerticalAlignment="Bottom" Visibility="Collapsed" >
+				<Grid.Background>
+					<SolidColorBrush Color="{StaticResource PhoneChromeColor}"/>
+				</Grid.Background>
+			<Grid x:Name="SuggestionsPanelInner">
+				<Grid x:Name="SuggestionsLine" Visibility="Collapsed" VerticalAlignment="Bottom" 
+			Height="72" >
+
+					<ListBox x:Name="SuggestionsList" VerticalContentAlignment="Stretch"
+				SelectionChanged="SuggestionsList_SelectionsChanged" ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+				ScrollViewer.VerticalScrollBarVisibility="Disabled">
+						<ListBox.ItemsPanel>
+							<ItemsPanelTemplate>
+								<VirtualizingStackPanel Orientation="Horizontal" />
+							</ItemsPanelTemplate>
+						</ListBox.ItemsPanel>
+					</ListBox>
+				</Grid>
+
+				<Grid x:Name="SuggestionsCommands" Visibility="Collapsed" Height="72" VerticalAlignment="Bottom" Margin="0,0,0,60">
+					<StackPanel Orientation="Horizontal" Margin="0,5,0,0" >
+						<Button Content="#" Click="SuggestionsAddDiese_Click" FontSize="34" Foreground="{StaticResource PrincBrush}" Margin="14,-12,12,0" Style="{StaticResource ActionButtonStyle}"  />
+						<Button  Content="@" Click="SuggestionsAddAt_Click" FontSize="28" Margin="0,-9,0,0" Foreground="{StaticResource PrincBrush}"  Style="{StaticResource ActionButtonStyle}" />
+					</StackPanel>
+				</Grid>
+			</Grid>
+		</Grid>
+		</Grid>
+
+		<Grid x:Name="SendingCommentPanel" Background="#7F000000" Visibility="Collapsed">
+			<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+				<TextBlock Text="{Binding LocalizedResources.SendingComment, Source={StaticResource LocalizedStrings}}" />
+				<ProgressBar x:Name="SendingCommentProgress" Background="Transparent" Foreground="{StaticResource PrincBrush}"  />
+			</StackPanel>
+		</Grid>
+
+		<Grid x:Name="LoadingPanel" Visibility="{Binding IsLoading, Converter={StaticResource VisibilityConverter}}" Background="#7F000000">
+			<StackPanel VerticalAlignment="Center" >
+                <TextBlock Text="{Binding LocalizedResources.Loading, Source={StaticResource LocalizedStrings}}" TextAlignment="Center"/>
+                <ProgressBar Background="Transparent" Foreground="{StaticResource PrincBrush}" IsIndeterminate="{Binding IsLoading}" />
+			</StackPanel>
+		</Grid>
+
+        <Grid x:Name="SaveMediaLoadingPanel" Visibility="Collapsed" >
+            <Rectangle Fill="{StaticResource ModernHeaderBrush}" Opacity="0.5"/>
+            <ProgressBar x:Name="SaveMediaLoadingProgress" Foreground="{StaticResource PrincBrush}" />
+        </Grid>
+
+
+    </Grid>
+</phone:PhoneApplicationPage>

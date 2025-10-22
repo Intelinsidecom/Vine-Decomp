@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="Vine.Controls.PullRefreshControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480">
+    <UserControl.Resources>
+        <Storyboard x:Name="StoryboardExternal" FillBehavior="Stop">
+            <DoubleAnimation Duration="0:0:2.6" To="1440" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="ExternalCircle" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <BackEase Amplitude="0.4" EasingMode="EaseInOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="ExternalCircle">
+                <EasingColorKeyFrame KeyTime="0:0:0.3" Value="{StaticResource GreenColor}"/>
+                <EasingColorKeyFrame KeyTime="0:0:2.3" Value="{StaticResource GreenColor}"/>
+                <EasingColorKeyFrame KeyTime="0:0:2.6" Value="#FFD2D2D2"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="StoryboardInternal" FillBehavior="Stop">
+            <DoubleAnimation Duration="0:0:2.7" To="1080" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="InternalCircle" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseInOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="InternalCircle">
+                <EasingColorKeyFrame KeyTime="0:0:1.2" Value="{StaticResource GreenColor}"/>
+                <EasingColorKeyFrame KeyTime="0:0:2.3" Value="{StaticResource GreenColor}"/>
+                <EasingColorKeyFrame KeyTime="0:0:2.7" Value="#FFD2D2D2"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot">
+        <Grid x:Name="InternalCircleExt" VerticalAlignment="Top" Margin="0,9,0,0" RenderTransformOrigin="0.5,0.5">
+            <Path x:Name="InternalCircle" Data="M20.449,0.005228 C27.8881,0.175739 34.9351,4.50916 38.2166,11.7384 C38.2879,11.8955 38.357,12.0532 38.424,12.2111 L38.6072,12.6592 L34.9563,14.3164 L34.8956,14.15 C34.7955,13.896 34.6883,13.6431 34.5742,13.3917 C30.9218,5.34522 21.4381,1.78318 13.3917,5.43558 C5.34521,9.08798 1.78317,18.5717 5.43558,26.6181 C9.08798,34.6646 18.5717,38.2266 26.6181,34.5742 L28.2714,38.2166 C18.2134,42.782 6.35873,38.3295 1.79325,28.2714 C-2.77224,18.2134 1.68034,6.35873 11.7384,1.79325 C14.5672,0.509207 17.5381,-0.061493 20.449,0.005228 z" HorizontalAlignment="Center" Height="44" Stretch="Fill" StrokeThickness="0" UseLayoutRounding="False" Width="44" RenderTransformOrigin="0.5,0.5">
+                <Path.Fill>
+                    <SolidColorBrush Color="{StaticResource GreyColor}"/>
+                </Path.Fill>
+                <Path.RenderTransform>
+                    <CompositeTransform/>
+                </Path.RenderTransform>
+            </Path>
+        </Grid>
+        <Grid x:Name="ExternalCircleExt" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <Path x:Name="ExternalCircle" Data="M27.6328,0.002012 C29.0392,-0.014862 30.4647,0.074215 31.9003,0.275982 C32.1396,0.309606 32.3777,0.346204 32.6147,0.385575 L32.8879,0.434662 L32.3308,4.39831 L31.9559,4.33098 C31.7529,4.29719 31.5487,4.26588 31.3436,4.23705 C18.2178,2.39234 6.08177,11.5375 4.23705,24.6633 C2.39234,37.7891 11.5375,49.9252 24.6633,51.7699 C37.7891,53.6146 49.9252,44.4694 51.7699,31.3436 L55.731,31.9003 C53.5788,47.2138 39.4201,57.8832 24.1066,55.731 C8.79314,53.5788 -1.87619,39.4201 0.275982,24.1066 C2.22639,10.2288 14.0376,0.165125 27.6328,0.002012 z" HorizontalAlignment="Center" Height="62" Margin="0" Stretch="Fill" StrokeThickness="0" UseLayoutRounding="False" Width="62" RenderTransformOrigin="0.5,0.5" Fill="#FFD2D2D2">
+                <Path.RenderTransform>
+                    <CompositeTransform/>
+                </Path.RenderTransform>
+            </Path>
+        </Grid>
+    </Grid>
+</UserControl>
