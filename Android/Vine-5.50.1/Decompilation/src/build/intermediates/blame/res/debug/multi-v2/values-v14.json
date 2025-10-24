@@ -1,0 +1,47 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\jlaks\\OneDrive\\Dokumentai\\GitHub\\Vine-Decomp\\Android\\Vine-5.50.1\\Decompilation\\src\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\jlaks\\.gradle\\caches\\transforms-2\\files-2.1\\6a423f1568d5a8607f8ef126eab49d98\\appcompat-v7-22.2.1\\res\\values-v14\\values-v14.xml",
+                    "from": {
+                        "startLines": "27,28,29,32,33",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "2040,2160,2223,2377,2440",
+                        "endLines": "27,28,31,32,33",
+                        "endColumns": "119,62,12,62,131",
+                        "endOffsets": "2155,2218,2372,2435,2567"
+                    },
+                    "to": {
+                        "startLines": "21,22,23,26,27",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "1428,1548,1611,1765,1828",
+                        "endLines": "21,22,25,26,27",
+                        "endColumns": "119,62,12,62,131",
+                        "endOffsets": "1543,1606,1760,1823,1955"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\jlaks\\OneDrive\\Dokumentai\\GitHub\\Vine-Decomp\\Android\\Vine-5.50.1\\Decompilation\\src\\res\\values-v14\\styles.xml",
+                    "from": {
+                        "startLines": "6,2,4,11,16",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "253,57,149,585,1011",
+                        "endLines": "10,3,5,15,20",
+                        "endColumns": "12,12,12,12,12",
+                        "endOffsets": "579,143,247,1005,1443"
+                    },
+                    "to": {
+                        "startLines": "2,7,9,11,16",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,382,472,574,995",
+                        "endLines": "6,8,10,15,20",
+                        "endColumns": "12,12,12,12,12",
+                        "endOffsets": "377,467,569,990,1423"
+                    }
+                }
+            ]
+        }
+    ]
+}

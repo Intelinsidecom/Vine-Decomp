@@ -1,0 +1,92 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+
+    defaultConfig {
+        applicationId 'co.vine.android'
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 1600360
+        versionName "5.50.1"
+        // testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['java']
+            java {
+                // Exclude decompiled third-party libs; use binaries via dependencies instead
+                exclude 'com/google/android/exoplayer/**'
+                exclude 'com/fasterxml/**'
+                exclude 'android/support/**'
+                exclude 'retrofit/**'
+                exclude 'okhttp/**'
+                exclude 'okio/**'
+                exclude 'com/google/android/gms/**'
+                exclude 'com/flurry/**'
+                exclude 'com/codebutler/**'
+                exclude 'oauth/**'
+            }
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['lib']
+        }
+        androidTest.setRoot('tests')
+    }
+}
+
+dependencies {
+    // Pick up any local JARs placed in this module's libs/ directory
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    // Core Android support libs matching API 22 era
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.android.support:support-v4:22.2.1'
+
+    // Media playback (replace decompiled ExoPlayer sources)
+
+    // Networking stack
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile 'com.squareup.retrofit:converter-jackson:1.9.0'
+    compile 'com.squareup.okhttp:okhttp:2.5.0'
+    compile 'com.squareup.okio:okio:1.6.0'
+
+    // JSON (replace decompiled Jackson sources)
+    compile 'com.fasterxml.jackson.core:jackson-core:2.5.3'
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.5.3'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.5.3'
+
+    // Google Play services pieces used in manifest (maps/gcm)
+    compile 'com.google.android.gms:play-services-maps:8.3.0'
+    compile 'com.google.android.gms:play-services-gcm:8.3.0'
+
+    // OAuth (Signpost)
+    compile 'oauth.signpost:signpost-core:1.2.1.2'
+    compile 'oauth.signpost:signpost-commonshttp4:1.2.1.2'
+
+    // Optional: WebSockets client if you prefer dependency over decompiled source
+    // compile 'com.codebutler:android-websockets:1.2'
+
+    // Optional: Flurry Analytics (or keep decompiled if present)
+    // compile 'com.flurry.android:analytics:6.3.0'
+}

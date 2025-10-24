@@ -1,3 +1,36 @@
+// Auto-detect Android SDK and write local.properties if missing
+def localPropsFile = new File(rootDir, 'local.properties')
+try {
+    def extractSdkDir = { File f ->
+        if (!f.exists()) return null
+        def m = (f.text =~ /(?m)^sdk.dir\s*=\s*(.*)$/)
+        return m.find() ? new File(m.group(1).trim()) : null
+    }
+
+    def candidates = [
+            new File(rootDir, '../Build'),           // prefer sibling Build/
+            new File(rootDir, '../../Build'),        // one level higher
+            new File(rootDir, '../../../Build'),     // repo root Build/
+            new File(System.properties['user.home'] + '/AppData/Local/Android/Sdk'),
+            System.getenv('ANDROID_SDK_ROOT') ? new File(System.getenv('ANDROID_SDK_ROOT')) : null,
+            System.getenv('ANDROID_HOME') ? new File(System.getenv('ANDROID_HOME')) : null
+    ].findAll { it != null }
+
+    def currentSdk = extractSdkDir(localPropsFile)
+    def currentValid = currentSdk != null && currentSdk.exists() && new File(currentSdk, 'platforms').exists()
+
+    if (!currentValid) {
+        def sdkDir = candidates.find { it.exists() && new File(it, 'platforms').exists() }
+        if (sdkDir) {
+            def sdkPath = sdkDir.absolutePath.replace('\\', '/')
+            localPropsFile.text = "sdk.dir=${sdkPath}\n"
+            println "Configured Android SDK: ${sdkPath}"
+        } else {
+            println 'Android SDK not found in default locations. Please set sdk.dir in local.properties.'
+        }
+    }
+} catch (Throwable ignored) { }
+
 rootProject.name = 'Vine'
 
-include 'app'
+include 'src'

@@ -1,0 +1,112 @@
+Vine 5.50.1 — Gradle build setup (Android 4.1 era)
+
+Summary
+- Toolchain: AGP 2.3.3, Gradle 3.3, Build Tools 22.0.1, SDK Platform android-22, JDK 8
+- Module: :src uses legacy source set pointing to ./src/{AndroidManifest.xml, java/, res/, assets/, lib/}
+- Strategy: Do not compile decompiled third-party libraries; use official JAR/AAR/Maven coordinates instead.
+
+Requirements
+- Android SDK Platform 22
+- Android Build-Tools 22.0.1
+- JDK 8 on PATH (javac 1.8)
+- Gradle Wrapper 3.3 (recommended) or a local Gradle 3.3 installation
+
+Project files updated
+- build.gradle (root):
+  - Repos: maven.google.com + jcenter + mavenCentral
+  - Classpath: com.android.tools.build:gradle:2.3.3
+- settings.gradle:
+  - include 'src'
+- src/build.gradle (module):
+  - apply plugin: 'com.android.application'
+  - compileSdkVersion 22, buildToolsVersion 22.0.1
+  - Java 1.7 compatibility
+  - Source sets mapped to current layout
+  - Excluded decompiled 3P packages (see below)
+  - Added period-correct dependencies
+
+Third-party libraries to use as binaries (JAR/AAR/Maven)
+- Android Support Libraries (API 22 era):
+  - com.android.support:support-v4:22.2.1
+  - com.android.support:appcompat-v7:22.2.1
+  - com.android.support:recyclerview-v7:22.2.1
+- ExoPlayer (v1):
+  - com.google.android.exoplayer:exoplayer:r1.5.12
+- Networking:
+  - com.squareup.retrofit:retrofit:1.9.0
+  - com.squareup.retrofit:converter-jackson:1.9.0
+  - com.squareup.okhttp:okhttp:2.5.0
+  - com.squareup.okio:okio:1.6.0
+- JSON:
+  - com.fasterxml.jackson.core:jackson-core:2.5.3
+  - com.fasterxml.jackson.core:jackson-annotations:2.5.3
+  - com.fasterxml.jackson.core:jackson-databind:2.5.3
+- Google Play Services (manifest references maps, gcm, ads):
+  - com.google.android.gms:play-services-maps:8.3.0
+  - com.google.android.gms:play-services-gcm:8.3.0
+  - com.google.android.gms:play-services-ads:8.3.0
+- OAuth (if needed by code using signpost):
+  - oauth.signpost:signpost-core:1.2.1.2
+  - oauth.signpost:signpost-commonshttp4:1.2.1.2
+- Optional/To evaluate after first compile:
+  - Facebook SDK (manifest has com.facebook.FacebookActivity): com.facebook.android:facebook-android-sdk:4.6.0 (approx era)
+  - Flurry Analytics: com.flurry.android:analytics:6.3.0
+  - Android WebSockets (CodeButler): com.codebutler:android-websockets:1.2
+  - Twitter/Digits/Fabric: com.twitter.sdk.android:twitter-core / digits (versions contemporary to 2015). Only add if compile errors indicate usage.
+
+Source folders excluded from compilation (replaced by binaries)
+- src/java/android/support/**
+- src/java/com/google/android/exoplayer/**
+- src/java/com/google/android/gms/**
+- src/java/com/fasterxml/**
+- src/java/retrofit/**
+- src/java/okhttp/**
+- src/java/okio/**
+- src/java/oauth/**
+- src/java/com/codebutler/**
+- src/java/com/flurry/**
+
+Folders safe to delete (not required to build)
+- src/.fabric/
+- src/META-INF/
+- src/NOTICE.txt
+- src/builddef.lst
+- src/version.txt
+- Any of the excluded third-party source trees above if you prefer a cleaner repo (after confirming binary deps compile):
+  - src/java/android/support/
+  - src/java/com/google/android/exoplayer/
+  - src/java/com/google/android/gms/
+  - src/java/com/fasterxml/
+  - src/java/retrofit/
+  - src/java/okhttp/
+  - src/java/okio/
+  - src/java/oauth/
+  - src/java/com/codebutler/
+  - src/java/com/flurry/
+
+Folders required to build
+- src/AndroidManifest.xml
+- src/java/ (minus excluded 3P folders)
+- src/res/
+- src/assets/
+- src/lib/ (JNI .so libraries: keep all ABIs you plan to support)
+- src/isoparser-default.properties (likely used by mp4 parser; keep until verified)
+
+Known decompilation issues and mitigation
+- errors.txt shows Jadx issues in ExoPlayer and Jackson. We replaced these with official artifacts.
+- If additional decompiled classes fail (e.g., support lib, gms), remove their source folders and add corresponding dependencies.
+- Apache HttpClient: min/target/compileSdk 22 still includes org.apache.http; do NOT use useLibrary 'org.apache.http.legacy' (that is API 23+ only).
+
+Build steps
+1) Ensure SDK 22 and Build-Tools 22.0.1 installed.
+2) Use JDK 8.
+3) From Android/Vine-5.50.1/Decompilation/:
+   - With Gradle wrapper 3.3 (if added): gradlew.bat assembleDebug
+   - Or with local Gradle 3.3: gradle assembleDebug
+4) Resolve compile errors by either:
+   - Adding the missing Maven dependency from the list above, or
+   - Excluding/deleting the conflicting decompiled source folder.
+
+Notes
+- The manifest references Google Ads/Measurement, Maps, GCM, Facebook, Crashlytics/Digits. Only add those SDKs if build errors reference them; otherwise leave decompiled sources in place.
+- If you want an even faster path to a runnable APK without fixing Java, consider apktool-based smali rebuilds.

@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\jlaks\\OneDrive\\Dokumentai\\GitHub\\Vine-Decomp\\Android\\Vine-5.50.1\\Decompilation\\src\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v18\\values-v18.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\jlaks\\OneDrive\\Dokumentai\\GitHub\\Vine-Decomp\\Android\\Vine-5.50.1\\Decompilation\\src\\res\\values-v18\\dimens.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endColumns": "48",
+                        "endOffsets": "101"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "48",
+                        "endOffsets": "99"
+                    }
+                }
+            ]
+        }
+    ]
+}

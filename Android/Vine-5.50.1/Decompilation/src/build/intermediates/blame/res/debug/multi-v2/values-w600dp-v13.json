@@ -1,0 +1,43 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\jlaks\\OneDrive\\Dokumentai\\GitHub\\Vine-Decomp\\Android\\Vine-5.50.1\\Decompilation\\src\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w600dp-v13\\values-w600dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\jlaks\\OneDrive\\Dokumentai\\GitHub\\Vine-Decomp\\Android\\Vine-5.50.1\\Decompilation\\src\\res\\values-w600dp-v13\\dimens.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endColumns": "62",
+                        "endOffsets": "115"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "62",
+                        "endOffsets": "113"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\jlaks\\OneDrive\\Dokumentai\\GitHub\\Vine-Decomp\\Android\\Vine-5.50.1\\Decompilation\\src\\res\\values-w600dp-v13\\integers.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endColumns": "54",
+                        "endOffsets": "107"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "118",
+                        "endColumns": "54",
+                        "endOffsets": "168"
+                    }
+                }
+            ]
+        }
+    ]
+}

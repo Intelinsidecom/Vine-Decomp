@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="co.vine.android"
+    platformBuildVersionCode="22"
+    platformBuildVersionName="5.1.1-1819727"
+    android:versionCode="1600360"
+    android:versionName="5.50.1" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="22" />
+
+    <permission
+        android:name="co.vine.android.BROADCAST"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="co.vine.android.BROADCAST" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.twitter.android.permission.AUTH_APP" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.sonymobile.permission.CAMERA_ADDON" />
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:glEsVersion="0x20000"
+        android:required="true" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name="co.vine.android.AppShell"
+        android:allowBackup="false"
+        android:debuggable="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/VineTheme" >
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDV-tuG52BiVWM9SbwrAuQflpoAneik91c" />
+
+        <provider
+            android:name="co.vine.android.provider.VineProvider"
+            android:authorities="co.vine.android.provider.VineProvider"
+            android:exported="false"
+            android:label="@string/vine" />
+        <provider
+            android:name="co.vine.android.provider.VineUploadProvider"
+            android:authorities="co.vine.android.provider.VineUploadProvider"
+            android:exported="false"
+            android:label="@string/vine"
+            android:process=":upload" />
+        <provider
+            android:name="co.vine.android.provider.VineSuggestionsProvider"
+            android:authorities="co.vine.android.provider.VineSuggestionsProvider"
+            android:exported="false"
+            android:label="@string/vine" />
+        <provider
+            android:name="co.vine.android.provider.VineVideoProvider"
+            android:authorities="co.vine.android.provider.VineVideoProvider"
+            android:exported="false" />
+
+        <activity
+            android:name="co.vine.android.RecordingActivity"
+            android:exported="true"
+            android:process=":record"
+            android:screenOrientation="portrait"
+            android:theme="@style/VineTheme.NoTitleBar.Dark"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="co.vine.android.SonyRecordingActivity"
+            android:exported="true"
+            android:process=":record"
+            android:screenOrientation="portrait"
+            android:theme="@style/VineTheme.NoTitleBar.Dark" />
+
+        <service
+            android:name="co.vine.android.service.ResourceService"
+            android:exported="false"
+            android:process=":record" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name="com.facebook.FacebookActivity" />
+        <activity
+            android:name="co.vine.android.SonyStartActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/VineTheme.NoTitleBar" />
+        <activity
+            android:name="co.vine.android.recordingui.CameraCaptureActivity"
+            android:exported="true"
+            android:process=":record"
+            android:screenOrientation="portrait"
+            android:theme="@style/VineTheme.NoTitleBar" />
+        <activity
+            android:name="co.vine.android.StartActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@style/VineTheme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="vine.co" />
+                <data android:host="www.vine.co" />
+                <data android:host="tomato.vine.co" />
+                <data android:pathPrefix="/u" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="vine.co" />
+                <data android:host="www.vine.co" />
+                <data android:host="tomato.vine.co" />
+                <data android:pathPrefix="/v" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="vine.co" />
+                <data android:host="www.vine.co" />
+                <data android:host="tomato.vine.co" />
+                <data android:pathPrefix="/popular-now" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="vine.co" />
+                <data android:host="www.vine.co" />
+                <data android:host="tomato.vine.co" />
+                <data android:pathPrefix="/tags" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="vine.co" />
+                <data android:host="www.vine.co" />
+                <data android:host="tomato.vine.co" />
+                <data android:pathPrefix="/confirmEmail" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="vine.co" />
+                <data android:host="www.vine.co" />
+                <data android:host="tomato.vine.co" />
+                <data android:pathPrefix="/privacy" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="vine.co" />
+                <data android:host="www.vine.co" />
+                <data android:host="tomato.vine.co" />
+                <data android:pathPrefix="/terms" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="vine.co" />
+                <data android:host="www.vine.co" />
+                <data android:host="tomato.vine.co" />
+                <data android:pathPrefix="/tos" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="vine.co" />
+                <data android:host="www.vine.co" />
+                <data android:host="tomato.vine.co" />
+                <data android:pathPrefix="/android-attribution" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="vine" />
+                <data android:pathPattern=".*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="co.vine.android.nux.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/VineTheme.DarkActionBar"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+        <activity
+            android:name="co.vine.android.DebugHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.vine.android.ClientFlagsOverrideActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.vine.android.UsersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.vine.android.HomeTabActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/VineTheme.Home" />
+        <activity
+            android:name="co.vine.android.nux.LoginTwitterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/VineTheme.DarkActionBar"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+        <activity
+            android:name="co.vine.android.nux.SignUpPagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/VineTheme.DarkActionBar"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+        <activity
+            android:name="co.vine.android.EditProfileCropActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="co.vine.android.AuthenticatorActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:label="@string/authenticator_activity_title"
+            android:permission="android.permission.MANAGE_USERS"
+            android:screenOrientation="portrait"
+            android:theme="@style/VineTheme.Dialog.Dark" />
+        <activity
+            android:name="co.vine.android.ExploreVideoListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.vine.android.LongformActivity"
+            android:configChanges="screenSize|orientation" />
+        <activity
+            android:name="co.vine.android.CommentsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="co.vine.android.ResetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/VineTheme.DarkActionBar"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+        <activity
+            android:name="co.vine.android.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.vine.android.FindFriendsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.vine.android.TwitterFollowerMigrationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.vine.android.FindFriendsNUXActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/VineTheme.DarkActionBar.NoBackButton" />
+        <activity
+            android:name="co.vine.android.ChannelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.vine.android.SingleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.vine.android.search.SearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/VineTheme.Search" />
+        <activity
+            android:name="co.vine.android.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/VineTheme.Preference"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="co.vine.android.PostOptionsDialogActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/VineTheme.Dialog" />
+        <activity
+            android:name="co.vine.android.ContentControlsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.vine.android.CaptchaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.vine.android.ChannelsListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.vine.android.ChannelsFollowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.vine.android.NotificationSettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.vine.android.NotificationAlertsSettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.vine.android.ConversationActivityMain"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name="co.vine.android.ShowLogActivity" />
+        <activity
+            android:name="co.vine.android.ConversationActivity"
+            android:launchMode="singleTop"
+            android:process=":record"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="co.vine.android.ImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.vine.android.ConfirmationFlowActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/VineTheme.DarkActionBar.NoBackButton" />
+        <activity
+            android:name="co.vine.android.ViewOverlayActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/VineTheme.ViewOverlayActivity.OnboardVm" />
+        <activity
+            android:name="co.vine.android.PrivacyControlsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.vine.android.SyncControlsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.vine.android.ChannelsListNUXActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/VineTheme.DarkActionBar.NoBackButton" />
+        <activity
+            android:name="co.vine.android.search.TagSearchResultsActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="co.vine.android.service.VineService"
+            android:exported="false" />
+        <service
+            android:name="co.vine.android.scribe.ScribeService"
+            android:exported="false" />
+        <service
+            android:name="co.vine.android.service.VineAuthenticationService"
+            android:exported="true"
+            android:permission="android.permission.MANAGE_USERS" >
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+        <service
+            android:name="co.vine.android.service.GCMRegistrationService"
+            android:label="@string/notif_service_label" />
+        <service
+            android:name="co.vine.android.service.GCMNotificationService"
+            android:label="@string/notif_service_label" />
+        <service
+            android:name="co.vine.android.service.RealTimeChatService"
+            android:label="@string/chat_service_label"
+            android:process=":record" />
+
+        <uses-library
+            android:name="com.sonymobile.camera.addon.api"
+            android:required="false" />
+
+        <activity
+            android:name="co.vine.android.SonyLaunchActivity"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="com.sonymobile.camera.addon.action.REGISTER_MODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.sonymobile.camera.addon.MODE_ATTRIBUTES"
+                android:resource="@xml/modes" />
+        </activity>
+        <activity
+            android:name="co.vine.android.UploadsListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.vine.android.LocationSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/VineTheme.NoTitleBar.Dark"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="co.vine.android.CameraWidgetConfigureActivity"
+            android:theme="@android:style/Theme.NoDisplay" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="co.vine.android.ImportTrimCropActivity"
+            android:process=":trim"
+            android:screenOrientation="portrait"
+            android:theme="@style/VineTheme.NoTitleBar.Dark" />
+        <activity
+            android:name="co.vine.android.FavoritePeopleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.vine.android.FavoritePeopleOnboardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/VineTheme.OverlayActivity.OnboardFavoriteUsers" />
+        <activity
+            android:name="co.vine.android.share.activities.PostShareActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/VineTheme.OverlayActivity.SharePost"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="co.vine.android.share.activities.FeedShareActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/VineTheme.OverlayActivity.SharePost"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="co.vine.android.TumblrLoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="co.vine.android.TabbedFeedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.vine.android.TooltipOverlayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/VineTheme.OverlayActivity.Tooltip" />
+
+        <service
+            android:name="co.vine.android.service.VineUploadService"
+            android:exported="false"
+            android:process=":upload" />
+
+        <receiver
+            android:name="co.vine.android.CameraWidgetProvider"
+            android:label="@string/camera_widget_name" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/camera_widget_provider" />
+        </receiver>
+        <receiver
+            android:name="co.vine.android.DeviceBootReceiver"
+            android:process=":record" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.EXTERNAL_APPLICATIONS_AVAILABLE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="co.vine.android.service.AccountsChangedReceiver"
+            android:label="@string/app_name"
+            android:permission="android.permission.MANAGE_USERS" >
+            <intent-filter>
+                <action android:name="android.accounts.LOGIN_ACCOUNTS_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="co.vine.android.service.GCMBroadcastReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="co.vine.android" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="co.vine.android.service.SessionChangedReceiver.UploadSessionChangedReceiver"
+            android:exported="false"
+            android:label="@string/chat_service_label"
+            android:process=":upload" >
+            <intent-filter>
+                <action android:name="co.vine.android.session.login" />
+                <action android:name="co.vine.android.session.logout" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="co.vine.android.service.SessionChangedReceiver.RecordSessionChangedReceiver"
+            android:exported="false"
+            android:label="@string/chat_service_label"
+            android:process=":record" >
+            <intent-filter>
+                <action android:name="co.vine.android.session.login" />
+                <action android:name="co.vine.android.session.logout" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.mobileapptracker.Tracker" >
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.crashlytics.ApiKey"
+            android:value="2fa6302c3e528319c2fd8f4c233d688012b78633" />
+
+        <activity
+            android:name="co.vine.android.ReportingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.vine.android.VideoEditTextActivity"
+            android:label="@string/title_activity_edit_caption"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.vine.android.TheaterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.vine.android.SolicitorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.vine.android.ImportVideoTabActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/VineTheme.NoTitleBar" />
+        <activity
+            android:name="co.vine.android.DownloadVineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/VineTheme.NoTitleBar" />
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity"
+            android:theme="@style/Theme.IAPTheme" />
+
+        <provider
+            android:name="com.google.android.gms.measurement.AppMeasurementContentProvider"
+            android:authorities="co.vine.android.google_measurement_service"
+            android:exported="false" />
+
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.measurement.UPLOAD" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name="com.digits.sdk.android.PhoneNumberActivity"
+            android:configChanges="screenSize|orientation"
+            android:exported="false"
+            android:taskAffinity="com.digits.sdk.android"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="com.digits.sdk.android.ConfirmationCodeActivity"
+            android:configChanges="screenSize|orientation"
+            android:exported="false"
+            android:taskAffinity="com.digits.sdk.android"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="com.digits.sdk.android.LoginCodeActivity"
+            android:configChanges="screenSize|orientation"
+            android:exported="false"
+            android:taskAffinity="com.digits.sdk.android"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="com.digits.sdk.android.PinCodeActivity"
+            android:configChanges="screenSize|orientation"
+            android:exported="false"
+            android:taskAffinity="com.digits.sdk.android"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="com.digits.sdk.android.FailureActivity"
+            android:configChanges="screenSize|orientation"
+            android:exported="false"
+            android:taskAffinity="com.digits.sdk.android" />
+        <activity
+            android:name="com.digits.sdk.android.ContactsActivity"
+            android:configChanges="screenSize|orientation"
+            android:exported="false" />
+        <activity
+            android:name="com.digits.sdk.android.EmailRequestActivity"
+            android:configChanges="screenSize|orientation"
+            android:exported="false"
+            android:taskAffinity="com.digits.sdk.android"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="com.digits.sdk.android.PhoneNumberActionBarActivity"
+            android:configChanges="screenSize|orientation"
+            android:exported="false"
+            android:taskAffinity="com.digits.sdk.android"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="com.digits.sdk.android.ConfirmationCodeActionBarActivity"
+            android:configChanges="screenSize|orientation"
+            android:exported="false"
+            android:taskAffinity="com.digits.sdk.android"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="com.digits.sdk.android.LoginCodeActionBarActivity"
+            android:configChanges="screenSize|orientation"
+            android:exported="false"
+            android:taskAffinity="com.digits.sdk.android"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="com.digits.sdk.android.FailureActionBarActivity"
+            android:configChanges="screenSize|orientation"
+            android:exported="false"
+            android:taskAffinity="com.digits.sdk.android" />
+        <activity
+            android:name="com.digits.sdk.android.ContactsActionBarActivity"
+            android:configChanges="screenSize|orientation"
+            android:exported="false" />
+        <activity
+            android:name="com.digits.sdk.android.PinCodeActionBarActivity"
+            android:configChanges="screenSize|orientation"
+            android:exported="false"
+            android:taskAffinity="com.digits.sdk.android"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="com.digits.sdk.android.EmailRequestActionBarActivity"
+            android:configChanges="screenSize|orientation"
+            android:exported="false"
+            android:taskAffinity="com.digits.sdk.android"
+            android:windowSoftInputMode="stateVisible" />
+
+        <service
+            android:name="com.digits.sdk.android.ContactsUploadService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name="com.twitter.sdk.android.core.identity.OAuthActivity"
+            android:configChanges="screenSize|orientation"
+            android:excludeFromRecents="true"
+            android:exported="false" />
+        <activity
+            android:name="com.twitter.sdk.android.core.identity.ShareEmailActivity"
+            android:configChanges="screenSize|orientation"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:icon="@drawable/tw__transparent"
+            android:label="@string/kit_name" />
+    </application>
+
+</manifest>

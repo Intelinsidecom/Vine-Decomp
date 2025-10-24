@@ -1,0 +1,45 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\jlaks\\OneDrive\\Dokumentai\\GitHub\\Vine-Decomp\\Android\\Vine-5.50.1\\Decompilation\\src\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\jlaks\\OneDrive\\Dokumentai\\GitHub\\Vine-Decomp\\Android\\Vine-5.50.1\\Decompilation\\src\\res\\values-hdpi-v4\\styles.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "331"
+                    },
+                    "to": {
+                        "startLines": "7",
+                        "startColumns": "4",
+                        "startOffsets": "340",
+                        "endLines": "11",
+                        "endColumns": "12",
+                        "endOffsets": "610"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\jlaks\\OneDrive\\Dokumentai\\GitHub\\Vine-Decomp\\Android\\Vine-5.50.1\\Decompilation\\src\\res\\values-hdpi-v4\\dimens.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "57,119,172,231,291",
+                        "endColumns": "60,51,57,58,54",
+                        "endOffsets": "113,166,225,285,341"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,116,168,226,285",
+                        "endColumns": "60,51,57,58,54",
+                        "endOffsets": "111,163,221,280,335"
+                    }
+                }
+            ]
+        }
+    ]
+}

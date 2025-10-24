@@ -1,0 +1,43 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\jlaks\\OneDrive\\Dokumentai\\GitHub\\Vine-Decomp\\Android\\Vine-5.50.1\\Decompilation\\src\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\jlaks\\OneDrive\\Dokumentai\\GitHub\\Vine-Decomp\\Android\\Vine-5.50.1\\Decompilation\\src\\res\\values-sw600dp-v13\\dimens.xml",
+                    "from": {
+                        "startLines": "7,2,3,8,9,6,4,5",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "400,57,128,470,550,340,199,271",
+                        "endColumns": "68,69,69,78,75,58,70,67",
+                        "endOffsets": "464,122,193,544,621,394,265,334"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,124,194,264,343,419,478,549",
+                        "endColumns": "68,69,69,78,75,58,70,67",
+                        "endOffsets": "119,189,259,338,414,473,544,612"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\jlaks\\OneDrive\\Dokumentai\\GitHub\\Vine-Decomp\\Android\\Vine-5.50.1\\Decompilation\\src\\res\\values-sw600dp-v13\\integers.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endColumns": "54",
+                        "endOffsets": "107"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "617",
+                        "endColumns": "54",
+                        "endOffsets": "667"
+                    }
+                }
+            ]
+        }
+    ]
+}

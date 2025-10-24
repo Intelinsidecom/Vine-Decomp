@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="profile_header_button_padding">21dp</dimen>
+    <dimen name="profile_header_low_api_spacer">0dp</dimen>
+    <dimen name="profile_header_view_pager_height">177dp</dimen>
+    <dimen name="profile_header_view_pager_height_short">129dp</dimen>
+    <dimen name="profile_header_view_pager_text_margin_top">10dp</dimen>
+</resources>
